@@ -5,7 +5,7 @@
   playTimeTracker: JobPassenger
   startingGear: PassengerGear
   icon: "JobIconPassenger"
-  supervisors: job-supervisors-everyone
+  supervisors: job-supervisors-nobody # Inferus - passengers dont gotta do SQUAT.
   access:
   - Maintenance
 
@@ -18,7 +18,7 @@
   playTimeTracker: JobPassenger
   startingGear: PassengerGear
   icon: "JobIconPassenger"
-  supervisors: job-supervisors-everyone
+  supervisors: job-supervisors-nobody # Inferus - passengers dont gotta do SQUAT.
   access:
   - Maintenance
 

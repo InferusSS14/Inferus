@@ -8,9 +8,9 @@ loadout-group-roboticist-backpack = Roboticist backpack
 loadout-group-roboticist-shoes = Roboticist shoes
 
 # Civilian
-loadout-group-assistant-glasses = Assistant glasses
-loadout-group-assistant-head = Assistant head
-loadout-group-assistant-backpack = Assistant backpack
+loadout-group-passenger-glasses = Passenger glasses
+loadout-group-passenger-head = Passenger head
+loadout-group-passenger-backpack = Passenger backpack
 
 loadout-group-boxer-jumpsuit = Boxer jumpsuit
 loadout-group-boxer-gloves = Boxer gloves

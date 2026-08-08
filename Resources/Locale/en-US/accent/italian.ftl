@@ -6,10 +6,10 @@
 # accent-italian-prefix-3 = Mamma-mia! That's a spicy meat-ball!
 # accemt-italian-prefix-4 = La la la la la funiculi funicula!
 
-accent-italian-words-1 = assistant
+accent-italian-words-1 = passenger
 accent-italian-words-replace-1 = goombah
 
-accent-italian-words-2 = assistants
+accent-italian-words-2 = passengers
 accent-italian-words-replace-2 = goombahs
 
 accent-italian-words-3 = baby
@@ -42,10 +42,10 @@ accent-italian-words-replace-11 = molto bene
 accent-italian-words-12 = assist
 accent-italian-words-replace-12 = curva
 
-accent-italian-words-13 = assistant
+accent-italian-words-13 = passenger
 accent-italian-words-replace-13 = curvista
 
-accent-italian-words-14 = assistants
+accent-italian-words-14 = passengers
 accent-italian-words-replace-14 = curvisti
 
 accent-italian-words-15 = hello
@@ -135,10 +135,10 @@ accent-italian-words-replace-42 = for-a what reason
 accent-italian-words-43 = wine
 accent-italian-words-replace-43 = vino
 
-accent-italian-words-44 = assistant
+accent-italian-words-44 = passenger
 accent-italian-words-replace-44 = goombah
 
-accent-italian-words-45 = assistants
+accent-italian-words-45 = passengers
 accent-italian-words-replace-45 = goombahs
 
 accent-italian-words-46 = i'm

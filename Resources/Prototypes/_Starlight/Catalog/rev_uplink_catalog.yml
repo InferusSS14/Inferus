@@ -629,7 +629,7 @@
       - LoneOpsUplink
 
 - type: listing
-  id: uplinkRiggedBoxingGlovesAssistant
+  id: uplinkRiggedBoxingGlovesPassenger
   name: uplink-rigged-boxing-gloves-name
   description: uplink-rigged-boxing-gloves-desc
   productEntity: ClothingHandsGlovesBoxingRigged
@@ -643,7 +643,7 @@
   conditions:
     - !type:BuyerJobCondition
       whitelist:
-        - Assistant
+        - Passenger
 
 - type: listing
   id: UplinkNecronomicon

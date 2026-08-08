@@ -68,7 +68,7 @@
             CargoTechnician: [ 6, 7 ]
             MailTech: [ 2, 2 ]
             #civilian
-            Assistant: [ -1, -1 ] #infinite, not counted
+            Passenger: [ -1, -1 ] #infinite, not counted
             Clown: [ 1, 1 ]
             Mime: [ 1, 1 ]
             Musician: [ 2, 2 ]

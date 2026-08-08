@@ -12,7 +12,7 @@
           - BorgModuleTool
           - BorgModuleFireExtinguisher
         ears:
-          - ClothingHeadsetAssistant
+          - ClothingHeadsetPassenger
         head:
           - ClothingHeadHelmetEVALarge
         outerClothing:
@@ -246,7 +246,7 @@
           - BorgModuleSyndicateWeapon
           - BorgModuleTopicals
         ears:
-          - ClothingHeadsetAssistant
+          - ClothingHeadsetPassenger
         head:
           - ClothingHeadHelmetEVALarge
         outerClothing:
@@ -292,7 +292,7 @@
           - BorgModuleSyndicateWeapon
           - BorgModuleTopicals
         ears:
-          - ClothingHeadsetAssistant
+          - ClothingHeadsetPassenger
         head:
           - ClothingHeadHelmetEVALarge
         outerClothing:
@@ -319,7 +319,7 @@
           - BorgModuleSyndicateWeapon
           - BorgModuleTopicals
         ears:
-          - ClothingHeadsetAssistant
+          - ClothingHeadsetPassenger
         head:
           - ClothingHeadHelmetEVALarge
         outerClothing:
@@ -444,7 +444,7 @@
           - BorgModuleSyndicateWeapon
           - BorgModuleTopicals
         ears:
-          - ClothingHeadsetAssistant
+          - ClothingHeadsetPassenger
         head:
           - ClothingHeadHelmetEVALarge
         outerClothing:

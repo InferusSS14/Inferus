@@ -81,10 +81,10 @@ accent-pirate-replacement-25 = argh
 accent-pirate-replaced-26 = ouch
 accent-pirate-replacement-26 = argh
 
-accent-pirate-replaced-27 = assistant
+accent-pirate-replaced-27 = passenger
 accent-pirate-replacement-27 = landlubber
 
-accent-pirate-replaced-28 = assistants
+accent-pirate-replaced-28 = passengers
 accent-pirate-replacement-28 = landlubbers
 
 accent-pirate-replaced-29 = captain

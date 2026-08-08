@@ -1,6 +1,6 @@
 - type: chameleonOutfit
-  id: AssistantChameleonOutfit
-  job: Assistant
+  id: PassengerChameleonOutfit
+  job: Passenger # Inferus
   equipment:
     head: ClothingHeadHatWelding
     eyes: ClothingEyesGlassesCheapSunglasses

@@ -1,10 +1,10 @@
 - type: job
-  id: Assistant
-  name: job-name-assistant
-  description: job-description-assistant
+  id: Passenger
+  name: job-name-passenger
+  description: job-description-passenger
   playTimeTracker: JobPassenger
-  startingGear: AssistantGear
-  icon: "JobIconAssistant"
+  startingGear: PassengerGear
+  icon: "JobIconPassenger"
   supervisors: job-supervisors-everyone
   access:
   - Maintenance
@@ -13,20 +13,20 @@
   id: Passenger
   overrideConsoleVisibility: false # SL - don't show in ID console
   hidden: true
-  name: job-name-assistant
-  description: job-description-assistant
-  playTimeTracker: JobAssistant
-  startingGear: AssistantGear
-  icon: "JobIconAssistant"
+  name: job-name-passenger
+  description: job-description-passenger
+  playTimeTracker: JobPassenger
+  startingGear: PassengerGear
+  icon: "JobIconPassenger"
   supervisors: job-supervisors-everyone
   access:
   - Maintenance
 
 - type: startingGear
-  id: AssistantGear
+  id: PassengerGear
   equipment:
-    id: AssistantPDA
-    ears: ClothingHeadsetAssistant
+    id: PassengerPDA
+    ears: ClothingHeadsetPassenger
   #storage:
     #back:
     #- Stuff

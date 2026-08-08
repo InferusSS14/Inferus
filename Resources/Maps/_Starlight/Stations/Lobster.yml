@@ -129225,7 +129225,7 @@ entities:
     - type: Transform
       pos: -38.5,6.5
       parent: 2
-- proto: SpawnPointAssistant
+- proto: SpawnPointPassenger
   entities:
   - uid: 20614
     components:

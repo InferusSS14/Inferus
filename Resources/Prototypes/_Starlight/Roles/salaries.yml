@@ -49,7 +49,7 @@
     ServiceWorker: 23
     Performer: 23
     Reporter: 46
-    Assistant: 15
+    Passenger: 15 # Inferus
     Boxer: 23
     Zookeeper: 34
 

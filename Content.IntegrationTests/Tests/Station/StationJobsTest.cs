@@ -24,7 +24,7 @@ public sealed class StationJobsTest : GameTest
     [TestPrototypes]
     private const string Prototypes = $@"
 - type: playTimeTracker
-  id: PlayTimeDummyAssistant
+  id: PlayTimeDummyPassenger
 
 - type: playTimeTracker
   id: PlayTimeDummyMime
@@ -51,13 +51,13 @@ public sealed class StationJobsTest : GameTest
         - type: StationJobs
           availableJobs:
             TMime: [0, -1]
-            TAssistant: [-1, -1]
+            TPassenger: [-1, -1]
             TCaptain: [5, 5]
             TClown: [5, 6]
 
 - type: job
-  id: TAssistant
-  playTimeTracker: PlayTimeDummyAssistant
+  id: TPassenger
+  playTimeTracker: PlayTimeDummyPassenger
 
 - type: job
   id: TMime
@@ -108,7 +108,7 @@ public sealed class StationJobsTest : GameTest
 
         var jobPrioritiesA = new Dictionary<ProtoId<JobPrototype>, JobPriority>
         {
-            { "TAssistant", JobPriority.Medium },
+            { "TPassenger", JobPriority.Medium },
             { "TClown", JobPriority.Low },
             { "TMime", JobPriority.High },
         };
@@ -154,14 +154,14 @@ public sealed class StationJobsTest : GameTest
                     Assert.That(assignedHere.Where(x => x.Value.Item1 == "TCaptain").ToList(), Has.Count.EqualTo(1));
                 }
 
-                // All clown players have assistant as a higher priority.
+                // All clown players have passenger as a higher priority.
                 Assert.That(assigned.Values.Select(x => x.Item1).ToList(), Does.Not.Contain("TClown"));
                 // Mime isn't an open job-slot at round-start.
                 Assert.That(assigned.Values.Select(x => x.Item1).ToList(), Does.Not.Contain("TMime"));
                 // All players have slots they can fill.
                 Assert.That(assigned.Values, Has.Count.EqualTo(TotalPlayers), $"Expected {TotalPlayers} players.");
-                // There must be assistants present.
-                Assert.That(assigned.Values.Select(x => x.Item1).ToList(), Does.Contain("TAssistant"));
+                // There must be passengers present.
+                Assert.That(assigned.Values.Select(x => x.Item1).ToList(), Does.Contain("TPassenger"));
                 // There must be captains present, too.
                 Assert.That(assigned.Values.Select(x => x.Item1).ToList(), Does.Contain("TCaptain"));
             });
@@ -193,7 +193,7 @@ public sealed class StationJobsTest : GameTest
             // Verify jobs are/are not unlimited.
             Assert.Multiple(() =>
             {
-                Assert.That(stationJobs.IsJobUnlimited(station, "TAssistant"), "TAssistant is expected to be unlimited.");
+                Assert.That(stationJobs.IsJobUnlimited(station, "TPassenger"), "TPassenger is expected to be unlimited.");
                 Assert.That(stationJobs.IsJobUnlimited(station, "TMime"), "TMime is expected to be unlimited.");
                 Assert.That(!stationJobs.IsJobUnlimited(station, "TCaptain"), "TCaptain is expected to not be unlimited.");
                 Assert.That(!stationJobs.IsJobUnlimited(station, "TClown"), "TClown is expected to not be unlimited.");

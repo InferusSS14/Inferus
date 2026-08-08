@@ -150,19 +150,19 @@
   - FancyPen
 
 - type: loadoutGroup
-  id: AssistantGlasses
-  name: loadout-group-assistant-glasses
+  id: PassengerGlasses
+  name: loadout-group-passenger-glasses
   minLimit: 0
   loadouts:
   - Glasses
   - GlassesJamjar
   - GlassesJensen
   - CheapSunnies
-  - AssistantNoirGlasses
+  - PassengerNoirGlasses
 
 - type: loadoutGroup
-  id: AssistantHead
-  name: loadout-group-assistant-head
+  id: PassengerHead
+  name: loadout-group-passenger-head
   minLimit: 0
   loadouts:
   - GreyCowboy
@@ -178,8 +178,8 @@
   - FeatheredHat
 
 - type: loadoutGroup
-  id: AssistantBackpack
-  name: loadout-group-assistant-backpack
+  id: PassengerBackpack
+  name: loadout-group-passenger-backpack
   loadouts:
   - CommonBackpack
   - CommonSatchel
@@ -1110,7 +1110,6 @@
 
 - type: loadoutGroup
   id: LibrarianJobTrinkets
-  name: loadout-group-jobtrinkets
   minLimit: 0
   loadouts:
   - LizardPlushieLibrarian
@@ -1126,11 +1125,11 @@
   - LizardPlushieChef
 
 - type: loadoutGroup
-  id: AssistantJobTrinkets
+  id: PassengerJobTrinkets
   name: loadout-group-jobtrinkets
   minLimit: 0
   loadouts:
-  - LizardPlushieAssistant
+  - LizardPlushiePassenger
 
 - type: loadoutGroup
   id: CaptainEyewear

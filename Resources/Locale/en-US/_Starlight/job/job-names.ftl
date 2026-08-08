@@ -1,4 +1,4 @@
-job-name-assistant = Assistant
+job-name-passenger = Passenger
 job-name-stirstir = Stir Stir
 
 # Role timers - Apparently someone from upstream will cut us if these aren't alphabetical?

@@ -1,4 +1,4 @@
-job-description-technical-assistant = Learn the basics of managing the station's power, as well as repairing the station's hull.
+job-description-technical-passenger = Learn the basics of managing the station's power, as well as repairing the station's hull.
 job-description-atmostech = Optimize the station's atmospherics setup, and synthesize rare gases to use or sell.
 job-description-bartender = Manage the bar and keep it lively, give out drinks, and listen to the crew's stories.
 job-description-botanist = Grow food for the chef, drugs for medbay, and other plants to keep yourself entertained.
@@ -35,7 +35,7 @@ job-description-lawyer = Ensure that every prisoner or criminal receives a fair 
 job-description-librarian = Manage the library, give out knowledge to any who seek it, and report on activities aboard the station.
 job-description-mime = Entertain the crew without speaking or writing, and engage with light rivalry with the clown.
 job-description-musician = Entertain the crew with your unique musical talent, and acquire new instruments to mess around with.
-job-description-assistant = Your task is to help the crew of the station in achieving their goals or you can choose another path, become a security and defend the will of the people, or maybe you will be a chef?
+job-description-passenger = Your task is to help the crew of the station in achieving their goals or you can choose another path, become a security and defend the will of the people, or maybe you will be a chef?
 job-description-psychologist = Provide emotional support to traumatized crew.
 job-description-qm = Manage the supplies of the station & the Cargo department, keep the salvage specialists working, make sure all orders are fulfilled, and keep the money flowing.
 job-description-rd = Manage the Science department, unlocking technologies, acquiring & researching artifacts, and performing experiments.

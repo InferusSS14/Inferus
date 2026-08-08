@@ -69,7 +69,7 @@
             Reporter: [ 1, 1 ]
             ServiceWorker: [ 3, 3 ]
             Performer: [ 2, 2 ]
-            Assistant: [ -1, -1 ]
+            Passenger: [ -1, -1 ]
             # silicon
             StationAi: [ 1, 1 ]
             Borg: [ 2, 2 ]

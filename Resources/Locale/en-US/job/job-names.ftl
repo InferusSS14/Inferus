@@ -78,7 +78,7 @@ job-title-universal = Universal
 job-title-visitor = Visitor
 
 # Role timers - Make these alphabetical or I cut you
-JobAssistant = Assistant
+JobPassenger = Passenger
 JobAtmosphericTechnician = Atmospheric Technician
 JobBartender = Bartender
 JobBorg = Borg

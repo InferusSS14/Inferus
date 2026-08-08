@@ -158452,7 +158452,7 @@ entities:
     - type: Transform
       pos: 6.5,-55.5
       parent: 2
-- proto: SpawnPointAssistant
+- proto: SpawnPointPassenger
   entities:
   - uid: 24053
     components:
@@ -166709,7 +166709,7 @@ entities:
     - type: Transform
       pos: 34.39057,-59.922966
       parent: 2
-- proto: ToyFigurineAssistant
+- proto: ToyFigurinePassenger
   entities:
   - uid: 25199
     components:

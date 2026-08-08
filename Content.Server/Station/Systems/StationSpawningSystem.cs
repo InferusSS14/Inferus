@@ -69,7 +69,7 @@ public sealed partial class StationSpawningSystem : SharedStationSpawningSystem
     [Dependency] private GameTicker _gameTicker = default!;
     [Dependency] private TransformSystem _xform = default!;
     private static readonly ProtoId<SpeciesPrototype> FallbackSpecies = "Human";
-    private static readonly ProtoId<JobPrototype> FallbackJob = "Assistant";
+    private static readonly ProtoId<JobPrototype> FallbackJob = "Passenger";
     private static readonly Gauge _speciesJobsSpawns = Metrics.CreateGauge(
         "sl_species_jobs_spawns",
         "Contains info on species and jobs spawned at and during the round.",

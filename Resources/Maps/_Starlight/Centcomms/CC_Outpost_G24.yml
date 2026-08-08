@@ -63531,7 +63531,7 @@ entities:
     - type: Transform
       pos: -3.6893306,-27.677359
       parent: 1
-- proto: ToyFigurineAssistant
+- proto: ToyFigurinePassenger
   entities:
   - uid: 9515
     components:

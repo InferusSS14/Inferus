@@ -37,7 +37,7 @@ namespace Content.Client.Access.UI
         private string? _lastJobProto;
 
         // The job that will be picked if the ID doesn't have a job on the station.
-        private static ProtoId<JobPrototype> _defaultJob = "Assistant";
+        private static ProtoId<JobPrototype> _defaultJob = "Passenger";
         // Starlight-edit: Start
         private ProtoId<AccessGroupPrototype>? _selectedAccessGroup = null;
         public Action<ProtoId<AccessGroupPrototype>>? OnGroupSelected;

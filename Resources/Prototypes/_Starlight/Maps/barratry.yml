@@ -60,7 +60,7 @@
             CargoTechnician: [ 4, 4 ]
             MailTech: [ 1, 2 ]
             #civilian
-            Assistant: [ -1, -1 ]
+            Passenger: [ -1, -1 ] # Inferus
             Clown: [ 1, 1 ]
             Mime: [ 1, 1 ]
             Musician: [ 1, 1 ]

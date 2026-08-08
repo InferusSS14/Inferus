@@ -1118,7 +1118,7 @@ doc-text-printer-order-recognizing-reasonableness-creature =
 
     The established full name of the creature: [form]
 
-    The creature is henceforth to be accepted as an Assistant.
+    The creature is henceforth to be accepted as a Passenger.
 
     ────────────────────────────────────────
    ⠀                      [italic]Place for Stamps and/or Signatures[/italic]

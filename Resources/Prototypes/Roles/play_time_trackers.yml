@@ -5,7 +5,7 @@
 
 # Jobs
 - type: playTimeTracker
-  id: JobAssistant
+  id: JobPassenger
 
 - type: playTimeTracker
   id: JobAtmosphericTechnician

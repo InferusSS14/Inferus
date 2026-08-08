@@ -55640,7 +55640,7 @@ entities:
       canCollide: False
     - type: InsideEntityStorage
       storage: 8069
-- proto: ClothingHeadsetAssistant
+- proto: ClothingHeadsetPassenger
   entities:
   - uid: 8082
     components:
@@ -107607,7 +107607,7 @@ entities:
     - type: Transform
       pos: 25.5,16.5
       parent: 2
-- proto: SpawnPointAssistant
+- proto: SpawnPointPassenger
   entities:
   - uid: 15571
     components:

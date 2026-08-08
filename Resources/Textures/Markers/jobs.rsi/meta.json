@@ -14,9 +14,6 @@
             "name": "jobicon"
         },
         {
-            "name": "assistant"
-        },
-        {
             "name": "ai"
         },
         {
@@ -210,6 +207,9 @@
         },
         {
             "name": "zookeeper"
+        },
+        {
+            "name": "passenger"
         }
     ]
 }

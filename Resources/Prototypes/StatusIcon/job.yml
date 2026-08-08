@@ -356,8 +356,8 @@
   id: JobIconAssistant
   icon:
     sprite: *icon-rsi
-    state: Assistant # Starlight - Passenger -> Asistant
-  jobName: job-name-assistant # Starlight - passenger -> assistant
+    state: Passenger # Inferus
+  jobName: job-name-passenger # Starlight - passenger -> assistant
 
 - type: jobIcon
   parent: JobIcon

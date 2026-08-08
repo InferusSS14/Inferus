@@ -88772,7 +88772,7 @@ entities:
     - type: Transform
       pos: -2.5,22.5
       parent: 2
-- proto: SpawnPointAssistant
+- proto: SpawnPointPassenger
   entities:
   - uid: 12580
     components:

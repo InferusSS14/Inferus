@@ -1,5 +1,5 @@
-figurines-assistant-1 = Can I help you?
-figurines-assistant-2 = Call evac.
-figurines-assistant-3 = HELP MAINTS!!
-figurines-assistant-4 = I'm assistant.
-figurines-assistant-5 = You need help?
+figurines-passenger-1 = Can I help you?
+figurines-passenger-2 = Call evac.
+figurines-passenger-3 = HELP MAINTS!!
+figurines-passenger-4 = I'm passenger.
+figurines-passenger-5 = You need help?

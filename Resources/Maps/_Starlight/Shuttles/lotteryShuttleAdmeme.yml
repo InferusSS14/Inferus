@@ -2857,7 +2857,7 @@ entities:
     mapInit: true
     components:
     - type: MetaData
-      name: Jack Potts's ID card (Assistant)
+      name: Jack Potts's ID card (Passenger)
     - type: Transform
       pos: -10.523869,14.550409
       parent: 1
@@ -2873,8 +2873,8 @@ entities:
     - type: IdCard
       jobDepartments:
       - Civilian
-      jobIcon: JobIconAssistant
-      _jobTitle: Assistant
+      jobIcon: JobIconPassenger
+      _jobTitle: Passenger
       fullName: Jack Potts
 - proto: AirCanister
   entities:
@@ -2959,13 +2959,13 @@ entities:
       loadingNetworkDemand: 19070
       currentReceiving: 19070.057
       currentSupply: 19070
-- proto: AssistantIDCard
+- proto: PassengerIDCard
   entities:
   - uid: 190
     mapInit: true
     components:
     - type: MetaData
-      name: ID card (Assistant)
+      name: ID card (Passenger)
     - type: Transform
       parent: 184
     - type: Access
@@ -2974,8 +2974,8 @@ entities:
     - type: IdCard
       jobDepartments:
       - Civilian
-      jobIcon: JobIconAssistant
-      _jobTitle: Assistant
+      jobIcon: JobIconPassenger
+      _jobTitle: Passenger
     - type: EmitSoundOnCollide
       nextSound: -295.666538
     - type: Physics

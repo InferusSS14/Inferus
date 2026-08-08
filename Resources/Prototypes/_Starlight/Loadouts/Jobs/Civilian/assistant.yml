@@ -1,14 +1,14 @@
-# Assistants Time
+# Passengers Time
 - type: loadoutEffectGroup
-  id: HonoredAssistant
+  id: HonoredPassenger
   effects:
   - !type:JobRequirementLoadoutEffect
     requirement:
       !type:RoleTimeRequirement
       role: JobPassenger
-      time: 10h # silly reward for people who play Assistant a lot
+      time: 10h # silly reward for people who play Passenger a lot
 
-# Head of Assistants (for grey mantle)
+# Head of Passengers (for grey mantle)
 - type: loadoutEffectGroup
   id: MasterGrey
   effects:
@@ -16,7 +16,7 @@
     requirement:
       !type:RoleTimeRequirement
       role: JobPassenger
-      time: 20h # fun mantle for the most experienced assistants
+      time: 20h # fun mantle for the most experienced passengers
 
 # Neck
 - type: loadout
@@ -25,7 +25,7 @@
     neck: ClothingNeckOldMantle
   effects:
   - !type:GroupLoadoutEffect
-    proto: HonoredAssistant
+    proto: HonoredPassenger
 
 - type: loadout
   id: Mantle
@@ -45,7 +45,7 @@
   id: GreyCowboy
   effects:
   - !type:GroupLoadoutEffect
-    proto: HonoredAssistant
+    proto: HonoredPassenger
   equipment:
     head: ClothingHeadHatCowboyGrey
 
@@ -53,7 +53,7 @@
   id: GreyBandana
   effects:
   - !type:GroupLoadoutEffect
-    proto: HonoredAssistant
+    proto: HonoredPassenger
   equipment:
     head: ClothingHeadBandGrey
 
@@ -61,7 +61,7 @@
   id: GreyFlatcap
   effects:
   - !type:GroupLoadoutEffect
-    proto: HonoredAssistant
+    proto: HonoredPassenger
   equipment:
     head: ClothingHeadHatGreyFlatcap
 
@@ -69,7 +69,7 @@
   id: GreyCap
   effects:
   - !type:GroupLoadoutEffect
-    proto: HonoredAssistant
+    proto: HonoredPassenger
   equipment:
     head: ClothingHeadHatGreysoft
 
@@ -77,7 +77,7 @@
   id: CorpoCap
   effects:
   - !type:GroupLoadoutEffect
-    proto: HonoredAssistant
+    proto: HonoredPassenger
   equipment:
     head: ClothingHeadHatCorpsoft
 
@@ -93,7 +93,7 @@
   id: GreyFedoraA
   effects:
   - !type:GroupLoadoutEffect
-    proto: HonoredAssistant
+    proto: HonoredPassenger
   equipment:
     head: ClothingHeadHatFedoraGrey
 
@@ -117,7 +117,7 @@
   id: BrimHat
   effects:
   - !type:GroupLoadoutEffect
-    proto: HonoredAssistant
+    proto: HonoredPassenger
   equipment:
     head: ClothingHeadHatBrimHat
 
@@ -125,7 +125,7 @@
   id: FeatheredHat
   effects:
   - !type:GroupLoadoutEffect
-    proto: HonoredAssistant
+    proto: HonoredPassenger
   equipment:
     head: ClothingHeadHatFeatheredHat
 
@@ -134,32 +134,32 @@
   id: CheapSunnies
   effects:
   - !type:GroupLoadoutEffect
-    proto: HonoredAssistant
+    proto: HonoredPassenger
   equipment:
     eyes: ClothingEyesGlassesCheapSunglasses
 
 - type: loadout
-  id: AssistantNoirGlasses
+  id: PassengerNoirGlasses
   equipment:
-    Eyes: ClothingEyesGlassesNoirAssistant
+    Eyes: ClothingEyesGlassesNoirPassenger
   effects:
   - !type:GroupLoadoutEffect
-    proto: HonoredAssistant
+    proto: HonoredPassenger
 
 # Mask
 - type: loadout
   id: NeckGaiter
   effects:
   - !type:GroupLoadoutEffect
-    proto: HonoredAssistant
+    proto: HonoredPassenger
   equipment:
     mask: ClothingMaskNeckGaiter
 
 - type: loadout
-  id: AssistantFace
+  id: PassengerFace
   effects:
   - !type:GroupLoadoutEffect
-    proto: HonoredAssistant
+    proto: HonoredPassenger
   equipment:
     mask: ClothingMaskGas
 
@@ -169,7 +169,7 @@
   id: GreyJumpsuit
   effects:
   - !type:GroupLoadoutEffect
-    proto: HonoredAssistant
+    proto: HonoredPassenger
   equipment:
     jumpsuit: ClothingUniformJumpsuitColorGrey
 
@@ -177,7 +177,7 @@
   id: GreyJumpskirt
   effects:
   - !type:GroupLoadoutEffect
-    proto: HonoredAssistant
+    proto: HonoredPassenger
   equipment:
     jumpsuit: ClothingUniformJumpskirtColorGrey
 
@@ -185,7 +185,7 @@
   id: WhiteJumpsuitLoadout
   effects:
   - !type:GroupLoadoutEffect
-    proto: HonoredAssistant
+    proto: HonoredPassenger
   equipment:
     jumpsuit: ClothingUniformJumpsuitColorWhite
 
@@ -193,7 +193,7 @@
   id: WhiteJumpskirtLoadout
   effects:
   - !type:GroupLoadoutEffect
-    proto: HonoredAssistant
+    proto: HonoredPassenger
   equipment:
     jumpsuit: ClothingUniformJumpskirtColorWhite
 
@@ -201,7 +201,7 @@
   id: BlackJumpsuitLoadout
   effects:
   - !type:GroupLoadoutEffect
-    proto: HonoredAssistant
+    proto: HonoredPassenger
   equipment:
     jumpsuit: ClothingUniformJumpsuitColorBlack
 
@@ -209,7 +209,7 @@
   id: BlackJumpskirtLoadout
   effects:
   - !type:GroupLoadoutEffect
-    proto: HonoredAssistant
+    proto: HonoredPassenger
   equipment:
     jumpsuit: ClothingUniformJumpskirtColorBlack
 
@@ -217,7 +217,7 @@
   id: BlueJumpsuitLoadout
   effects:
   - !type:GroupLoadoutEffect
-    proto: HonoredAssistant
+    proto: HonoredPassenger
   equipment:
     jumpsuit: ClothingUniformJumpsuitColorBlue
 
@@ -225,7 +225,7 @@
   id: BlueJumpskirtLoadout
   effects:
   - !type:GroupLoadoutEffect
-    proto: HonoredAssistant
+    proto: HonoredPassenger
   equipment:
     jumpsuit: ClothingUniformJumpskirtColorBlue
 
@@ -233,7 +233,7 @@
   id: DarkBlueJumpsuitLoadout
   effects:
   - !type:GroupLoadoutEffect
-    proto: HonoredAssistant
+    proto: HonoredPassenger
   equipment:
     jumpsuit: ClothingUniformJumpsuitColorDarkBlue
 
@@ -241,7 +241,7 @@
   id: DarkBlueJumpskirtLoadout
   effects:
   - !type:GroupLoadoutEffect
-    proto: HonoredAssistant
+    proto: HonoredPassenger
   equipment:
     jumpsuit: ClothingUniformJumpskirtColorDarkBlue
 
@@ -249,7 +249,7 @@
   id: TealJumpsuitLoadout
   effects:
   - !type:GroupLoadoutEffect
-    proto: HonoredAssistant
+    proto: HonoredPassenger
   equipment:
     jumpsuit: ClothingUniformJumpsuitColorTeal
 
@@ -257,7 +257,7 @@
   id: TealJumpskirtLoadout
   effects:
   - !type:GroupLoadoutEffect
-    proto: HonoredAssistant
+    proto: HonoredPassenger
   equipment:
     jumpsuit: ClothingUniformJumpskirtColorTeal
 
@@ -265,7 +265,7 @@
   id: GreenJumpsuitLoadout
   effects:
   - !type:GroupLoadoutEffect
-    proto: HonoredAssistant
+    proto: HonoredPassenger
   equipment:
     jumpsuit: ClothingUniformJumpsuitColorGreen
 
@@ -273,7 +273,7 @@
   id: GreenJumpskirtLoadout
   effects:
   - !type:GroupLoadoutEffect
-    proto: HonoredAssistant
+    proto: HonoredPassenger
   equipment:
     jumpsuit: ClothingUniformJumpskirtColorGreen
 
@@ -281,7 +281,7 @@
   id: DarkGreenJumpsuitLoadout
   effects:
   - !type:GroupLoadoutEffect
-    proto: HonoredAssistant
+    proto: HonoredPassenger
   equipment:
     jumpsuit: ClothingUniformJumpsuitColorDarkGreen
 
@@ -289,7 +289,7 @@
   id: DarkGreenJumpskirtLoadout
   effects:
   - !type:GroupLoadoutEffect
-    proto: HonoredAssistant
+    proto: HonoredPassenger
   equipment:
     jumpsuit: ClothingUniformJumpskirtColorDarkGreen
 
@@ -297,7 +297,7 @@
   id: OrangeJumpsuitLoadout
   effects:
   - !type:GroupLoadoutEffect
-    proto: HonoredAssistant
+    proto: HonoredPassenger
   equipment:
     jumpsuit: ClothingUniformJumpsuitColorOrange
 
@@ -305,7 +305,7 @@
   id: OrangeJumpskirtLoadout
   effects:
   - !type:GroupLoadoutEffect
-    proto: HonoredAssistant
+    proto: HonoredPassenger
   equipment:
     jumpsuit: ClothingUniformJumpskirtColorOrange
 
@@ -313,7 +313,7 @@
   id: PinkJumpsuitLoadout
   effects:
   - !type:GroupLoadoutEffect
-    proto: HonoredAssistant
+    proto: HonoredPassenger
   equipment:
     jumpsuit: ClothingUniformJumpsuitColorPink
 
@@ -321,7 +321,7 @@
   id: PinkJumpskirtLoadout
   effects:
   - !type:GroupLoadoutEffect
-    proto: HonoredAssistant
+    proto: HonoredPassenger
   equipment:
     jumpsuit: ClothingUniformJumpskirtColorPink
 
@@ -329,7 +329,7 @@
   id: RedJumpsuitLoadout
   effects:
   - !type:GroupLoadoutEffect
-    proto: HonoredAssistant
+    proto: HonoredPassenger
   equipment:
     jumpsuit: ClothingUniformJumpsuitColorRed
 
@@ -337,7 +337,7 @@
   id: RedJumpskirtLoadout
   effects:
   - !type:GroupLoadoutEffect
-    proto: HonoredAssistant
+    proto: HonoredPassenger
   equipment:
     jumpsuit: ClothingUniformJumpskirtColorRed
 
@@ -345,7 +345,7 @@
   id: YellowJumpsuitLoadout
   effects:
   - !type:GroupLoadoutEffect
-    proto: HonoredAssistant
+    proto: HonoredPassenger
   equipment:
     jumpsuit: ClothingUniformJumpsuitColorYellow
 
@@ -353,7 +353,7 @@
   id: YellowJumpskirtLoadout
   effects:
   - !type:GroupLoadoutEffect
-    proto: HonoredAssistant
+    proto: HonoredPassenger
   equipment:
     jumpsuit: ClothingUniformJumpskirtColorYellow
 
@@ -361,7 +361,7 @@
   id: PurpleJumpsuitLoadout
   effects:
   - !type:GroupLoadoutEffect
-    proto: HonoredAssistant
+    proto: HonoredPassenger
   equipment:
     jumpsuit: ClothingUniformJumpsuitColorPurple
 
@@ -369,7 +369,7 @@
   id: PurpleJumpskirtLoadout
   effects:
   - !type:GroupLoadoutEffect
-    proto: HonoredAssistant
+    proto: HonoredPassenger
   equipment:
     jumpsuit: ClothingUniformJumpskirtColorPurple
 
@@ -377,7 +377,7 @@
   id: LightBrownJumpsuitLoadout
   effects:
   - !type:GroupLoadoutEffect
-    proto: HonoredAssistant
+    proto: HonoredPassenger
   equipment:
     jumpsuit: ClothingUniformJumpsuitColorLightBrown
 
@@ -385,7 +385,7 @@
   id: LightBrownJumpskirtLoadout
   effects:
   - !type:GroupLoadoutEffect
-    proto: HonoredAssistant
+    proto: HonoredPassenger
   equipment:
     jumpsuit: ClothingUniformJumpskirtColorLightBrown
 
@@ -393,7 +393,7 @@
   id: BrownJumpsuitLoadout
   effects:
   - !type:GroupLoadoutEffect
-    proto: HonoredAssistant
+    proto: HonoredPassenger
   equipment:
     jumpsuit: ClothingUniformJumpsuitColorBrown
 
@@ -401,7 +401,7 @@
   id: BrownJumpskirtLoadout
   effects:
   - !type:GroupLoadoutEffect
-    proto: HonoredAssistant
+    proto: HonoredPassenger
   equipment:
     jumpsuit: ClothingUniformJumpskirtColorBrown
 
@@ -409,7 +409,7 @@
   id: MaroonJumpsuitLoadout
   effects:
   - !type:GroupLoadoutEffect
-    proto: HonoredAssistant
+    proto: HonoredPassenger
   equipment:
     jumpsuit: ClothingUniformJumpsuitColorMaroon
 
@@ -417,7 +417,7 @@
   id: MaroonJumpskirtLoadout
   effects:
   - !type:GroupLoadoutEffect
-    proto: HonoredAssistant
+    proto: HonoredPassenger
   equipment:
     jumpsuit: ClothingUniformJumpskirtColorMaroon
 
@@ -425,7 +425,7 @@
   id: BodysuitJeans
   effects:
   - !type:GroupLoadoutEffect
-    proto: HonoredAssistant
+    proto: HonoredPassenger
   equipment:
     jumpsuit: BodysuitJeansUniformSuit
 
@@ -433,7 +433,7 @@
   id: CoolTanktop
   effects:
   - !type:GroupLoadoutEffect
-    proto: HonoredAssistant
+    proto: HonoredPassenger
   equipment:
     jumpsuit: CoolTanktopUniformSuit
 
@@ -457,7 +457,7 @@
   id: MessyDressShirt
   effects:
   - !type:GroupLoadoutEffect
-    proto: HonoredAssistant
+    proto: HonoredPassenger
   equipment:
     jumpsuit: MessyDressShirtUniformSuit
 
@@ -465,7 +465,7 @@
   id: OldWomanDress
   effects:
   - !type:GroupLoadoutEffect
-    proto: HonoredAssistant
+    proto: HonoredPassenger
   equipment:
     jumpsuit: OldWomanUniformSuit
 
@@ -489,7 +489,7 @@
   id: TieDye
   effects:
   - !type:GroupLoadoutEffect
-    proto: HonoredAssistant
+    proto: HonoredPassenger
   equipment:
     jumpsuit: TieDyeUniformSuit
 
@@ -504,18 +504,18 @@
 - type: loadout
   id: BasicJumpsuit
   equipment:
-    jumpsuit: ClothingUniformJumpsuitAssistant
+    jumpsuit: ClothingUniformJumpsuitPassenger
 
 - type: loadout
   id: BasicJumpskirt
   equipment:
-    jumpsuit: ClothingUniformJumpskirtAssistant
+    jumpsuit: ClothingUniformJumpskirtPassenger
 
 - type: loadout
   id: RainbowJumpsuit
   effects:
   - !type:GroupLoadoutEffect
-    proto: HonoredAssistant
+    proto: HonoredPassenger
   equipment:
     jumpsuit: ClothingUniformColorRainbow
 
@@ -523,7 +523,7 @@
   id: RainbowJumpskirt
   effects:
   - !type:GroupLoadoutEffect
-    proto: HonoredAssistant
+    proto: HonoredPassenger
   equipment:
     jumpsuit: ClothingUniformJumpskirtColorRainbow
 
@@ -531,7 +531,7 @@
   id: AncientJumpsuit
   effects:
   - !type:GroupLoadoutEffect
-    proto: HonoredAssistant
+    proto: HonoredPassenger
   equipment:
     jumpsuit: ClothingUniformJumpsuitAncient
 
@@ -562,23 +562,23 @@
   id: GreyGloves
   effects:
   - !type:GroupLoadoutEffect
-    proto: HonoredAssistant
+    proto: HonoredPassenger
   equipment:
     gloves: ClothingHandsGlovesColorGray
 
 - type: loadout
-  id: AssistantMittens
+  id: PassengerMittens
   effects:
   - !type:GroupLoadoutEffect
-    proto: HonoredAssistant
+    proto: HonoredPassenger
   equipment:
     gloves: ClothingHandsMittensColorYellow # Starlight, replace with fingerless budget insuls
 
 - type: loadout
-  id: AssistantGloves
+  id: PassengerGloves
   effects:
   - !type:GroupLoadoutEffect
-    proto: HonoredAssistant
+    proto: HonoredPassenger
   equipment:
     gloves: ClothingHandsGlovesFingerlessBudget
 
@@ -587,7 +587,7 @@
   id: GreyHoodieA
   effects:
   - !type:GroupLoadoutEffect
-    proto: HonoredAssistant
+    proto: HonoredPassenger
   equipment:
     outerClothing: ClothingOuterHoodieGrey
 
@@ -595,7 +595,7 @@
   id: GreyTrenchcoatA
   effects:
   - !type:GroupLoadoutEffect
-    proto: HonoredAssistant
+    proto: HonoredPassenger
   equipment:
     outerClothing: ClothingOuterCoatGreytiderTrenchcoat
 
@@ -616,7 +616,7 @@
     outerClothing: ClothingOuterRedLeather
 
 - type: loadout
-  id: AssistantWintercoat
+  id: PassengerWintercoat
   equipment:
     outerClothing: ClothingOuterWinterColorGray
 

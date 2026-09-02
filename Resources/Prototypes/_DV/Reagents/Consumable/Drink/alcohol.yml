@@ -1,0 +1,41 @@
+- type: reagent
+  id: Firebolt
+  name: reagent-name-firebolt
+  parent: BaseAlcohol
+  desc: reagent-desc-firebolt
+  physicalDesc: reagent-physical-desc-spicy
+  flavor: firebolt
+  color: "#f29219"
+  metamorphicSprite:
+    sprite: _DV/Objects/Consumable/Drinks/firebolt.rsi
+    state: icon_empty
+  metamorphicMaxFillLevels: 5
+  metamorphicFillBaseName: fill-
+  metamorphicChangeColor: true
+  metabolisms:
+    Digestion:
+      metabolites:
+        Ethanol: 0.4
+    # starlight - dwarf drink effects
+      effects:
+      - !type:ModifyStatusEffect
+        effectProto: BonusArmorFirebolt
+        time: 3
+        conditions:
+        - !type:MetabolizerTypeCondition
+          type: [ Dwarf ]
+    # end starlight
+
+- type: entity
+  parent: BonusArmorDwarfGeneric
+  id: BonusArmorFirebolt
+  name: 5% resistance to Heat and Blunt damage
+  components:
+  - type: BonusArmorStatusEffect
+    modifiers:
+      coefficients:
+        Blunt: 0.95
+        Heat: 0.95
+  - type: SoundStatusEffect
+    startSound:
+      path: /Audio/_Starlight/Magic/dwarf-buff-generic.ogg

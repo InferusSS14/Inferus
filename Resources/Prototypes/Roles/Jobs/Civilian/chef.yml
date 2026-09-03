@@ -20,7 +20,7 @@
   alternateTitles:
   - job-alt-chef-cook
   - job-alt-chef-culinary
-  - job-alt-chef-butcher 
+  - job-alt-chef-butcher
 
 - type: startingGear
   id: ChefGear

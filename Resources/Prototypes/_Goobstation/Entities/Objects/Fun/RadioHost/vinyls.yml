@@ -1,19 +1,19 @@
-  # Macleod Songs
+# Macleod Songs
 - type: entity
   parent: BaseVinylDisc
   id: VinylAirportLounge
   name: "vinyl: Airport Lounge"
   description: "A long, relaxing song reminiscent of elevator music. By: Kevin MacLeod" #SL  Addition
   components:
-  - type: Sprite
-    state: default
-    layers:
-    - state: default
-    - state: label
-      color: "#7860cf"
-  - type: Vinyl
-    song:
-      path: /Audio/_Goobstation/RadioStation/Vinyls/music/KevinMacleod/AirportLounge.ogg
+    - type: Sprite
+      state: default
+      layers:
+        - state: default
+        - state: label
+          color: "#7860cf"
+    - type: Vinyl
+      song:
+        path: /Audio/_Goobstation/RadioStation/Vinyls/music/KevinMacleod/AirportLounge.ogg
 
 - type: entity
   parent: BaseVinylDisc
@@ -21,15 +21,15 @@
   name: "vinyl: Boogie Part"
   description: "A funky jazz song that makes you want to boogie. By: Kevin MacLeod" #SL  Addition
   components:
-  - type: Sprite
-    state: default
-    layers:
-    - state: default
-    - state: label
-      color: "#179682"
-  - type: Vinyl
-    song:
-      path: /Audio/_Goobstation/RadioStation/Vinyls/music/KevinMacleod/BoogieParty.ogg
+    - type: Sprite
+      state: default
+      layers:
+        - state: default
+        - state: label
+          color: "#179682"
+    - type: Vinyl
+      song:
+        path: /Audio/_Goobstation/RadioStation/Vinyls/music/KevinMacleod/BoogieParty.ogg
 
 - type: entity
   parent: BaseVinylDisc
@@ -37,15 +37,15 @@
   name: "vinyl: Burn The World Waltz"
   description: "Heavy metal and brimstone. By: Kevin MacLeod" #SL  Addition
   components:
-  - type: Sprite
-    state: default
-    layers:
-    - state: default
-    - state: label
-      color: "#623544"
-  - type: Vinyl
-    song:
-      path: /Audio/_Goobstation/RadioStation/Vinyls/music/KevinMacleod/BurnTheWorldWaltz.ogg
+    - type: Sprite
+      state: default
+      layers:
+        - state: default
+        - state: label
+          color: "#623544"
+    - type: Vinyl
+      song:
+        path: /Audio/_Goobstation/RadioStation/Vinyls/music/KevinMacleod/BurnTheWorldWaltz.ogg
 
 - type: entity
   parent: BaseVinylDisc
@@ -53,15 +53,15 @@
   name: "vinyl: Corncob"
   description: "A fast pace country tune. By: Kevin MacLeod" #SL  Addition
   components:
-  - type: Sprite
-    state: default
-    layers:
-    - state: default
-    - state: label
-      color: "#06e22b"
-  - type: Vinyl
-    song:
-      path: /Audio/_Goobstation/RadioStation/Vinyls/music/KevinMacleod/Corncob.ogg
+    - type: Sprite
+      state: default
+      layers:
+        - state: default
+        - state: label
+          color: "#06e22b"
+    - type: Vinyl
+      song:
+        path: /Audio/_Goobstation/RadioStation/Vinyls/music/KevinMacleod/Corncob.ogg
 
 - type: entity
   parent: BaseVinylDisc
@@ -69,15 +69,15 @@
   name: "vinyl: Deadly Roulette"
   description: "A slow pace basey tune. By: Kevin MacLeod" #SL  Addition
   components:
-  - type: Sprite
-    state: default
-    layers:
-    - state: default
-    - state: label
-      color: "#d4c0e7"
-  - type: Vinyl
-    song:
-      path: /Audio/_Goobstation/RadioStation/Vinyls/music/KevinMacleod/DeadlyRoulette.ogg
+    - type: Sprite
+      state: default
+      layers:
+        - state: default
+        - state: label
+          color: "#d4c0e7"
+    - type: Vinyl
+      song:
+        path: /Audio/_Goobstation/RadioStation/Vinyls/music/KevinMacleod/DeadlyRoulette.ogg
 
 - type: entity
   parent: BaseVinylDisc
@@ -85,15 +85,15 @@
   name: "vinyl: Feral Angel Waltz"
   description: "A slow pace rock waltz. By: Kevin MacLeod" #SL  Addition
   components:
-  - type: Sprite
-    state: default
-    layers:
-    - state: default
-    - state: label
-      color: "#fe9c24"
-  - type: Vinyl
-    song:
-      path: /Audio/_Goobstation/RadioStation/Vinyls/music/KevinMacleod/FeralAngelWaltz.ogg
+    - type: Sprite
+      state: default
+      layers:
+        - state: default
+        - state: label
+          color: "#fe9c24"
+    - type: Vinyl
+      song:
+        path: /Audio/_Goobstation/RadioStation/Vinyls/music/KevinMacleod/FeralAngelWaltz.ogg
 
 - type: entity
   parent: BaseVinylDisc
@@ -101,15 +101,15 @@
   name: "vinyl: Jingle Bells"
   description: "The classic festive tune. By: Kevin MacLeod" #SL  Addition
   components:
-  - type: Sprite
-    state: default
-    layers:
-    - state: default
-    - state: label
-      color: "#fc5442"
-  - type: Vinyl
-    song:
-      path: /Audio/_Goobstation/RadioStation/Vinyls/music/KevinMacleod/JingleBells.ogg
+    - type: Sprite
+      state: default
+      layers:
+        - state: default
+        - state: label
+          color: "#fc5442"
+    - type: Vinyl
+      song:
+        path: /Audio/_Goobstation/RadioStation/Vinyls/music/KevinMacleod/JingleBells.ogg
 
 - type: entity
   parent: BaseVinylDisc
@@ -117,15 +117,15 @@
   name: "vinyl: Late Night Radio"
   description: "A slow pace jazzy tune. By: Kevin MacLeod" #SL  Addition
   components:
-  - type: Sprite
-    state: default
-    layers:
-    - state: default
-    - state: label
-      color: "#1c5121"
-  - type: Vinyl
-    song:
-      path: /Audio/_Goobstation/RadioStation/Vinyls/music/KevinMacleod/LateNightRadio.ogg
+    - type: Sprite
+      state: default
+      layers:
+        - state: default
+        - state: label
+          color: "#1c5121"
+    - type: Vinyl
+      song:
+        path: /Audio/_Goobstation/RadioStation/Vinyls/music/KevinMacleod/LateNightRadio.ogg
 
 - type: entity
   parent: BaseVinylDisc
@@ -133,15 +133,15 @@
   name: "vinyl: Mesmerizing Galaxy Loop"
   description: "A hypnotic eletronic tune. By: Kevin MacLeod" #SL  Addition
   components:
-  - type: Sprite
-    state: default
-    layers:
-    - state: default
-    - state: label
-      color: "#9515b8"
-  - type: Vinyl
-    song:
-      path: /Audio/_Goobstation/RadioStation/Vinyls/music/KevinMacleod/MesmerizingGalaxyLoop.ogg
+    - type: Sprite
+      state: default
+      layers:
+        - state: default
+        - state: label
+          color: "#9515b8"
+    - type: Vinyl
+      song:
+        path: /Audio/_Goobstation/RadioStation/Vinyls/music/KevinMacleod/MesmerizingGalaxyLoop.ogg
 
 - type: entity
   parent: BaseVinylDisc
@@ -149,15 +149,15 @@
   name: "vinyl: Night In Venice"
   description: "A slow pace jazzy tune with a romantic vibe. By: Kevin MacLeod" #SL  Addition
   components:
-  - type: Sprite
-    state: default
-    layers:
-    - state: default
-    - state: label
-      color: "#20c4ea"
-  - type: Vinyl
-    song:
-      path: /Audio/_Goobstation/RadioStation/Vinyls/music/KevinMacleod/NightInVenice.ogg
+    - type: Sprite
+      state: default
+      layers:
+        - state: default
+        - state: label
+          color: "#20c4ea"
+    - type: Vinyl
+      song:
+        path: /Audio/_Goobstation/RadioStation/Vinyls/music/KevinMacleod/NightInVenice.ogg
 
 - type: entity
   parent: BaseVinylAI
@@ -165,17 +165,17 @@
   name: "vinyl: Space Jazz"
   description: "A slow pace jazzy tune reminiscent of elevator music. By: Kevin MacLeod" #SL  Addition
   components:
-  # Starlight-start
-  - type: Sprite
-    state: default
-    layers:
-    - state: default
-    - state: label
-      color: "#67659e"
-  # Starlight-end
-  - type: Vinyl
-    song:
-      path: /Audio/_Goobstation/RadioStation/Vinyls/music/KevinMacleod/SpaceJazz.ogg
+    # Starlight-start
+    - type: Sprite
+      state: default
+      layers:
+        - state: default
+        - state: label
+          color: "#67659e"
+    # Starlight-end
+    - type: Vinyl
+      song:
+        path: /Audio/_Goobstation/RadioStation/Vinyls/music/KevinMacleod/SpaceJazz.ogg
 
 - type: entity
   parent: BaseVinylDisc
@@ -183,16 +183,15 @@
   name: "vinyl: Vibing Over Venus"
   description: "A slow pace jazzy tune. By: Kevin MacLeod" #SL  Addition
   components:
-  - type: Sprite
-    state: default
-    layers:
-    - state: default
-    - state: label
-      color: "#f2f0d7"
-  - type: Vinyl
-    song:
-      path: /Audio/_Goobstation/RadioStation/Vinyls/music/KevinMacleod/VibingOverVenus.ogg
-
+    - type: Sprite
+      state: default
+      layers:
+        - state: default
+        - state: label
+          color: "#f2f0d7"
+    - type: Vinyl
+      song:
+        path: /Audio/_Goobstation/RadioStation/Vinyls/music/KevinMacleod/VibingOverVenus.ogg
 
   # Christmas
 - type: entity
@@ -201,16 +200,15 @@
   name: "vinyl: Christmas Song"
   description: "A festive tune about giving your heart away to someone special. By: Goonstation" #SL  Addition
   components:
-  - type: Sprite
-    state: default
-    layers:
-    - state: default
-    - state: label
-      color: "#9aca6a"
-  - type: Vinyl
-    song:
-      path: /Audio/_Goobstation/RadioStation/Vinyls/music/goonstation/christmassong.ogg
-
+    - type: Sprite
+      state: default
+      layers:
+        - state: default
+        - state: label
+          color: "#9aca6a"
+    - type: Vinyl
+      song:
+        path: /Audio/_Goobstation/RadioStation/Vinyls/music/goonstation/christmassong.ogg
 
 # PM Music Classical Songs
 - type: entity
@@ -219,15 +217,15 @@
   name: "vinyl: Also Sprach Zarathustra"
   description: "A classical piece that slowly builds to an climactic crescendo. By: PM Music" #SL  Addition
   components:
-  - type: Sprite
-    state: default
-    layers:
-    - state: default
-    - state: label
-      color: "#fd99b8"
-  - type: Vinyl
-    song:
-      path: /Audio/_Goobstation/RadioStation/Vinyls/music/PMMusic/AlsoSprachZarathustra.ogg
+    - type: Sprite
+      state: default
+      layers:
+        - state: default
+        - state: label
+          color: "#fd99b8"
+    - type: Vinyl
+      song:
+        path: /Audio/_Goobstation/RadioStation/Vinyls/music/PMMusic/AlsoSprachZarathustra.ogg
 
 - type: entity
   parent: BaseVinylDisc
@@ -235,15 +233,15 @@
   name: "vinyl: Russian Dance"
   description: "A classical piece with a fast pace and a lively rhythm. By: PM Music" #SL  Addition
   components:
-  - type: Sprite
-    state: default
-    layers:
-    - state: default
-    - state: label
-      color: "#393c39"
-  - type: Vinyl
-    song:
-      path: /Audio/_Goobstation/RadioStation/Vinyls/music/PMMusic/RussianDance.ogg
+    - type: Sprite
+      state: default
+      layers:
+        - state: default
+        - state: label
+          color: "#393c39"
+    - type: Vinyl
+      song:
+        path: /Audio/_Goobstation/RadioStation/Vinyls/music/PMMusic/RussianDance.ogg
 
 - type: entity
   parent: BaseVinylDisc
@@ -251,15 +249,15 @@
   name: "vinyl: The Flower Duet"
   description: "A classical opera duet. By: PM Music" #SL  Addition
   components:
-  - type: Sprite
-    state: default
-    layers:
-    - state: default
-    - state: label
-      color: "#3383c4"
-  - type: Vinyl
-    song:
-      path: /Audio/_Goobstation/RadioStation/Vinyls/music/PMMusic/TheFlowerDuet.ogg
+    - type: Sprite
+      state: default
+      layers:
+        - state: default
+        - state: label
+          color: "#3383c4"
+    - type: Vinyl
+      song:
+        path: /Audio/_Goobstation/RadioStation/Vinyls/music/PMMusic/TheFlowerDuet.ogg
 
 - type: entity
   parent: BaseVinylDisc
@@ -267,15 +265,15 @@
   name: "vinyl: Vivaldi's Winter"
   description: "A classical tune from Vivaldi, representing the winter season. By: PM Music" #SL  Addition
   components:
-  - type: Sprite
-    state: default
-    layers:
-    - state: default
-    - state: label
-      color: "#bfd3e2"
-  - type: Vinyl
-    song:
-      path: /Audio/_Goobstation/RadioStation/Vinyls/music/PMMusic/WinterVivaldi.ogg
+    - type: Sprite
+      state: default
+      layers:
+        - state: default
+        - state: label
+          color: "#bfd3e2"
+    - type: Vinyl
+      song:
+        path: /Audio/_Goobstation/RadioStation/Vinyls/music/PMMusic/WinterVivaldi.ogg
 
 - type: entity
   parent: BaseVinylDisc
@@ -283,15 +281,15 @@
   name: "vinyl: Cello Suite"
   description: "A classical cello solo. By: PM Music" #SL  Addition
   components:
-  - type: Sprite
-    state: default
-    layers:
-    - state: default
-    - state: label
-      color: "#07db3c"
-  - type: Vinyl
-    song:
-      path: /Audio/_Goobstation/RadioStation/Vinyls/music/PMMusic/CelloSuite.ogg
+    - type: Sprite
+      state: default
+      layers:
+        - state: default
+        - state: label
+          color: "#07db3c"
+    - type: Vinyl
+      song:
+        path: /Audio/_Goobstation/RadioStation/Vinyls/music/PMMusic/CelloSuite.ogg
 
 - type: entity
   parent: BaseVinylDisc
@@ -299,15 +297,15 @@
   name: "vinyl: Ride Of The Valkyries"
   description: "A classical piece best paired with the charging of cavalry. By: PM Music" #SL  Addition
   components:
-  - type: Sprite
-    state: default
-    layers:
-    - state: default
-    - state: label
-      color: "#2202c6"
-  - type: Vinyl
-    song:
-      path: /Audio/_Goobstation/RadioStation/Vinyls/music/PMMusic/RideOfTheValkyries.ogg
+    - type: Sprite
+      state: default
+      layers:
+        - state: default
+        - state: label
+          color: "#2202c6"
+    - type: Vinyl
+      song:
+        path: /Audio/_Goobstation/RadioStation/Vinyls/music/PMMusic/RideOfTheValkyries.ogg
 
 - type: entity
   parent: BaseVinylDisc
@@ -315,16 +313,15 @@
   name: "vinyl: Romeo And Juliet"
   description: "A classical romantic piece. By: PM Music" #SL  Addition
   components:
-  - type: Sprite
-    state: default
-    layers:
-    - state: default
-    - state: label
-      color: "#638414"
-  - type: Vinyl
-    song:
-      path: /Audio/_Goobstation/RadioStation/Vinyls/music/PMMusic/RomeoAndJuliet.ogg
-
+    - type: Sprite
+      state: default
+      layers:
+        - state: default
+        - state: label
+          color: "#638414"
+    - type: Vinyl
+      song:
+        path: /Audio/_Goobstation/RadioStation/Vinyls/music/PMMusic/RomeoAndJuliet.ogg
 
   # Loyalty Freak Music
 - type: entity
@@ -333,9 +330,9 @@
   name: "vinyl: Maxi"
   description: "An exciting rock/metal song. By: Goonstation" #SL  Addition
   components:
-  - type: Vinyl
-    song:
-      path: /Audio/_Goobstation/RadioStation/Vinyls/music/goonstation/maxi.ogg
+    - type: Vinyl
+      song:
+        path: /Audio/_Goobstation/RadioStation/Vinyls/music/goonstation/maxi.ogg
 
 - type: entity
   parent: BaseVinylDevil
@@ -343,9 +340,9 @@
   name: "vinyl: Xtra"
   description: "An exciting rock/metal song. By: Goonstation" #SL  Addition
   components:
-  - type: Vinyl
-    song:
-      path: /Audio/_Goobstation/RadioStation/Vinyls/music/goonstation/xtra.ogg
+    - type: Vinyl
+      song:
+        path: /Audio/_Goobstation/RadioStation/Vinyls/music/goonstation/xtra.ogg
 
 - type: entity
   parent: BaseVinylDevil
@@ -353,9 +350,9 @@
   name: "vinyl: Giga"
   description: "An exciting rock/metal song. By: Goonstation" #SL  Addition
   components:
-  - type: Vinyl
-    song:
-      path: /Audio/_Goobstation/RadioStation/Vinyls/music/goonstation/giga.ogg
+    - type: Vinyl
+      song:
+        path: /Audio/_Goobstation/RadioStation/Vinyls/music/goonstation/giga.ogg
 
 - type: entity
   parent: BaseVinylDisc
@@ -363,15 +360,15 @@
   name: "vinyl: Everyone Is So Alive"
   description: "A slow pace electronic tune. By: Goonstation" #SL  Addition
   components:
-  - type: Sprite
-    state: default
-    layers:
-    - state: default
-    - state: label
-      color: "#f048e1"
-  - type: Vinyl
-    song:
-      path: /Audio/_Goobstation/RadioStation/Vinyls/music/goonstation/everyone_is_so_alive.ogg
+    - type: Sprite
+      state: default
+      layers:
+        - state: default
+        - state: label
+          color: "#f048e1"
+    - type: Vinyl
+      song:
+        path: /Audio/_Goobstation/RadioStation/Vinyls/music/goonstation/everyone_is_so_alive.ogg
 
 - type: entity
   parent: BaseVinylDisc
@@ -379,15 +376,15 @@
   name: "vinyl: High Technologic Beat"
   description: "A fast pace electronic dance beat. By: Goonstation" #SL  Addition
   components:
-  - type: Sprite
-    state: default
-    layers:
-    - state: default
-    - state: label
-      color: "#a6f9ef"
-  - type: Vinyl
-    song:
-      path: /Audio/_Goobstation/RadioStation/Vinyls/music/goonstation/high_technologic_beat.ogg
+    - type: Sprite
+      state: default
+      layers:
+        - state: default
+        - state: label
+          color: "#a6f9ef"
+    - type: Vinyl
+      song:
+        path: /Audio/_Goobstation/RadioStation/Vinyls/music/goonstation/high_technologic_beat.ogg
 
 - type: entity
   parent: BaseVinylDisc
@@ -395,15 +392,15 @@
   name: "vinyl: After Party"
   description: "A slow pace electronic tune. By: Goonstation" #SL  Addition
   components:
-  - type: Sprite
-    state: default
-    layers:
-    - state: default
-    - state: label
-      color: "#d9941c"
-  - type: Vinyl
-    song:
-      path: /Audio/_Goobstation/RadioStation/Vinyls/music/goonstation/after_party.ogg
+    - type: Sprite
+      state: default
+      layers:
+        - state: default
+        - state: label
+          color: "#d9941c"
+    - type: Vinyl
+      song:
+        path: /Audio/_Goobstation/RadioStation/Vinyls/music/goonstation/after_party.ogg
 
 - type: entity
   parent: BaseVinylDisc
@@ -411,15 +408,15 @@
   name: "vinyl: It Feels Good To Be Alive Too"
   description: "A fast pace electronic tune. By: Goonstation" #SL  Addition
   components:
-  - type: Sprite
-    state: default
-    layers:
-    - state: default
-    - state: label
-      color: "#bbd0e1"
-  - type: Vinyl
-    song:
-      path: /Audio/_Goobstation/RadioStation/Vinyls/music/goonstation/it_feels_good_to_be_alive_too.ogg
+    - type: Sprite
+      state: default
+      layers:
+        - state: default
+        - state: label
+          color: "#bbd0e1"
+    - type: Vinyl
+      song:
+        path: /Audio/_Goobstation/RadioStation/Vinyls/music/goonstation/it_feels_good_to_be_alive_too.ogg
 
 - type: entity
   parent: BaseVinylDisc
@@ -427,15 +424,15 @@
   name: "vinyl: Funkadelic"
   description: "A slow pace funky electronic tune. By: Goonstation" #SL  Addition
   components:
-  - type: Sprite
-    state: default
-    layers:
-    - state: default
-    - state: label
-      color: "#db6786"
-  - type: Vinyl
-    song:
-      path: /Audio/_Goobstation/RadioStation/Vinyls/music/goonstation/funkadelic.ogg
+    - type: Sprite
+      state: default
+      layers:
+        - state: default
+        - state: label
+          color: "#db6786"
+    - type: Vinyl
+      song:
+        path: /Audio/_Goobstation/RadioStation/Vinyls/music/goonstation/funkadelic.ogg
 
 - type: entity
   parent: BaseVinylDisc
@@ -443,15 +440,15 @@
   name: "vinyl: Lunch"
   description: "A fast pace groovy electronic tune. By: Goonstation" #SL  Addition
   components:
-  - type: Sprite
-    state: default
-    layers:
-    - state: default
-    - state: label
-      color: "#c6a6e9"
-  - type: Vinyl
-    song:
-      path: /Audio/_Goobstation/RadioStation/Vinyls/music/goonstation/lunch.ogg
+    - type: Sprite
+      state: default
+      layers:
+        - state: default
+        - state: label
+          color: "#c6a6e9"
+    - type: Vinyl
+      song:
+        path: /Audio/_Goobstation/RadioStation/Vinyls/music/goonstation/lunch.ogg
 
 - type: entity
   parent: BaseVinylDisc
@@ -459,17 +456,15 @@
   name: "vinyl: Groovy"
   description: "A fast pace electronic tune. By: Goonstation" #SL  Addition
   components:
-  - type: Sprite
-    state: default
-    layers:
-    - state: default
-    - state: label
-      color: "#45832f"
-  - type: Vinyl
-    song:
-      path: /Audio/_Goobstation/RadioStation/Vinyls/music/goonstation/groovy.ogg
-
-
+    - type: Sprite
+      state: default
+      layers:
+        - state: default
+        - state: label
+          color: "#45832f"
+    - type: Vinyl
+      song:
+        path: /Audio/_Goobstation/RadioStation/Vinyls/music/goonstation/groovy.ogg
 
   # Anonymous420
 - type: entity
@@ -478,17 +473,15 @@
   name: "vinyl: Anonymous"
   description: "A fast pace hypnotic electronic tune. By: Goonstation" #SL  Addition
   components:
-  - type: Sprite
-    state: default
-    layers:
-    - state: default
-    - state: label
-      color: "#c6a6e9"
-  - type: Vinyl
-    song:
-      path: /Audio/_Goobstation/RadioStation/Vinyls/music/goonstation/anonymous.ogg
-
-
+    - type: Sprite
+      state: default
+      layers:
+        - state: default
+        - state: label
+          color: "#c6a6e9"
+    - type: Vinyl
+      song:
+        path: /Audio/_Goobstation/RadioStation/Vinyls/music/goonstation/anonymous.ogg
 
   # Thundermine
 - type: entity
@@ -497,17 +490,15 @@
   name: "vinyl: Distant Star"
   description: "A fast pace electronic tune. By: Goonstation" #SL  Addition
   components:
-  - type: Sprite
-    state: default
-    layers:
-    - state: default
-    - state: label
-      color: "#cec55b"
-  - type: Vinyl
-    song:
-      path: /Audio/_Goobstation/RadioStation/Vinyls/music/goonstation/distant_star.ogg
-
-
+    - type: Sprite
+      state: default
+      layers:
+        - state: default
+        - state: label
+          color: "#cec55b"
+    - type: Vinyl
+      song:
+        path: /Audio/_Goobstation/RadioStation/Vinyls/music/goonstation/distant_star.ogg
 
   # mrjajkes
 - type: entity
@@ -516,15 +507,15 @@
   name: "vinyl: Ephedrine Overdose"
   description: "A fast pace electronic tune. By: mrjajkes" #SL  Addition
   components:
-  - type: Sprite
-    state: default
-    layers:
-    - state: default
-    - state: label
-      color: "#cd5c04"
-  - type: Vinyl
-    song:
-      path: /Audio/_Goobstation/RadioStation/Vinyls/music/mrjajkes/EphedrineOverdose.ogg
+    - type: Sprite
+      state: default
+      layers:
+        - state: default
+        - state: label
+          color: "#cd5c04"
+    - type: Vinyl
+      song:
+        path: /Audio/_Goobstation/RadioStation/Vinyls/music/mrjajkes/EphedrineOverdose.ogg
 
 - type: entity
   parent: BaseVinylDisc
@@ -532,15 +523,15 @@
   name: "vinyl: Get That Antag!"
   description: "A fast pace electronic tune. By: mrjajkes" #SL  Addition
   components:
-  - type: Sprite
-    state: default
-    layers:
-    - state: default
-    - state: label
-      color: "#3b67b1"
-  - type: Vinyl
-    song:
-      path: /Audio/_Goobstation/RadioStation/Vinyls/music/mrjajkes/GetThatAntag.ogg
+    - type: Sprite
+      state: default
+      layers:
+        - state: default
+        - state: label
+          color: "#3b67b1"
+    - type: Vinyl
+      song:
+        path: /Audio/_Goobstation/RadioStation/Vinyls/music/mrjajkes/GetThatAntag.ogg
 
 - type: entity
   parent: BaseVinylDisc
@@ -548,15 +539,15 @@
   name: "vinyl: Greytide Song"
   description: "A hip tune by DJ Tider. By: mrjajkes" #SL  Addition
   components:
-  - type: Sprite
-    state: default
-    layers:
-    - state: default
-    - state: label
-      color: "#b46929"
-  - type: Vinyl
-    song:
-      path: /Audio/_Goobstation/RadioStation/Vinyls/music/mrjajkes/GreytideSong.ogg
+    - type: Sprite
+      state: default
+      layers:
+        - state: default
+        - state: label
+          color: "#b46929"
+    - type: Vinyl
+      song:
+        path: /Audio/_Goobstation/RadioStation/Vinyls/music/mrjajkes/GreytideSong.ogg
 
 - type: entity
   parent: BaseVinylDisc
@@ -564,15 +555,15 @@
   name: "vinyl: Nukies Trap Remix"
   description: "A fast pace electronic tune. By: mrjajkes" #SL  Addition
   components:
-  - type: Sprite
-    state: default
-    layers:
-    - state: default
-    - state: label
-      color: "#6de56e"
-  - type: Vinyl
-    song:
-      path: /Audio/_Goobstation/RadioStation/Vinyls/music/mrjajkes/NUKIES_TRAP.ogg
+    - type: Sprite
+      state: default
+      layers:
+        - state: default
+        - state: label
+          color: "#6de56e"
+    - type: Vinyl
+      song:
+        path: /Audio/_Goobstation/RadioStation/Vinyls/music/mrjajkes/NUKIES_TRAP.ogg
 
 - type: entity
   parent: BaseVinylDisc
@@ -580,15 +571,15 @@
   name: "vinyl: Running Out"
   description: "A dramatic fast pace electronic tune. By: mrjajkes" #SL  Addition
   components:
-  - type: Sprite
-    state: default
-    layers:
-    - state: default
-    - state: label
-      color: "#a69250"
-  - type: Vinyl
-    song:
-      path: /Audio/_Goobstation/RadioStation/Vinyls/music/mrjajkes/RunningOutCover.ogg
+    - type: Sprite
+      state: default
+      layers:
+        - state: default
+        - state: label
+          color: "#a69250"
+    - type: Vinyl
+      song:
+        path: /Audio/_Goobstation/RadioStation/Vinyls/music/mrjajkes/RunningOutCover.ogg
 
 - type: entity
   parent: BaseVinylDisc
@@ -596,15 +587,15 @@
   name: "vinyl: Sponsored By Syndicate"
   description: "A fast pace rock tune. By: mrjajkes" #SL  Addition
   components:
-  - type: Sprite
-    state: default
-    layers:
-    - state: default
-    - state: label
-      color: "#c55ab3"
-  - type: Vinyl
-    song:
-      path: /Audio/_Goobstation/RadioStation/Vinyls/music/mrjajkes/SponsoredBySyndicate.ogg
+    - type: Sprite
+      state: default
+      layers:
+        - state: default
+        - state: label
+          color: "#c55ab3"
+    - type: Vinyl
+      song:
+        path: /Audio/_Goobstation/RadioStation/Vinyls/music/mrjajkes/SponsoredBySyndicate.ogg
 
 - type: entity
   parent: BaseVinylDisc
@@ -612,15 +603,15 @@
   name: "vinyl: Traitorous Intent"
   description: "A eerie low pace electronic tune. By: mrjajkes" #SL  Addition
   components:
-  - type: Sprite
-    state: default
-    layers:
-    - state: default
-    - state: label
-      color: "#c1f6ed"
-  - type: Vinyl
-    song:
-      path: /Audio/_Goobstation/RadioStation/Vinyls/music/mrjajkes/TraitorousIntent.ogg
+    - type: Sprite
+      state: default
+      layers:
+        - state: default
+        - state: label
+          color: "#c1f6ed"
+    - type: Vinyl
+      song:
+        path: /Audio/_Goobstation/RadioStation/Vinyls/music/mrjajkes/TraitorousIntent.ogg
 
 - type: entity
   parent: BaseVinylDisc
@@ -628,18 +619,15 @@
   name: "vinyl: Violet"
   description: "A fast pace electronic tune. By: mrjajkes" #SL  Addition
   components:
-  - type: Sprite
-    state: default
-    layers:
-    - state: default
-    - state: label
-      color: "#22264b"
-  - type: Vinyl
-    song:
-      path: /Audio/_Goobstation/RadioStation/Vinyls/music/mrjajkes/violet.ogg
-
-
-
+    - type: Sprite
+      state: default
+      layers:
+        - state: default
+        - state: label
+          color: "#22264b"
+    - type: Vinyl
+      song:
+        path: /Audio/_Goobstation/RadioStation/Vinyls/music/mrjajkes/violet.ogg
 
   # Other
 - type: entity
@@ -648,15 +636,15 @@
   name: "vinyl: Waystations"
   description: "A slow pace electronic tune. By: Goonstation" #SL  Addition
   components:
-  - type: Sprite
-    state: default
-    layers:
-    - state: default
-    - state: label
-      color: "#c1f6ed"
-  - type: Vinyl
-    song:
-      path: /Audio/_Goobstation/RadioStation/Vinyls/music/goonstation/waystations.ogg
+    - type: Sprite
+      state: default
+      layers:
+        - state: default
+        - state: label
+          color: "#c1f6ed"
+    - type: Vinyl
+      song:
+        path: /Audio/_Goobstation/RadioStation/Vinyls/music/goonstation/waystations.ogg
 
 - type: entity
   parent: BaseVinylDisc
@@ -664,15 +652,15 @@
   name: "vinyl: Upbeat 1"
   description: "A groovy upbeat tune. By: Goonstation" #SL  Addition
   components:
-  - type: Sprite
-    state: default
-    layers:
-    - state: default
-    - state: label
-      color: "#5f5d70"
-  - type: Vinyl
-    song:
-      path: /Audio/_Goobstation/RadioStation/Vinyls/music/goonstation/upbeat_1.ogg
+    - type: Sprite
+      state: default
+      layers:
+        - state: default
+        - state: label
+          color: "#5f5d70"
+    - type: Vinyl
+      song:
+        path: /Audio/_Goobstation/RadioStation/Vinyls/music/goonstation/upbeat_1.ogg
 
 - type: entity
   parent: BaseVinylDisc
@@ -680,15 +668,15 @@
   name: "vinyl: Upbeat 2"
   description: "A groovy upbeat tune. By: Goonstation" #SL  Addition
   components:
-  - type: Sprite
-    state: default
-    layers:
-    - state: default
-    - state: label
-      color: "#06ad7b"
-  - type: Vinyl
-    song:
-      path: /Audio/_Goobstation/RadioStation/Vinyls/music/goonstation/upbeat_2.ogg
+    - type: Sprite
+      state: default
+      layers:
+        - state: default
+        - state: label
+          color: "#06ad7b"
+    - type: Vinyl
+      song:
+        path: /Audio/_Goobstation/RadioStation/Vinyls/music/goonstation/upbeat_2.ogg
 
 - type: entity
   parent: BaseVinylDisc
@@ -696,15 +684,15 @@
   name: "vinyl: Planets"
   description: "A slow pace electronic tune. By: Goonstation" #SL  Addition
   components:
-  - type: Sprite
-    state: default
-    layers:
-    - state: default
-    - state: label
-      color: "#420d38"
-  - type: Vinyl
-    song:
-      path: /Audio/_Goobstation/RadioStation/Vinyls/music/goonstation/planets.ogg
+    - type: Sprite
+      state: default
+      layers:
+        - state: default
+        - state: label
+          color: "#420d38"
+    - type: Vinyl
+      song:
+        path: /Audio/_Goobstation/RadioStation/Vinyls/music/goonstation/planets.ogg
 
 - type: entity
   parent: BaseVinylDisc
@@ -712,15 +700,15 @@
   name: "vinyl: Chill 1"
   description: "A slow pace calming tune. By: Goonstation" #SL  Addition
   components:
-  - type: Sprite
-    state: default
-    layers:
-    - state: default
-    - state: label
-      color: "#3fa890"
-  - type: Vinyl
-    song:
-      path: /Audio/_Goobstation/RadioStation/Vinyls/music/goonstation/chill_1.ogg
+    - type: Sprite
+      state: default
+      layers:
+        - state: default
+        - state: label
+          color: "#3fa890"
+    - type: Vinyl
+      song:
+        path: /Audio/_Goobstation/RadioStation/Vinyls/music/goonstation/chill_1.ogg
 
 - type: entity
   parent: BaseVinylDisc
@@ -728,15 +716,15 @@
   name: "vinyl: Chill 2"
   description: "A slow pace calming tune. By: Goonstation" #SL  Addition
   components:
-  - type: Sprite
-    state: default
-    layers:
-    - state: default
-    - state: label
-      color: "#363948"
-  - type: Vinyl
-    song:
-      path: /Audio/_Goobstation/RadioStation/Vinyls/music/goonstation/chill_2.ogg
+    - type: Sprite
+      state: default
+      layers:
+        - state: default
+        - state: label
+          color: "#363948"
+    - type: Vinyl
+      song:
+        path: /Audio/_Goobstation/RadioStation/Vinyls/music/goonstation/chill_2.ogg
 
 - type: entity
   parent: BaseVinylDisc
@@ -744,15 +732,15 @@
   name: "vinyl: Chill 3"
   description: "A slow pace calming tune. By: Goonstation" #SL  Addition
   components:
-  - type: Sprite
-    state: default
-    layers:
-    - state: default
-    - state: label
-      color: "#560b76"
-  - type: Vinyl
-    song:
-      path: /Audio/_Goobstation/RadioStation/Vinyls/music/goonstation/chill_3.ogg
+    - type: Sprite
+      state: default
+      layers:
+        - state: default
+        - state: label
+          color: "#560b76"
+    - type: Vinyl
+      song:
+        path: /Audio/_Goobstation/RadioStation/Vinyls/music/goonstation/chill_3.ogg
 
 - type: entity
   parent: BaseVinylDisc
@@ -760,31 +748,31 @@
   name: "vinyl: Chill 4"
   description: "A slow pace calming tune. By: Goonstation" #SL  Addition
   components:
-  - type: Sprite
-    state: default
-    layers:
-    - state: default
-    - state: label
-      color: "#17b800"
-  - type: Vinyl
-    song:
-      path: /Audio/_Goobstation/RadioStation/Vinyls/music/goonstation/chill_4.ogg
+    - type: Sprite
+      state: default
+      layers:
+        - state: default
+        - state: label
+          color: "#17b800"
+    - type: Vinyl
+      song:
+        path: /Audio/_Goobstation/RadioStation/Vinyls/music/goonstation/chill_4.ogg
 
 - type: entity
   parent: BaseVinylDisc
   id: VinylBeaches
   name: "vinyl: Beaches"
-  description: "A slow pace electronic tune. By: aquariofury, Not Tom"  #SL  Addition
+  description: "A slow pace electronic tune. By: aquariofury, Not Tom" #SL  Addition
   components:
-  - type: Sprite
-    state: default
-    layers:
-    - state: default
-    - state: label
-      color: "#cbf456"
-  - type: Vinyl
-    song:
-      path: /Audio/_Goobstation/RadioStation/Vinyls/music/goonstation/beaches.ogg
+    - type: Sprite
+      state: default
+      layers:
+        - state: default
+        - state: label
+          color: "#cbf456"
+    - type: Vinyl
+      song:
+        path: /Audio/_Goobstation/RadioStation/Vinyls/music/goonstation/beaches.ogg
 
 - type: entity
   parent: BaseVinylDisc
@@ -792,15 +780,15 @@
   name: "vinyl: Dance On A Space Volcano"
   description: "A funky fast pace electronic dance tune. By: Goonstation" #SL  Addition
   components:
-  - type: Sprite
-    state: default
-    layers:
-    - state: default
-    - state: label
-      color: "#1b3c96"
-  - type: Vinyl
-    song:
-      path: /Audio/_Goobstation/RadioStation/Vinyls/music/goonstation/dance_on_a_space_volcano.ogg
+    - type: Sprite
+      state: default
+      layers:
+        - state: default
+        - state: label
+          color: "#1b3c96"
+    - type: Vinyl
+      song:
+        path: /Audio/_Goobstation/RadioStation/Vinyls/music/goonstation/dance_on_a_space_volcano.ogg
 
 - type: entity
   parent: BaseVinylFloaty
@@ -808,9 +796,9 @@
   name: "vinyl: Floaty"
   description: "A slow pace hypnotic tune. By: aquariofury, Not Tom" #SL  Addition
   components:
-  - type: Vinyl
-    song:
-      path: /Audio/_Goobstation/RadioStation/Vinyls/music/goonstation/floaty.ogg
+    - type: Vinyl
+      song:
+        path: /Audio/_Goobstation/RadioStation/Vinyls/music/goonstation/floaty.ogg
 
 - type: entity
   parent: BaseVinylDisc
@@ -818,15 +806,15 @@
   name: "vinyl: Graveyard"
   description: "A slow pace eerie tune. By: aquariofury, Not Tom" #SL  Addition
   components:
-  - type: Sprite
-    state: default
-    layers:
-    - state: default
-    - state: label
-      color: "#5e2daa"
-  - type: Vinyl
-    song:
-      path: /Audio/_Goobstation/RadioStation/Vinyls/music/goonstation/graveyard.ogg
+    - type: Sprite
+      state: default
+      layers:
+        - state: default
+        - state: label
+          color: "#5e2daa"
+    - type: Vinyl
+      song:
+        path: /Audio/_Goobstation/RadioStation/Vinyls/music/goonstation/graveyard.ogg
 
 - type: entity
   parent: BaseVinylDisc
@@ -834,15 +822,15 @@
   name: "vinyl: Riverdancer"
   description: "A slow pace funky electronic tune. By: Goonstation" #SL  Addition
   components:
-  - type: Sprite
-    state: default
-    layers:
-    - state: default
-    - state: label
-      color: "#ff7e77"
-  - type: Vinyl
-    song:
-      path: /Audio/_Goobstation/RadioStation/Vinyls/music/goonstation/riverdancer.ogg
+    - type: Sprite
+      state: default
+      layers:
+        - state: default
+        - state: label
+          color: "#ff7e77"
+    - type: Vinyl
+      song:
+        path: /Audio/_Goobstation/RadioStation/Vinyls/music/goonstation/riverdancer.ogg
 
 - type: entity
   parent: BaseVinylDisc
@@ -850,15 +838,15 @@
   name: "vinyl: Space Gardener"
   description: "A slow pace electronic tune. By: tamakari" #SL  Addition
   components:
-  - type: Sprite
-    state: default
-    layers:
-    - state: default
-    - state: label
-      color: "#b123dc"
-  - type: Vinyl
-    song:
-      path: /Audio/_Goobstation/RadioStation/Vinyls/music/goonstation/space_gardener.ogg
+    - type: Sprite
+      state: default
+      layers:
+        - state: default
+        - state: label
+          color: "#b123dc"
+    - type: Vinyl
+      song:
+        path: /Audio/_Goobstation/RadioStation/Vinyls/music/goonstation/space_gardener.ogg
 
 - type: entity
   parent: BaseVinylDisc
@@ -866,15 +854,15 @@
   name: "vinyl: Key Lime"
   description: "A slow pace calming tune. By: Goonstation" #SL  Addition
   components:
-  - type: Sprite
-    state: default
-    layers:
-    - state: default
-    - state: label
-      color: "#6cbda3"
-  - type: Vinyl
-    song:
-      path: /Audio/_Goobstation/RadioStation/Vinyls/music/goonstation/key_lime.ogg
+    - type: Sprite
+      state: default
+      layers:
+        - state: default
+        - state: label
+          color: "#6cbda3"
+    - type: Vinyl
+      song:
+        path: /Audio/_Goobstation/RadioStation/Vinyls/music/goonstation/key_lime.ogg
 
 - type: entity
   parent: BaseVinylAI
@@ -882,9 +870,9 @@
   name: "vinyl: Lay Egg Is True"
   description: "A face pace electronic tune. By: WyrdDoe" #SL  Addition
   components:
-  - type: Vinyl
-    song:
-      path: /Audio/_Goobstation/RadioStation/Vinyls/music/goonstation/lay_egg_is_true.ogg
+    - type: Vinyl
+      song:
+        path: /Audio/_Goobstation/RadioStation/Vinyls/music/goonstation/lay_egg_is_true.ogg
 
 - type: entity
   parent: BaseVinylDisc
@@ -892,15 +880,15 @@
   name: "vinyl: Monkey Riot"
   description: "A fast pace high-energy electronic tune. By: WyrdDoe" #SL  Addition
   components:
-  - type: Sprite
-    state: default
-    layers:
-    - state: default
-    - state: label
-      color: "#526575"
-  - type: Vinyl
-    song:
-      path: /Audio/_Goobstation/RadioStation/Vinyls/music/goonstation/monkey_riot.ogg
+    - type: Sprite
+      state: default
+      layers:
+        - state: default
+        - state: label
+          color: "#526575"
+    - type: Vinyl
+      song:
+        path: /Audio/_Goobstation/RadioStation/Vinyls/music/goonstation/monkey_riot.ogg
 
 - type: entity
   parent: BaseVinylDisc
@@ -908,15 +896,15 @@
   name: "vinyl: Oh No Evil Star"
   description: "A slow pace calming tune. By: Goonstation" #SL  Addition
   components:
-  - type: Sprite
-    state: default
-    layers:
-    - state: default
-    - state: label
-      color: "#0a922b"
-  - type: Vinyl
-    song:
-      path: /Audio/_Goobstation/RadioStation/Vinyls/music/goonstation/oh_no_evil_star.ogg
+    - type: Sprite
+      state: default
+      layers:
+        - state: default
+        - state: label
+          color: "#0a922b"
+    - type: Vinyl
+      song:
+        path: /Audio/_Goobstation/RadioStation/Vinyls/music/goonstation/oh_no_evil_star.ogg
 
 - type: entity
   parent: BaseVinylDisc
@@ -924,15 +912,15 @@
   name: "vinyl: Repose"
   description: "A slow pace funky tune. By: aquariofury, Not Tom" #SL  Addition
   components:
-  - type: Sprite
-    state: default
-    layers:
-    - state: default
-    - state: label
-      color: "#cc2f54"
-  - type: Vinyl
-    song:
-      path: /Audio/_Goobstation/RadioStation/Vinyls/music/goonstation/repose.ogg
+    - type: Sprite
+      state: default
+      layers:
+        - state: default
+        - state: label
+          color: "#cc2f54"
+    - type: Vinyl
+      song:
+        path: /Audio/_Goobstation/RadioStation/Vinyls/music/goonstation/repose.ogg
 
 - type: entity
   parent: BaseVinylDisc
@@ -940,15 +928,15 @@
   name: "vinyl: Adventure 3"
   description: "A fast pace adventurous tune. By: Goonstation" #SL  Addition
   components:
-  - type: Sprite
-    state: default
-    layers:
-    - state: default
-    - state: label
-      color: "#2c5e0b"
-  - type: Vinyl
-    song:
-      path: /Audio/_Goobstation/RadioStation/Vinyls/music/goonstation/adventure_3.ogg
+    - type: Sprite
+      state: default
+      layers:
+        - state: default
+        - state: label
+          color: "#2c5e0b"
+    - type: Vinyl
+      song:
+        path: /Audio/_Goobstation/RadioStation/Vinyls/music/goonstation/adventure_3.ogg
 
 - type: entity
   parent: BaseVinylDisc
@@ -956,15 +944,15 @@
   name: "vinyl: Adventure 4"
   description: "A fast pace adventurous tune. By: Goonstation" #SL  Addition
   components:
-  - type: Sprite
-    state: default
-    layers:
-    - state: default
-    - state: label
-      color: "#8e54fa"
-  - type: Vinyl
-    song:
-      path: /Audio/_Goobstation/RadioStation/Vinyls/music/goonstation/adventure_4.ogg
+    - type: Sprite
+      state: default
+      layers:
+        - state: default
+        - state: label
+          color: "#8e54fa"
+    - type: Vinyl
+      song:
+        path: /Audio/_Goobstation/RadioStation/Vinyls/music/goonstation/adventure_4.ogg
 
 - type: entity
   parent: BaseVinylDisc
@@ -972,15 +960,15 @@
   name: "vinyl: Adventure 5"
   description: "A fast pace adventurous tune. By: Goonstation" #SL  Addition
   components:
-  - type: Sprite
-    state: default
-    layers:
-    - state: default
-    - state: label
-      color: "#e20e8f"
-  - type: Vinyl
-    song:
-      path: /Audio/_Goobstation/RadioStation/Vinyls/music/goonstation/adventure_5.ogg
+    - type: Sprite
+      state: default
+      layers:
+        - state: default
+        - state: label
+          color: "#e20e8f"
+    - type: Vinyl
+      song:
+        path: /Audio/_Goobstation/RadioStation/Vinyls/music/goonstation/adventure_5.ogg
 
 - type: entity
   parent: BaseVinylDisc
@@ -988,15 +976,15 @@
   name: "vinyl: Atlas"
   description: "A slow pace calming tune. By: Goonstation" #SL  Addition
   components:
-  - type: Sprite
-    state: default
-    layers:
-    - state: default
-    - state: label
-      color: "#831e30"
-  - type: Vinyl
-    song:
-      path: /Audio/_Goobstation/RadioStation/Vinyls/music/goonstation/atlas.ogg
+    - type: Sprite
+      state: default
+      layers:
+        - state: default
+        - state: label
+          color: "#831e30"
+    - type: Vinyl
+      song:
+        path: /Audio/_Goobstation/RadioStation/Vinyls/music/goonstation/atlas.ogg
 
 - type: entity
   parent: BaseVinylDisc
@@ -1004,15 +992,15 @@
   name: "vinyl: Atmosphere"
   description: "A slow pace calming tune. By: Goonstation" #SL  Addition
   components:
-  - type: Sprite
-    state: default
-    layers:
-    - state: default
-    - state: label
-      color: "#2c9040"
-  - type: Vinyl
-    song:
-      path: /Audio/_Goobstation/RadioStation/Vinyls/music/goonstation/atmosphere.ogg
+    - type: Sprite
+      state: default
+      layers:
+        - state: default
+        - state: label
+          color: "#2c9040"
+    - type: Vinyl
+      song:
+        path: /Audio/_Goobstation/RadioStation/Vinyls/music/goonstation/atmosphere.ogg
 
 - type: entity
   parent: BaseVinylDisc
@@ -1020,15 +1008,15 @@
   name: "vinyl: Banjo 1"
   description: "A slow pace calming tune. By: Goonstation" #SL  Addition
   components:
-  - type: Sprite
-    state: default
-    layers:
-    - state: default
-    - state: label
-      color: "#0fccb8"
-  - type: Vinyl
-    song:
-      path: /Audio/_Goobstation/RadioStation/Vinyls/music/goonstation/banjo1.ogg
+    - type: Sprite
+      state: default
+      layers:
+        - state: default
+        - state: label
+          color: "#0fccb8"
+    - type: Vinyl
+      song:
+        path: /Audio/_Goobstation/RadioStation/Vinyls/music/goonstation/banjo1.ogg
 
 - type: entity
   parent: BaseVinylDisc
@@ -1036,15 +1024,15 @@
   name: "vinyl: Biodome"
   description: "A slow pace eerie tune. By: aquariofury, Not Tom" #SL  Addition
   components:
-  - type: Sprite
-    state: default
-    layers:
-    - state: default
-    - state: label
-      color: "#a68fd1"
-  - type: Vinyl
-    song:
-      path: /Audio/_Goobstation/RadioStation/Vinyls/music/goonstation/biodome.ogg
+    - type: Sprite
+      state: default
+      layers:
+        - state: default
+        - state: label
+          color: "#a68fd1"
+    - type: Vinyl
+      song:
+        path: /Audio/_Goobstation/RadioStation/Vinyls/music/goonstation/biodome.ogg
 
 - type: entity
   parent: BaseVinylDisc
@@ -1052,15 +1040,15 @@
   name: "vinyl: Black Wing Interface"
   description: "A slow pace electronic tune. By: Goonstation" #SL  Addition
   components:
-  - type: Sprite
-    state: default
-    layers:
-    - state: default
-    - state: label
-      color: "#025693"
-  - type: Vinyl
-    song:
-      path: /Audio/_Goobstation/RadioStation/Vinyls/music/goonstation/black_wing_interface.ogg
+    - type: Sprite
+      state: default
+      layers:
+        - state: default
+        - state: label
+          color: "#025693"
+    - type: Vinyl
+      song:
+        path: /Audio/_Goobstation/RadioStation/Vinyls/music/goonstation/black_wing_interface.ogg
 
 - type: entity
   parent: BaseVinylDisc
@@ -1068,15 +1056,15 @@
   name: "vinyl: Bumblebee"
   description: "A incredibly fast pace violin solo. By: Goonstation" #SL  Addition
   components:
-  - type: Sprite
-    state: default
-    layers:
-    - state: default
-    - state: label
-      color: "#3c4c3e"
-  - type: Vinyl
-    song:
-      path: /Audio/_Goobstation/RadioStation/Vinyls/music/goonstation/bumblebee.ogg
+    - type: Sprite
+      state: default
+      layers:
+        - state: default
+        - state: label
+          color: "#3c4c3e"
+    - type: Vinyl
+      song:
+        path: /Audio/_Goobstation/RadioStation/Vinyls/music/goonstation/bumblebee.ogg
 
 - type: entity
   parent: BaseVinylDisc
@@ -1084,15 +1072,15 @@
   name: "vinyl: Cloud Sky Man Guy"
   description: "A upbeat electronic tune. By: Goonstation" #SL  Addition
   components:
-  - type: Sprite
-    state: default
-    layers:
-    - state: default
-    - state: label
-      color: "#c38cad"
-  - type: Vinyl
-    song:
-      path: /Audio/_Goobstation/RadioStation/Vinyls/music/goonstation/cloudskymanguy.ogg
+    - type: Sprite
+      state: default
+      layers:
+        - state: default
+        - state: label
+          color: "#c38cad"
+    - type: Vinyl
+      song:
+        path: /Audio/_Goobstation/RadioStation/Vinyls/music/goonstation/cloudskymanguy.ogg
 
 - type: entity
   parent: BaseVinylTTD
@@ -1100,9 +1088,9 @@
   name: "vinyl: Journey"
   description: "A upbeat electronic tune. By: OpenTTD" #SL  Addition
   components:
-  - type: Vinyl
-    song:
-      path: /Audio/_Goobstation/RadioStation/Vinyls/music/OpenTTDJourney.ogg
+    - type: Vinyl
+      song:
+        path: /Audio/_Goobstation/RadioStation/Vinyls/music/OpenTTDJourney.ogg
 
 - type: entity
   parent: BaseVinylForgotten
@@ -1110,10 +1098,9 @@
   name: "forgotten vinyl"
   description: "A song that we have all heard. Just not this bad... By: LuciferMkshelter" #SL  Addition
   components:
-  - type: Vinyl
-    song:
-      path: /Audio/_Goobstation/RadioStation/Vinyls/music/peakasshole.ogg
-
+    - type: Vinyl
+      song:
+        path: /Audio/_Goobstation/RadioStation/Vinyls/music/peakasshole.ogg
 
   # Fart/Clown Songs
 - type: entity
@@ -1122,14 +1109,14 @@
   name: "vinyl: Buttris"
   description: "An iconic videogame song remixed by the clown. By: Goonstation" #SL  Addition
   components:
-  - type: Sprite
-    layers:
-    - state: default
-    - state: label
-      color: brown
-  - type: Vinyl
-    song:
-      path: /Audio/_Goobstation/RadioStation/Vinyls/music/goonstation/Fart/buttris.ogg
+    - type: Sprite
+      layers:
+        - state: default
+        - state: label
+          color: brown
+    - type: Vinyl
+      song:
+        path: /Audio/_Goobstation/RadioStation/Vinyls/music/goonstation/Fart/buttris.ogg
 
 - type: entity
   parent: BaseVinylSlippery
@@ -1137,15 +1124,15 @@
   name: "vinyl: We Are Number Two"
   description: "A recognisable song from a famous TV show, remixed by the clown. By: Goonstation" #SL  Addition
   components:
-  - type: Sprite
-    state: default
-    layers:
-    - state: default
-    - state: label
-      color: brown
-  - type: Vinyl
-    song:
-      path: /Audio/_Goobstation/RadioStation/Vinyls/music/goonstation/Fart/we_are_number_two.ogg
+    - type: Sprite
+      state: default
+      layers:
+        - state: default
+        - state: label
+          color: brown
+    - type: Vinyl
+      song:
+        path: /Audio/_Goobstation/RadioStation/Vinyls/music/goonstation/Fart/we_are_number_two.ogg
 
 - type: entity
   parent: BaseVinylSlippery
@@ -1153,15 +1140,15 @@
   name: "vinyl: Uguu"
   description: "Some will say this song doesn't contain music. Others... their masterpiece. By: Goonstation" #SL  Addition
   components:
-  - type: Sprite
-    state: default
-    layers:
-    - state: default
-    - state: label
-      color: brown
-  - type: Vinyl
-    song:
-      path: /Audio/_Goobstation/RadioStation/Vinyls/music/goonstation/Fart/uguu.ogg
+    - type: Sprite
+      state: default
+      layers:
+        - state: default
+        - state: label
+          color: brown
+    - type: Vinyl
+      song:
+        path: /Audio/_Goobstation/RadioStation/Vinyls/music/goonstation/Fart/uguu.ogg
 
 - type: entity
   parent: BaseVinylSlippery
@@ -1169,15 +1156,15 @@
   name: "vinyl: Poo"
   description: "Take a chance on... poo? By: Goonstation" #SL  Addition
   components:
-  - type: Sprite
-    state: default
-    layers:
-    - state: default
-    - state: label
-      color: brown
-  - type: Vinyl
-    song:
-      path: /Audio/_Goobstation/RadioStation/Vinyls/music/goonstation/Fart/poo.ogg
+    - type: Sprite
+      state: default
+      layers:
+        - state: default
+        - state: label
+          color: brown
+    - type: Vinyl
+      song:
+        path: /Audio/_Goobstation/RadioStation/Vinyls/music/goonstation/Fart/poo.ogg
 
 - type: entity
   parent: BaseVinylSlippery
@@ -1185,15 +1172,15 @@
   name: "vinyl: Disco Poo"
   description: "Some will say this song doesn't contain music. Others... their masterpiece. By: Goonstation" #SL  Addition
   components:
-  - type: Sprite
-    state: default
-    layers:
-    - state: default
-    - state: label
-      color: brown
-  - type: Vinyl
-    song:
-      path: /Audio/_Goobstation/RadioStation/Vinyls/music/goonstation/Fart/disco_poo.ogg
+    - type: Sprite
+      state: default
+      layers:
+        - state: default
+        - state: label
+          color: brown
+    - type: Vinyl
+      song:
+        path: /Audio/_Goobstation/RadioStation/Vinyls/music/goonstation/Fart/disco_poo.ogg
 
 - type: entity
   parent: BaseVinylSlippery
@@ -1201,15 +1188,15 @@
   name: "vinyl: Core Of Poo"
   description: "Some will say this song doesn't contain music. Others... their masterpiece. By: Goonstation" #SL  Addition
   components:
-  - type: Sprite
-    state: default
-    layers:
-    - state: default
-    - state: label
-      color: brown
-  - type: Vinyl
-    song:
-      path: /Audio/_Goobstation/RadioStation/Vinyls/music/goonstation/Fart/core_of_poo.ogg
+    - type: Sprite
+      state: default
+      layers:
+        - state: default
+        - state: label
+          color: brown
+    - type: Vinyl
+      song:
+        path: /Audio/_Goobstation/RadioStation/Vinyls/music/goonstation/Fart/core_of_poo.ogg
 
 - type: entity
   parent: BaseVinylSlippery
@@ -1217,15 +1204,15 @@
   name: "vinyl: Fart Elise"
   description: "A classical piece remixed by the clown. By: Goonstation" #SL  Addition
   components:
-  - type: Sprite
-    state: default
-    layers:
-    - state: default
-    - state: label
-      color: brown
-  - type: Vinyl
-    song:
-      path: /Audio/_Goobstation/RadioStation/Vinyls/music/goonstation/Fart/fart_elise.ogg
+    - type: Sprite
+      state: default
+      layers:
+        - state: default
+        - state: label
+          color: brown
+    - type: Vinyl
+      song:
+        path: /Audio/_Goobstation/RadioStation/Vinyls/music/goonstation/Fart/fart_elise.ogg
 
 - type: entity
   parent: BaseVinylSlippery
@@ -1233,15 +1220,15 @@
   name: "vinyl: Honkmas"
   description: "A festive tune made by the clown. With love. By: Goonstation" #SL  Addition
   components:
-  - type: Sprite
-    state: default
-    layers:
-    - state: default
-    - state: label
-      color: brown
-  - type: Vinyl
-    song:
-      path: /Audio/_Goobstation/RadioStation/Vinyls/music/goonstation/Fart/honkmas.ogg
+    - type: Sprite
+      state: default
+      layers:
+        - state: default
+        - state: label
+          color: brown
+    - type: Vinyl
+      song:
+        path: /Audio/_Goobstation/RadioStation/Vinyls/music/goonstation/Fart/honkmas.ogg
 
 - type: entity
   parent: BaseVinylSlippery
@@ -1249,15 +1236,15 @@
   name: "vinyl: Eggshell"
   description: "Eggs. Eggs. Eggs. Eggs. Eggs. By: Goonstation" #SL  Addition
   components:
-  - type: Sprite
-    state: default
-    layers:
-    - state: default
-    - state: label
-      color: brown
-  - type: Vinyl
-    song:
-      path: /Audio/_Goobstation/RadioStation/Vinyls/music/goonstation/Fart/eggshell.ogg
+    - type: Sprite
+      state: default
+      layers:
+        - state: default
+        - state: label
+          color: brown
+    - type: Vinyl
+      song:
+        path: /Audio/_Goobstation/RadioStation/Vinyls/music/goonstation/Fart/eggshell.ogg
 
 - type: entity
   parent: BaseVinylSlippery
@@ -1265,11 +1252,27 @@
   name: "vinyl: Warriors Honk"
   description: "A fast pace electronic tune. By: Goonstation" #SL  Addition
   components:
-  - type: Sprite
-    layers:
-    - state: default
-    - state: label
-      color: brown
-  - type: Vinyl
-    song:
-      path: /Audio/_Goobstation/RadioStation/Vinyls/music/goonstation/Fart/warriors_honk.ogg
+    - type: Sprite
+      layers:
+        - state: default
+        - state: label
+          color: brown
+    - type: Vinyl
+      song:
+        path: /Audio/_Goobstation/RadioStation/Vinyls/music/goonstation/Fart/warriors_honk.ogg
+
+- type: entity
+  parent: BaseVinylDisc
+  id: VinylSpaceAsshole
+  name: "vinyl: Space Asshole"
+  description: "The unofficial anthem of this god-forsaken station. By: Chris Remo" #Inferus Addition
+  components:
+    - type: Sprite
+      state: default
+      layers:
+        - state: default
+        - state: label
+          color: "#ff3030"
+    - type: Vinyl
+      song:
+        path: /Audio/Lobby/space_asshole.ogg

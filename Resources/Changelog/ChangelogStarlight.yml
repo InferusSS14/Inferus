@@ -1,20 +1,6 @@
 Entries:
 - author: Cvlancer
   changes:
-  - message: (Reach) Added all the new techfabs.
-    type: Add
-  id: 407887
-  time: '2026-08-28T20:12:06.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/5751
-- author: Cvlancer
-  changes:
-  - message: (Reach) Added keycard auth's to all heads bedrooms and one in bridge.
-    type: Add
-  id: 407888
-  time: '2026-08-28T20:12:06.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/5751
-- author: Cvlancer
-  changes:
   - message: (Reach) Added radio host with just a single vinyl player near kitchen.
     type: Add
   id: 407889
@@ -2799,4 +2785,18 @@ Entries:
   id: 408286
   time: '2026-09-06T04:14:23.000000+00:00'
   url: https://github.com/ss14Starlight/space-station-14/pull/5911
+- author: STARLIGHT TEAM
+  changes:
+  - message: Soviet crates now despawn after 15 minutes dropping their content as they do.
+    type: Add
+  id: 408287
+  time: '2026-09-06T04:49:43.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/5921
+- author: STARLIGHT TEAM
+  changes:
+  - message: Fixed Soviet crates wont collide with each other anymore in an attempt to fix lag.
+    type: Fix
+  id: 408288
+  time: '2026-09-06T04:49:43.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/5921
 Order: -1

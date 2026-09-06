@@ -1,13 +1,6 @@
 Entries:
 - author: Cvlancer
   changes:
-  - message: (Orwell) Fixed tiles in maints bar below medical.
-    type: Fix
-  id: 407901
-  time: '2026-08-28T20:12:06.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/5751
-- author: Cvlancer
-  changes:
   - message: (Prism) Added stir stir to gen pop.
     type: Add
   id: 407902
@@ -2799,4 +2792,11 @@ Entries:
   id: 408300
   time: '2026-09-06T05:42:10.000000+00:00'
   url: https://github.com/ss14Starlight/space-station-14/pull/5728
+- author: Dogiememe
+  changes:
+  - message: (Reach) Service Mailbox.
+    type: Add
+  id: 408301
+  time: '2026-09-06T05:42:13.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/5995
 Order: -1

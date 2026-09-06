@@ -1,62 +1,6 @@
 Entries:
 - author: Caws
   changes:
-  - message: (Lagan) Added box shelving around the map.
-    type: Add
-  id: 407916
-  time: '2026-08-28T20:30:57.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/5852
-- author: Caws
-  changes:
-  - message: (Lagan) Added a crew monitor to Security's front desk.
-    type: Add
-  id: 407917
-  time: '2026-08-28T20:30:57.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/5852
-- author: Caws
-  changes:
-  - message: (Lagan) Added another security records computer to Security.
-    type: Add
-  id: 407918
-  time: '2026-08-28T20:30:57.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/5852
-- author: Caws
-  changes:
-  - message: (Lagan) Added an Evidence Room by Warden & moved the contraband storage box there.
-    type: Add
-  id: 407919
-  time: '2026-08-28T20:30:57.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/5852
-- author: Caws
-  changes:
-  - message: (Lagan) Improved Security's front desk with new computers, evidence shelves, and widened it to make it easier for people to use it in general.
-    type: Tweak
-  id: 407920
-  time: '2026-08-28T20:30:57.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/5852
-- author: Caws
-  changes:
-  - message: (Lagan) Upgraded Cargo Tech lockers to be large variants.
-    type: Tweak
-  id: 407921
-  time: '2026-08-28T20:30:57.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/5852
-- author: Caws
-  changes:
-  - message: (Lagan) Upgraded Mail Tech lockers to be the large variants.
-    type: Tweak
-  id: 407922
-  time: '2026-08-28T20:30:57.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/5852
-- author: Caws
-  changes:
-  - message: (Lagan) Fixed a missing disposals pipe west of HOP.
-    type: Fix
-  id: 407923
-  time: '2026-08-28T20:30:57.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/5852
-- author: Caws
-  changes:
   - message: (Lagan) Fixed a messing disposals pipe west of Arrivals.
     type: Fix
   id: 407924
@@ -2799,4 +2743,60 @@ Entries:
   id: 408315
   time: '2026-09-06T10:42:30.000000+00:00'
   url: https://github.com/ss14Starlight/space-station-14/pull/5968
+- author: Caws
+  changes:
+  - message: (Cork) Radio Host.
+    type: Add
+  id: 408316
+  time: '2026-09-06T10:42:31.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/5906
+- author: Caws
+  changes:
+  - message: (Cork) Moved funding allocation computer out of QM's office and into the Bridge.
+    type: Tweak
+  id: 408317
+  time: '2026-09-06T10:42:31.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/5906
+- author: Caws
+  changes:
+  - message: (Cork) Improved the sauna with the new platforms and stairs.
+    type: Tweak
+  id: 408318
+  time: '2026-09-06T10:42:31.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/5906
+- author: Caws
+  changes:
+  - message: (Cork) Fixed a bunch of tiles-under-windows where there should have been plating instead.
+    type: Tweak
+  id: 408319
+  time: '2026-09-06T10:42:31.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/5906
+- author: Caws
+  changes:
+  - message: (Cork) Small aesthetic tweaks to decals.
+    type: Tweak
+  id: 408320
+  time: '2026-09-06T10:42:31.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/5906
+- author: Caws
+  changes:
+  - message: (Cork) Removed ice crust that was on top of ice, which would get people stuck.
+    type: Fix
+  id: 408321
+  time: '2026-09-06T10:42:31.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/5906
+- author: Caws
+  changes:
+  - message: (Cork) Removed a camera that was floating off-grid.
+    type: Fix
+  id: 408322
+  time: '2026-09-06T10:42:31.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/5906
+- author: Caws
+  changes:
+  - message: (Cork) NCT Office.
+    type: Remove
+  id: 408323
+  time: '2026-09-06T10:42:31.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/5906
 Order: -1

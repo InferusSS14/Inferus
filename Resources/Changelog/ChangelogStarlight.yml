@@ -1,13 +1,6 @@
 Entries:
 - author: Caws
   changes:
-  - message: (Novo Lobster) Added more televisions around the station.
-    type: Add
-  id: 407871
-  time: '2026-08-28T20:12:04.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/5783
-- author: Caws
-  changes:
   - message: (Novo Lobster) Updated pet beds with the new variants.
     type: Add
   id: 407872
@@ -2799,4 +2792,11 @@ Entries:
   id: 408270
   time: '2026-09-06T01:36:43.000000+00:00'
   url: https://github.com/ss14Starlight/space-station-14/pull/5980
+- author: wonderfulnewworld, roryflowers
+  changes:
+  - message: Added a redspace beaker that Nukie Corpsmen now spawn with.
+    type: Add
+  id: 408271
+  time: '2026-09-06T02:05:01.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/5978
 Order: -1

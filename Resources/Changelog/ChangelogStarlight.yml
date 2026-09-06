@@ -1,13 +1,6 @@
 Entries:
 - author: Caws
   changes:
-  - message: (Cluster) Added Cargo Tech lockers.
-    type: Add
-  id: 407927
-  time: '2026-08-28T20:52:27.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/5853
-- author: Caws
-  changes:
   - message: (Cluster) Added box shelving around the map.
     type: Add
   id: 407928
@@ -2799,4 +2792,11 @@ Entries:
   id: 408326
   time: '2026-09-06T14:06:23.000000+00:00'
   url: https://github.com/ss14Starlight/space-station-14/pull/6015
+- author: Citrea
+  changes:
+  - message: Cybernetic Welding Tools have a fuel tank again.
+    type: Fix
+  id: 408327
+  time: '2026-09-06T14:34:01.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/6011
 Order: -1

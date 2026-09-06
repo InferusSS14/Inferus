@@ -1,27 +1,6 @@
 Entries:
 - author: Cvlancer
   changes:
-  - message: (Reach) Added radio host with just a single vinyl player near kitchen.
-    type: Add
-  id: 407889
-  time: '2026-08-28T20:12:06.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/5751
-- author: Cvlancer
-  changes:
-  - message: (Reach) Changed distro to begin at shift start.
-    type: Tweak
-  id: 407890
-  time: '2026-08-28T20:12:06.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/5751
-- author: Cvlancer
-  changes:
-  - message: (Orwell) Added the new departmental techfabs to each department and service fab in the bar.
-    type: Add
-  id: 407891
-  time: '2026-08-28T20:12:06.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/5751
-- author: Cvlancer
-  changes:
   - message: (Orwell) Added assistant manager to conference room.
     type: Add
   id: 407892
@@ -2799,4 +2778,25 @@ Entries:
   id: 408288
   time: '2026-09-06T04:49:43.000000+00:00'
   url: https://github.com/ss14Starlight/space-station-14/pull/5921
+- author: DogeyOT
+  changes:
+  - message: Vox markings for coloring legs, arms and beaks.
+    type: Add
+  id: 408289
+  time: '2026-09-06T05:12:38.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/5918
+- author: DogeyOT
+  changes:
+  - message: Two new vox tails.
+    type: Add
+  id: 408290
+  time: '2026-09-06T05:12:38.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/5918
+- author: DogeyOT
+  changes:
+  - message: Markings for feathered vox legs.
+    type: Add
+  id: 408291
+  time: '2026-09-06T05:12:38.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/5918
 Order: -1

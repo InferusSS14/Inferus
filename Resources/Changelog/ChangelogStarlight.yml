@@ -1,88 +1,4 @@
 Entries:
-- author: OJG
-  changes:
-  - message: adjust the reactor room and give it a way of venting directly to space.
-    type: Tweak
-  id: 407942
-  time: '2026-08-29T08:15:41.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/5848
-- author: OJG
-  changes:
-  - message: the bar and vox box have approximately 50% more swag.
-    type: Tweak
-  id: 407943
-  time: '2026-08-29T08:15:41.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/5848
-- author: OJG
-  changes:
-  - message: made the maints bar swankier.
-    type: Tweak
-  id: 407944
-  time: '2026-08-29T08:15:41.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/5848
-- author: OJG
-  changes:
-  - message: reinforced the AI upload room with more walls.
-    type: Tweak
-  id: 407945
-  time: '2026-08-29T08:15:41.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/5848
-- author: OJG
-  changes:
-  - message: HOS weapon spawner.
-    type: Fix
-  id: 407946
-  time: '2026-08-29T08:15:41.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/5848
-- author: OJG
-  changes:
-  - message: extended the evac docks to allow for proper evac.
-    type: Fix
-  id: 407947
-  time: '2026-08-29T08:15:41.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/5848
-- author: OJG
-  changes:
-  - message: gave armory their implants.
-    type: Fix
-  id: 407948
-  time: '2026-08-29T08:15:41.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/5848
-- author: OJG
-  changes:
-  - message: Reworked a long of little things in sec.
-    type: Tweak
-  id: 407949
-  time: '2026-08-29T08:15:41.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/5848
-- author: OJG
-  changes:
-  - message: tile maker and uniform printer to engi and hop respectively.
-    type: Add
-  id: 407950
-  time: '2026-08-29T08:15:41.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/5848
-- author: OJG
-  changes:
-  - message: cyborg charger in AI core.
-    type: Add
-  id: 407951
-  time: '2026-08-29T08:15:41.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/5848
-- author: OJG
-  changes:
-  - message: reconfigured the tanker shuttles gas lines and gave it's dock a beacon.
-    type: Tweak
-  id: 407952
-  time: '2026-08-29T08:15:41.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/5848
-- author: SirLutz
-  changes:
-  - message: Damage and Armor calulation take % reduction as armor, expect ingame changes.
-    type: Add
-  id: 407953
-  time: '2026-08-29T16:38:59.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/5677
 - author: SirLutz
   changes:
   - message: Hollow Point ammunition no longer shreds heavily armored mechs, for example, Mauler damage per shot is now SP 7,64 ->  6,43; HP 12,65 -> 0; AP  5,39 -> 9,95; FMJ  5,39 -> 7,05.
@@ -2799,4 +2715,88 @@ Entries:
   id: 408341
   time: '2026-09-06T21:46:50.000000+00:00'
   url: https://github.com/ss14Starlight/space-station-14/pull/6006
+- author: Wizden Team
+  changes:
+  - message: Logging immovablerodsystem collisions for admin panel.
+    type: Add
+  id: 408342
+  time: '2026-09-06T21:54:31.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/6023
+- author: Wizden Team
+  changes:
+  - message: Added functionality to the Optical Thermal Scanner. The eyewear will now overlay tiles with a solid color corresponding to its temperature if it's not room temperature, as well as if a tile is pure vacuum.
+    type: Add
+  id: 408343
+  time: '2026-09-06T21:54:31.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/6023
+- author: Wizden Team
+  changes:
+  - message: Chaplains can now choose a custom name.
+    type: Add
+  id: 408344
+  time: '2026-09-06T21:54:31.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/6023
+- author: Wizden Team
+  changes:
+  - message: Emitters now alert the Engineering radio channel if they are destroyed, deconstructed, lose power or are unlocked, when powered.
+    type: Add
+  id: 408345
+  time: '2026-09-06T21:54:31.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/6023
+- author: Wizden Team
+  changes:
+  - message: Stackables items now merge when stopping on/after a conveyor belt.
+    type: Add
+  id: 408346
+  time: '2026-09-06T21:54:31.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/6023
+- author: Wizden Team
+  changes:
+  - message: Adjusted the Mute Toxin chemical reaction recipe to no longer require uranium.
+    type: Tweak
+  id: 408347
+  time: '2026-09-06T21:54:31.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/6023
+- author: Wizden Team
+  changes:
+  - message: Rat King and Rat Servants now have partial shock resistance, preventing electrified doors from stunning them while still dealing reduced damage.
+    type: Tweak
+  id: 408348
+  time: '2026-09-06T21:54:31.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/6023
+- author: Wizden Team
+  changes:
+  - message: Volumetric devices now respect their pressure limits more.
+    type: Fix
+  id: 408349
+  time: '2026-09-06T21:54:31.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/6023
+- author: Wizden Team
+  changes:
+  - message: Firelocks now automatically re-close if they have a danger signal and they're powered.
+    type: Fix
+  id: 408350
+  time: '2026-09-06T21:54:31.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/6023
+- author: Wizden Team
+  changes:
+  - message: Ammonia and Nitrous Oxide now do more damage according to the concentration of gas in the atmosphere.
+    type: Tweak
+  id: 408351
+  time: '2026-09-06T21:54:31.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/6023
+- author: Wizden Team
+  changes:
+  - message: Fixed containment fields dying even when one side still had power.
+    type: Fix
+  id: 408352
+  time: '2026-09-06T21:54:31.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/6023
+- author: Wizden Team
+  changes:
+  - message: Closed the legal loophole which technically allowed engineers to open-carry the syndicate fire axe.
+    type: Fix
+  id: 408353
+  time: '2026-09-06T21:54:31.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/6023
 Order: -1

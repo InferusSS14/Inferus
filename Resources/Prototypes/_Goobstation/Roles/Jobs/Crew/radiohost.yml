@@ -19,6 +19,8 @@
     id: RadioHostPDA
     ears: ClothingHeadsetAltRadioHost
     belt: ClothingBeltStorageWaistbag
+    pocket1: Multitool # Inferus
+    pocket2: BoxRadioHandheldStation # Inferus
 
 - type: chameleonOutfit
   id: RadioHostChameleonOutfit

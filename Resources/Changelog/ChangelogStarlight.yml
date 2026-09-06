@@ -1,13 +1,6 @@
 Entries:
 - author: Caws
   changes:
-  - message: (Novo LObster) Fax machine added to Botany.
-    type: Add
-  id: 407866
-  time: '2026-08-28T20:12:04.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/5783
-- author: Caws
-  changes:
   - message: (Novo Lobster) Added missing Funding Allocation computers.
     type: Add
   id: 407867
@@ -2799,4 +2792,11 @@ Entries:
   id: 408265
   time: '2026-09-06T00:44:20.000000+00:00'
   url: https://github.com/ss14Starlight/space-station-14/pull/5924
+- author: xxhotgirl69, Doner & RedSpeeds
+  changes:
+  - message: Added new lobby art.
+    type: Add
+  id: 408266
+  time: '2026-09-06T01:11:53.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/5928
 Order: -1

@@ -237,3 +237,14 @@
   cost: 500
   category: cargoproduct-category-name-service
   group: market
+  
+# Inferus
+- type: cargoProduct
+  id: ServiceStationRadioBoxes
+  icon:
+    sprite: _Inferus/Objects/Devices/radiohandy.rsi
+    state: walkietalkie
+  product: CrateStationRadioHandheld
+  cost: 1200
+  category: cargoproduct-category-name-service
+  group: market

@@ -19,6 +19,7 @@
     id: RadioHostPDA
     ears: ClothingHeadsetAltRadioHost
     belt: ClothingBeltStorageWaistbag
+    pocket2: BoxRadioHandheldStation
 
 - type: chameleonOutfit
   id: RadioHostChameleonOutfit

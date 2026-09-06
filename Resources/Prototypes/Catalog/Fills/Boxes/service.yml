@@ -14,6 +14,24 @@
       - state: box
       - state: flashbang
 
+# Inferus start
+- type: entity
+  name: handheld station radio box
+  parent: BoxCardboard
+  id: BoxRadioHandheldStation
+  description: A box full of handheld station radios. Handed out at the radio host's discretion.
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase:
+        id: RadioHandheldStation
+        amount: 16
+  - type: Sprite
+    layers:
+      - state: box
+      - state: vials
+# Inferus end
+
 - type: entity
   name: NT "AgriChem Is Fun" kit
   parent: BoxCardboard

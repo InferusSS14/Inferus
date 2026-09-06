@@ -1,5 +1,5 @@
 - type: entity
-  name: Aspace radio [ADMEME]
+  name: aspace radio [ADMEME]
   description: A radio with which admins mess with you.
   parent: [RadioHandheld]
   id: RadioHandheldAdmeme
@@ -25,3 +25,28 @@
     - type: Tag
       tags:
         - Radio
+
+- type: entity
+  name: handheld station radio
+  description: Listen to those sweet tunes, on the go!
+  parent: [RadioHandheld]
+  id: RadioHandheldStation
+  components:
+    - type: Sprite
+      sprite: _Inferus/Objects/Devices/radiohandy.rsi
+      layers:
+        - state: walkietalkie
+        - state: walkietalkie-on
+      state: walkietalkie
+    - type: Item
+      sprite: _Inferus/Objects/Devices/radiohandy.rsi
+      heldPrefix: walkietalkie
+    - type: RadioSpeaker
+      channels:
+      - RadioShow
+    - type: Speech
+      speechVerb: Radio
+    - type: ActiveRadio
+      channels:
+      - RadioShow
+    - type: StationRadioReceiver

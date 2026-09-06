@@ -1,13 +1,6 @@
 Entries:
 - author: Caws
   changes:
-  - message: (Novo Lobster) Added a microwave by the 'donut' part of the kitchen, and a deep fryer by the 'general' part of the kitchen.
-    type: Add
-  id: 407873
-  time: '2026-08-28T20:12:04.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/5783
-- author: Caws
-  changes:
   - message: (Novo Lobster) Added a mailing unit to Brigmedic.
     type: Add
   id: 407874
@@ -2799,4 +2792,11 @@ Entries:
   id: 408272
   time: '2026-09-06T02:05:03.000000+00:00'
   url: https://github.com/ss14Starlight/space-station-14/pull/5960
+- author: Floximo
+  changes:
+  - message: Translation (console) errors fixed.
+    type: Fix
+  id: 408273
+  time: '2026-09-06T02:05:06.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/5981
 Order: -1

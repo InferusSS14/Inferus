@@ -1,13 +1,6 @@
 Entries:
 - author: Cvlancer
   changes:
-  - message: (Prism) Added all the new departmental tech fabs with service being in bar.
-    type: Add
-  id: 407906
-  time: '2026-08-28T20:12:06.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/5751
-- author: Cvlancer
-  changes:
   - message: (Prism) Added assistant manager spawn to hop line.
     type: Add
   id: 407907
@@ -2799,4 +2792,11 @@ Entries:
   id: 408305
   time: '2026-09-06T06:09:42.000000+00:00'
   url: https://github.com/ss14Starlight/space-station-14/pull/5969
+- author: STARLIGHT TEAM
+  changes:
+  - message: Clarified wording for some SOPs and added structure on permits for department-restricted items.
+    type: Tweak
+  id: 408306
+  time: '2026-09-06T08:27:26.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/6002
 Order: -1

@@ -1,11 +1,4 @@
 Entries:
-- author: Caws
-  changes:
-  - message: (Novo Lobster) Fixed an overlapping fuel tank and vending machine in the Park's maints.
-    type: Fix
-  id: 407880
-  time: '2026-08-28T20:12:04.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/5783
 - author: Cvlancer
   changes:
   - message: (Reach) Added assistant manager near hop's office.
@@ -2799,4 +2792,11 @@ Entries:
   id: 408279
   time: '2026-09-06T02:39:52.000000+00:00'
   url: https://github.com/ss14Starlight/space-station-14/pull/5984
+- author: Kirb
+  changes:
+  - message: Fixed hotbar order at roundstart.
+    type: Fix
+  id: 408280
+  time: '2026-09-06T03:14:49.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/5990
 Order: -1

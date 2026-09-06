@@ -27,5 +27,16 @@ Entries:
   id: 701
   time: '2026-09-03T01:55:13.000000+00:00'
   url: https://github.com/InferusSS14/Inferus/pull/7
+- author: baltdev
+  changes:
+  - message: Added handheld station radios.
+    type: Add
+  - message: Added a vinyl for Space Asshole.
+    type: Add
+  - message: Gives the Radio Host a Multitool.
+    type: Tweak
+  id: 801
+  time: '2026-09-06T03:03:54.000000+00:00'
+  url: https://github.com/InferusSS14/Inferus/pull/8
 Order: -2
 

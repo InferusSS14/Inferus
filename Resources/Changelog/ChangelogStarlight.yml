@@ -1,27 +1,6 @@
 Entries:
 - author: Cvlancer
   changes:
-  - message: (Prism) Added assistant manager spawn to hop line.
-    type: Add
-  id: 407907
-  time: '2026-08-28T20:12:06.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/5751
-- author: Cvlancer
-  changes:
-  - message: (Prism) Added roboticist locker to roboticist.
-    type: Add
-  id: 407908
-  time: '2026-08-28T20:12:06.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/5751
-- author: Cvlancer
-  changes:
-  - message: (Prism) Added coroner locker to morgue.
-    type: Add
-  id: 407909
-  time: '2026-08-28T20:12:06.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/5751
-- author: Cvlancer
-  changes:
   - message: (Prism) Added surgeon locker to surgery.
     type: Add
   id: 407910
@@ -2799,4 +2778,25 @@ Entries:
   id: 408306
   time: '2026-09-06T08:27:26.000000+00:00'
   url: https://github.com/ss14Starlight/space-station-14/pull/6002
+- author: OJG
+  changes:
+  - message: Diona nymph vent migrations.
+    type: Add
+  id: 408307
+  time: '2026-09-06T10:11:31.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/5971
+- author: OJG
+  changes:
+  - message: Generic diona nymph ghostroles.
+    type: Add
+  id: 408308
+  time: '2026-09-06T10:11:31.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/5971
+- author: OJG
+  changes:
+  - message: Crab vent migrations.
+    type: Add
+  id: 408309
+  time: '2026-09-06T10:11:31.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/5971
 Order: -1

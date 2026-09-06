@@ -1,20 +1,6 @@
 Entries:
 - author: Caws
   changes:
-  - message: (Novo Lobster) Added box shelving around the map, featuring various useful supplies.
-    type: Add
-  id: 407864
-  time: '2026-08-28T20:12:04.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/5783
-- author: Caws
-  changes:
-  - message: (Novo Lobster) Fax machine added to Engineering front.
-    type: Add
-  id: 407865
-  time: '2026-08-28T20:12:04.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/5783
-- author: Caws
-  changes:
   - message: (Novo LObster) Fax machine added to Botany.
     type: Add
   id: 407866
@@ -2799,4 +2785,18 @@ Entries:
   id: 408263
   time: '2026-09-06T00:44:19.000000+00:00'
   url: https://github.com/ss14Starlight/space-station-14/pull/5917
+- author: Johnny
+  changes:
+  - message: Ore box has bigger magnet now, pull from further away.
+    type: Tweak
+  id: 408264
+  time: '2026-09-06T00:44:20.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/5924
+- author: Johnny
+  changes:
+  - message: Ore box can now pick up artifact fragment.
+    type: Tweak
+  id: 408265
+  time: '2026-09-06T00:44:20.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/5924
 Order: -1

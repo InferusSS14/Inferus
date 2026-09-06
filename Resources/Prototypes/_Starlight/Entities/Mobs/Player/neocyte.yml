@@ -43,7 +43,6 @@
 - type: entity
   save: false
   name: Urist McScalester
-  suffix: Urisst' Mztosster
   parent: BaseMobNeoReptilian
   id: MobNeoReptilian
 
@@ -67,7 +66,7 @@
 
 - type: entity
   save: false
-  name: Urist McHandster The Neo-Dwarf
+  name: Urist McHandster the Neo-Dwarf
   parent: BaseMobNeoDwarf
   id: MobNeoDwarf
 

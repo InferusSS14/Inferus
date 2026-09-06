@@ -88,21 +88,21 @@ namespace Content.Server.Atmos.Piping.Trinary.EntitySystems
                 var limitMolesFilter =
                     AtmosphereSystem.MolesToMaxPressure(wantsToFilter, filterNode.Air, Atmospherics.MaxOutputPressure);
 
-                var filteredMoles = Math.Clamp(limitMolesFilter, 0f, availableMoles); // clamp against all selected gases
-                var filterRatio = availableMoles > 0f ? filteredMoles / availableMoles : 0f;
-                var actuallyFiltered = wantsToFilter.RemoveRatio(filterRatio); // preserve selected-gas ratios
-                #endregion
+                var availableMoles = removed.GetMoles(filter.FilteredGas.Value);
+                var filteredMoles = Math.Max(Math.Min(limitMolesFilter, availableMoles), 0);
+                var filteredGasMixture = new GasMixture { Temperature = removed.Temperature };
 
-                _atmosphereSystem.Merge(filterNode.Air, actuallyFiltered);
-                _atmosphereSystem.Merge(inletNode.Air, wantsToFilter); // Starlight, return selected gas that did not fit.
-                transferredMoles += actuallyFiltered.TotalMoles; // Starlight
+                filteredGasMixture.SetMoles(filter.FilteredGas.Value, filteredMoles);
+                removed.AdjustMoles(filter.FilteredGas.Value, -filteredMoles);
+
+                _atmosphereSystem.Merge(filterNode.Air, filteredGasMixture);
+
+                _ambientSoundSystem.SetAmbience(uid, filteredMoles > 0f);
             }
 
-            if (removed.TotalMoles > 0f) // Starlight
-            {
-                // Fraction of `removed` that can be sent to outlet without exceeding max pressure.
-                var limitRatioOutlet =
-                    AtmosphereSystem.FractionToMaxPressure(removed, outletNode.Air, Atmospherics.MaxOutputPressure);
+            // Fraction of `removed` that can be sent to outlet without exceeding max pressure.
+            var limitRatioOutlet =
+                AtmosphereSystem.FractionToMaxPressure(removed, outletNode.Air, Atmospherics.MaxOutputPressure);
 
                 // This might end up negative, but such cases are handled correctly by the `RemoveRatio` method.
                 var passthrough = removed.RemoveRatio(limitRatioOutlet);

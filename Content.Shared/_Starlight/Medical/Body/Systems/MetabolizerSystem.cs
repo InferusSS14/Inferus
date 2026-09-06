@@ -36,6 +36,7 @@ public sealed class MetabolizerSystem : EntitySystem
     [Dependency] private readonly SharedEntityConditionsSystem _entityConditions = default!;
     [Dependency] private readonly SharedEntityEffectsSystem _entityEffects = default!;
     [Dependency] private readonly SharedSolutionContainerSystem _solutionContainerSystem = default!;
+    [Dependency] private readonly INetManager _net = default!;
 
     private EntityQuery<OrganComponent> _organQuery;
     private EntityQuery<SolutionManagerComponent> _solutionQuery;
@@ -66,6 +67,11 @@ public sealed class MetabolizerSystem : EntitySystem
     {
         base.Update(frameTime);
         if (!_net.IsServer)
+            return;
+
+        // We only do this on the server to prevent the client from reshuffling metabolism during prediction.
+        // Should just be replaced with predicted random.
+        if (_net.IsClient)
             return;
 
         var metabolizers = new ValueList<(EntityUid Uid, MetabolizerComponent Component)>(Count<MetabolizerComponent>());

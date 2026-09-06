@@ -1,13 +1,6 @@
 Entries:
 - author: Cvlancer
   changes:
-  - message: (Orwell) Added assistant manager to conference room.
-    type: Add
-  id: 407892
-  time: '2026-08-28T20:12:06.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/5751
-- author: Cvlancer
-  changes:
   - message: (Orwell)  Added radio host south of arrivals.
     type: Add
   id: 407893
@@ -2799,4 +2792,11 @@ Entries:
   id: 408291
   time: '2026-09-06T05:12:38.000000+00:00'
   url: https://github.com/ss14Starlight/space-station-14/pull/5918
+- author: Conflee
+  changes:
+  - message: Added Firefighter Smocks. Smocks can be found in Fire-Safety Cargo orders, and Fire-Safety Closets. They are much worse than a Fire Suit, but do provide some protection from direct fire damage, heating/cooling temperatures, and heat/cold damage types. Resistances don't stack additively, so the benefit of wearing both is very small- spread the PPE! In prep for Reagent Fires.
+    type: Add
+  id: 408292
+  time: '2026-09-06T05:12:39.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/5956
 Order: -1

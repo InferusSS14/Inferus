@@ -1,11 +1,4 @@
 Entries:
-- author: Way
-  changes:
-  - message: Decal updates.
-    type: Tweak
-  id: 407863
-  time: '2026-08-28T19:42:58.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/5750
 - author: Caws
   changes:
   - message: (Novo Lobster) Added box shelving around the map, featuring various useful supplies.
@@ -2799,4 +2792,11 @@ Entries:
   id: 408262
   time: '2026-09-06T00:11:15.000000+00:00'
   url: https://github.com/ss14Starlight/space-station-14/pull/5909
+- author: RedSpeeds
+  changes:
+  - message: Fixed ATS nearly spawning into stations.
+    type: Fix
+  id: 408263
+  time: '2026-09-06T00:44:19.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/5917
 Order: -1

@@ -1,81 +1,4 @@
 Entries:
-- author: Caws
-  changes:
-  - message: (Cluster) NCT Office.
-    type: Remove
-  id: 407931
-  time: '2026-08-28T20:52:27.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/5853
-- author: RedSpeeds
-  changes:
-  - message: Increased Devil spawn rate to 10% from 5%.
-    type: Tweak
-  id: 407932
-  time: '2026-08-28T20:52:29.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/5850
-- author: walksanatora
-  changes:
-  - message: Added Remix OWO station (Orbital Weapons Observatory). No it is not in rotation. No it will never be in rotation. Yes I will randomly subject people to it. Yes it has Reach as the evac shuttle.
-    type: Add
-  id: 407933
-  time: '2026-08-29T08:15:39.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/5824
-- author: OJG
-  changes:
-  - message: removed the stacked RD server.
-    type: Tweak
-  id: 407934
-  time: '2026-08-29T08:15:41.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/5848
-- author: OJG
-  changes:
-  - message: revamped SM chamber.
-    type: Tweak
-  id: 407935
-  time: '2026-08-29T08:15:41.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/5848
-- author: OJG
-  changes:
-  - message: swapped out old counter variants for newer ones in the dining hall and gave the piano below SM a stage.
-    type: Tweak
-  id: 407936
-  time: '2026-08-29T08:15:41.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/5848
-- author: OJG
-  changes:
-  - message: moved surgical tables around and added drains.
-    type: Tweak
-  id: 407937
-  time: '2026-08-29T08:15:41.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/5848
-- author: OJG
-  changes:
-  - message: added some fuel rods to the reactor room.
-    type: Tweak
-  id: 407938
-  time: '2026-08-29T08:15:41.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/5848
-- author: OJG
-  changes:
-  - message: adjust the reactor room and give it a way of venting directly to space.
-    type: Tweak
-  id: 407939
-  time: '2026-08-29T08:15:41.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/5848
-- author: OJG
-  changes:
-  - message: made drugstore bigger.
-    type: Tweak
-  id: 407940
-  time: '2026-08-29T08:15:41.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/5848
-- author: OJG
-  changes:
-  - message: RD's office is purpler.
-    type: Tweak
-  id: 407941
-  time: '2026-08-29T08:15:41.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/5848
 - author: OJG
   changes:
   - message: adjust the reactor room and give it a way of venting directly to space.
@@ -2799,4 +2722,81 @@ Entries:
   id: 408330
   time: '2026-09-06T19:51:34.000000+00:00'
   url: https://github.com/ss14Starlight/space-station-14/pull/6021
+- author: Wizden Team
+  changes:
+  - message: Ghosts appearances will now change depending on their cause of death.
+    type: Add
+  id: 408331
+  time: '2026-09-06T21:46:50.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/6006
+- author: Wizden Team
+  changes:
+  - message: Mobs that don't need internals no longer have the internals indicator.
+    type: Tweak
+  id: 408332
+  time: '2026-09-06T21:46:50.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/6006
+- author: Wizden Team
+  changes:
+  - message: Emitter toggle logs now show if the emitter was toggled on or off.
+    type: Tweak
+  id: 408333
+  time: '2026-09-06T21:46:50.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/6006
+- author: Wizden Team
+  changes:
+  - message: The Syndi Law Circuit is now a kit containing the lawboard and and a Syndicate ID.
+    type: Tweak
+  id: 408334
+  time: '2026-09-06T21:46:50.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/6006
+- author: Wizden Team
+  changes:
+  - message: The Syndicate ID now uses the Syndicate icon instead of the blank icon.
+    type: Tweak
+  id: 408335
+  time: '2026-09-06T21:46:50.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/6006
+- author: Wizden Team
+  changes:
+  - message: Mime PDAs no longer have the NanoTask and Notekeeper applications installed by default.
+    type: Remove
+  id: 408336
+  time: '2026-09-06T21:46:50.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/6006
+- author: Wizden Team
+  changes:
+  - message: Central Command fax always tells admins where the fax came from instead of saying "unknown" until it was refreshed.
+    type: Fix
+  id: 408337
+  time: '2026-09-06T21:46:50.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/6006
+- author: Wizden Team
+  changes:
+  - message: Anomalies will no longer spawn multiple things on the same tile (asteroid wall, etc).
+    type: Fix
+  id: 408338
+  time: '2026-09-06T21:46:50.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/6006
+- author: Wizden Team
+  changes:
+  - message: Security bio suit now hides tails again.
+    type: Fix
+  id: 408339
+  time: '2026-09-06T21:46:50.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/6006
+- author: Wizden Team
+  changes:
+  - message: DNA scrambling properly.
+    type: Fix
+  id: 408340
+  time: '2026-09-06T21:46:50.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/6006
+- author: Wizden Team
+  changes:
+  - message: Dragons now heal when eating people again.
+    type: Fix
+  id: 408341
+  time: '2026-09-06T21:46:50.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/6006
 Order: -1

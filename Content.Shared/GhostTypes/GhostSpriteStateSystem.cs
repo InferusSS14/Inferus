@@ -32,7 +32,7 @@ public sealed class GhostSpriteStateSystem : EntitySystem
         ProtoId<SpecialCauseOfDeathPrototype>? specialCase = null;
 
         if (!TryComp<LastBodyDamageComponent>(mind, out var storedDamage))
-          return;
+            return;
 
         if (storedDamage.DamagePerGroup != null && storedDamage.Damage != null)
         {

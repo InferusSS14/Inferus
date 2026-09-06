@@ -43,12 +43,12 @@ public abstract partial class SharedAtmosphereSystem
         for (var i = 0; i < GasPrototypes.Length; i++)
         {
             /*
-             As an optimization routine we pre-divide the specific heat by the heat scale here,
-             so we don't have to do it every time we calculate heat capacity.
-             Most usages are going to want the scaled value anyway.
+            As an optimization routine we pre-divide the specific heat by the heat scale here,
+            so we don't have to do it every time we calculate heat capacity.
+            Most usages are going to want the scaled value anyway.
 
-             If you would like the unscaled specific heat, you'd need to multiply by HeatScale again.
-             TODO ATMOS: please just make this 2 separate arrays instead of invoking multiplication every time.
+            If you would like the unscaled specific heat, you'd need to multiply by HeatScale again.
+            TODO ATMOS: please just make this 2 separate arrays instead of invoking multiplication every time.
              */
             _gasSpecificHeats[i] = GasPrototypes[i].SpecificHeat / HeatScale;
         }

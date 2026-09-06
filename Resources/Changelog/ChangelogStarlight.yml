@@ -1,13 +1,6 @@
 Entries:
 - author: Caws
   changes:
-  - message: (Novo Lobster) Added meteor protection for Science.
-    type: Add
-  id: 407868
-  time: '2026-08-28T20:12:04.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/5783
-- author: Caws
-  changes:
   - message: (Novo Lobster) Added a HyDrobe to Botany.
     type: Add
   id: 407869
@@ -2799,4 +2792,11 @@ Entries:
   id: 408267
   time: '2026-09-06T01:11:55.000000+00:00'
   url: https://github.com/ss14Starlight/space-station-14/pull/5933
+- author: Conflee
+  changes:
+  - message: Added Particles to several anomalies for more visual polish. Pyro, Ice, Bluespace, Tech, Flesh, Liquid, Dark, and Shadow.
+    type: Add
+  id: 408268
+  time: '2026-09-06T01:36:39.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/5905
 Order: -1

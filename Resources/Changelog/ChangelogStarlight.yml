@@ -1,27 +1,6 @@
 Entries:
 - author: Caws
   changes:
-  - message: (Lagan) Fixed a messing disposals pipe west of Arrivals.
-    type: Fix
-  id: 407924
-  time: '2026-08-28T20:30:57.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/5852
-- author: Caws
-  changes:
-  - message: (Cluster) Radio Host.
-    type: Add
-  id: 407925
-  time: '2026-08-28T20:52:27.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/5853
-- author: Caws
-  changes:
-  - message: (Cluster) Added Mail Tech lockers.
-    type: Add
-  id: 407926
-  time: '2026-08-28T20:52:27.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/5853
-- author: Caws
-  changes:
   - message: (Cluster) Added Cargo Tech lockers.
     type: Add
   id: 407927
@@ -2799,4 +2778,25 @@ Entries:
   id: 408323
   time: '2026-09-06T10:42:31.000000+00:00'
   url: https://github.com/ss14Starlight/space-station-14/pull/5906
+- author: Citrea
+  changes:
+  - message: Soviet crates do *not* collide anymore, until collision issues are fixed.
+    type: Remove
+  id: 408324
+  time: '2026-09-06T14:06:23.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/6015
+- author: Citrea
+  changes:
+  - message: Secure crates can be deconstructed again.
+    type: Fix
+  id: 408325
+  time: '2026-09-06T14:06:23.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/6015
+- author: Citrea
+  changes:
+  - message: Crates are once again passable when open.
+    type: Fix
+  id: 408326
+  time: '2026-09-06T14:06:23.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/6015
 Order: -1

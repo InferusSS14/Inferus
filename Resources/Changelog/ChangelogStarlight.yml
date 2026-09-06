@@ -1,13 +1,6 @@
 Entries:
 - author: Caws
   changes:
-  - message: (Novo Lobster) An unpowered keycard auth. device and holopad in Conference have been fixed.
-    type: Fix
-  id: 407878
-  time: '2026-08-28T20:12:04.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/5783
-- author: Caws
-  changes:
   - message: (Novo Lobster) The wall medical vending machine by HOP is now a civilian instead of departmental.
     type: Fix
   id: 407879
@@ -2799,4 +2792,11 @@ Entries:
   id: 408277
   time: '2026-09-06T02:39:47.000000+00:00'
   url: https://github.com/ss14Starlight/space-station-14/pull/5988
+- author: Teddiousbear, Hanz5579(discord).
+  changes:
+  - message: Captain's Beret.
+    type: Add
+  id: 408278
+  time: '2026-09-06T02:39:49.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/5987
 Order: -1

@@ -1,13 +1,6 @@
 Entries:
 - author: Caws
   changes:
-  - message: (Novo Lobster) Updated pet beds with the new variants.
-    type: Add
-  id: 407872
-  time: '2026-08-28T20:12:04.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/5783
-- author: Caws
-  changes:
   - message: (Novo Lobster) Added a microwave by the 'donut' part of the kitchen, and a deep fryer by the 'general' part of the kitchen.
     type: Add
   id: 407873
@@ -2799,4 +2792,11 @@ Entries:
   id: 408271
   time: '2026-09-06T02:05:01.000000+00:00'
   url: https://github.com/ss14Starlight/space-station-14/pull/5978
+- author: Trosling
+  changes:
+  - message: Changed wording in Corporate Law to be more species-ambivalent, as opposed to the prior fixation on humanoids specifically.
+    type: Tweak
+  id: 408272
+  time: '2026-09-06T02:05:03.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/5960
 Order: -1

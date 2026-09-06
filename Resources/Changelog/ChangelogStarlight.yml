@@ -1,13 +1,6 @@
 Entries:
 - author: Caws
   changes:
-  - message: (Novo Lobster) Added a HyDrobe to Botany.
-    type: Add
-  id: 407869
-  time: '2026-08-28T20:12:04.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/5783
-- author: Caws
-  changes:
   - message: (Novo Lobster) Added emergency lighting to various indoor locations.
     type: Add
   id: 407870
@@ -2799,4 +2792,11 @@ Entries:
   id: 408268
   time: '2026-09-06T01:36:39.000000+00:00'
   url: https://github.com/ss14Starlight/space-station-14/pull/5905
+- author: Sparlight
+  changes:
+  - message: Shadekins can no longer use the olfactory (smell) implant.  They can't breathe to begin with.
+    type: Remove
+  id: 408269
+  time: '2026-09-06T01:36:41.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/5935
 Order: -1

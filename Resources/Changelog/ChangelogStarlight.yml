@@ -1,34 +1,6 @@
 Entries:
 - author: Cvlancer
   changes:
-  - message: (Orwell)  Added radio host south of arrivals.
-    type: Add
-  id: 407893
-  time: '2026-08-28T20:12:06.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/5751
-- author: Cvlancer
-  changes:
-  - message: (Orwell) Added several station radios throughout the station.
-    type: Add
-  id: 407894
-  time: '2026-08-28T20:12:06.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/5751
-- author: Cvlancer
-  changes:
-  - message: (Orwell) Added some cloth to maints surgery room.
-    type: Add
-  id: 407895
-  time: '2026-08-28T20:12:06.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/5751
-- author: Cvlancer
-  changes:
-  - message: (Orwell) Added double hop window.
-    type: Add
-  id: 407896
-  time: '2026-08-28T20:12:06.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/5751
-- author: Cvlancer
-  changes:
   - message: (Orwell) Changed the two shuttles at shuttle construction bay slightly using diagonals.
     type: Tweak
   id: 407897
@@ -2799,4 +2771,32 @@ Entries:
   id: 408292
   time: '2026-09-06T05:12:39.000000+00:00'
   url: https://github.com/ss14Starlight/space-station-14/pull/5956
+- author: Xale
+  changes:
+  - message: Avali and Vulpkanin no longer require more food or water to get out of near-dying levels of hunger or thirst.
+    type: Tweak
+  id: 408293
+  time: '2026-09-06T05:42:08.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/5992
+- author: Xale
+  changes:
+  - message: Documentation for Avali hunger rate, which is 1.8x rather than the previously stated 2.0x.
+    type: Fix
+  id: 408294
+  time: '2026-09-06T05:42:08.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/5992
+- author: Xale
+  changes:
+  - message: Documentation for Vulpkanin hunger rate, which is 1.1x rather than the previously stated 1.5x.
+    type: Fix
+  id: 408295
+  time: '2026-09-06T05:42:08.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/5992
+- author: Xale
+  changes:
+  - message: Documentation for Vulpkanin thirst rate, which is 1.25x rather than the previously stated 1.5x.
+    type: Fix
+  id: 408296
+  time: '2026-09-06T05:42:08.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/5992
 Order: -1

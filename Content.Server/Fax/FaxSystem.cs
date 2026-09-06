@@ -536,20 +536,20 @@ public sealed partial class FaxSystem : EntitySystem
 
         // TODO: See comment in 'Send()' about not being able to copy whole entities
         var printout = new FaxPrintout(paper.Content,
-                                       nameMod?.BaseName ?? metadata.EntityName,
-                                       labelComponent?.CurrentLabel,
-                                       metadata.EntityPrototype?.ID ?? component.PrintPaperId,
-                                       paper.StampState,
-                                       paper.StampedBy,
-                                       paper.EditingDisabled,
-                                       component.FaxName, // Starlight
-                                       //starlight-start
-                                       cargoSlipComponent?.Product.Id,
-                                       cargoSlipComponent?.Requester,
-                                       cargoSlipComponent?.Reason,
-                                       cargoSlipComponent?.OrderQuantity,
-                                       cargoSlipComponent?.Account,
-                                       retainMetadata: true); //starlight-end
+                                        nameMod?.BaseName ?? metadata.EntityName,
+                                        labelComponent?.CurrentLabel,
+                                        metadata.EntityPrototype?.ID ?? component.PrintPaperId,
+                                        paper.StampState,
+                                        paper.StampedBy,
+                                        paper.EditingDisabled,
+                                        component.FaxName, // Starlight
+                                        //starlight-start
+                                        cargoSlipComponent?.Product.Id,
+                                        cargoSlipComponent?.Requester,
+                                        cargoSlipComponent?.Reason,
+                                        cargoSlipComponent?.OrderQuantity,
+                                        cargoSlipComponent?.Account,
+                                        retainMetadata: true); //starlight-end
 
         component.PrintingQueue.Enqueue(printout);
         component.SendTimeoutRemaining += component.SendTimeout;

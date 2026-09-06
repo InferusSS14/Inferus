@@ -65,35 +65,6 @@ namespace Content.Server.Atmos.Piping.Binary.EntitySystems
                 pump.Blocked = true;
             }
 
-            //starlight fix subtick
-            float wantToTransfer = pump.TransferRate * _atmosphereSystem.PumpSpeedup() * args.dt;
-
-            // Get The Volume to transfer, do not attempt to transfer more than the pipe can hold.
-            float transferVolume = Math.Min(inlet.Air.Volume, wantToTransfer);
-
-            // Calculate how many moles does this transfer contain
-            float transferMoles =
-                inlet.Air.Pressure * transferVolume / (inlet.Air.Temperature * Atmospherics.R);
-
-            // Calculate how many moles can outlet still contain
-            float molesSpaceLeft = (pump.HigherThreshold - outlet.Air.Pressure) * outlet.Air.Volume /
-                                   (outlet.Air.Temperature * Atmospherics.R);
-
-            // Get the lower value of the two, and clamp it to the transfer rate
-            float actualMolesTransfered = Math.Clamp(transferMoles, 0, Math.Max(0, molesSpaceLeft));
-
-            float actualTransferVolume = 0;
-            if (actualMolesTransfered > 0 && inlet.Air.Pressure > 0)
-            {
-                actualTransferVolume = actualMolesTransfered * inlet.Air.Temperature * Atmospherics.R /
-                                       inlet.Air.Pressure;
-            }
-            else
-            {
-                pump.Blocked = true;
-            }
-            //starlight end
-
             if (previouslyBlocked != pump.Blocked)
                 UpdateAppearance(uid, pump);
             if (pump.Blocked)

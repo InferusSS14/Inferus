@@ -1,39 +1,4 @@
 Entries:
-- author: Cvlancer
-  changes:
-  - message: (Prism) Added surgeon locker to surgery.
-    type: Add
-  id: 407910
-  time: '2026-08-28T20:12:06.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/5751
-- author: Cvlancer
-  changes:
-  - message: (Prism) Added virology locker to viro.
-    type: Add
-  id: 407911
-  time: '2026-08-28T20:12:06.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/5751
-- author: Cvlancer
-  changes:
-  - message: (Prism) Added mail access airlocks/windows and lockers to mailroom.
-    type: Add
-  id: 407912
-  time: '2026-08-28T20:12:06.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/5751
-- author: Cvlancer
-  changes:
-  - message: (Prism) Added radio host near arrivals.
-    type: Add
-  id: 407913
-  time: '2026-08-28T20:12:06.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/5751
-- author: Cvlancer
-  changes:
-  - message: (Prism) Changed reporter office room to journalism access.
-    type: Tweak
-  id: 407914
-  time: '2026-08-28T20:12:06.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/5751
 - author: Caws
   changes:
   - message: (Lagan) Radio Hosts.
@@ -2799,4 +2764,39 @@ Entries:
   id: 408309
   time: '2026-09-06T10:11:31.000000+00:00'
   url: https://github.com/ss14Starlight/space-station-14/pull/5971
+- author: wonderfulnewworld
+  changes:
+  - message: Most alcohols are no longer flammable.
+    type: Tweak
+  id: 408310
+  time: '2026-09-06T10:11:33.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/5976
+- author: wonderfulnewworld
+  changes:
+  - message: Neocyte frames are no longer stainable.
+    type: Tweak
+  id: 408311
+  time: '2026-09-06T10:11:33.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/5976
+- author: wonderfulnewworld
+  changes:
+  - message: Washing machines can now be access locked. One for each department has been added, with flatpacks being added to Cap and HoS's lockers respectively, and CMO's generic one being replaced with a medical one.
+    type: Tweak
+  id: 408312
+  time: '2026-09-06T10:11:33.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/5976
+- author: wonderfulnewworld
+  changes:
+  - message: Destroying or deconstructing a washing machine will now dump its contents.
+    type: Fix
+  id: 408313
+  time: '2026-09-06T10:11:33.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/5976
+- author: wonderfulnewworld
+  changes:
+  - message: Fixed a missing loc when trying to pour water on the wall.
+    type: Fix
+  id: 408314
+  time: '2026-09-06T10:11:33.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/5976
 Order: -1

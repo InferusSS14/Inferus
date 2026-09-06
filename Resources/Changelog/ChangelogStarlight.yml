@@ -1,13 +1,6 @@
 Entries:
 - author: Cvlancer
   changes:
-  - message: (Reach) Added flippers (the pet) to gen pop processing room.
-    type: Add
-  id: 407883
-  time: '2026-08-28T20:12:06.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/5751
-- author: Cvlancer
-  changes:
   - message: (Reach) Added a recharger to science.
     type: Add
   id: 407884
@@ -2799,4 +2792,11 @@ Entries:
   id: 408282
   time: '2026-09-06T03:40:16.000000+00:00'
   url: https://github.com/ss14Starlight/space-station-14/pull/5991
+- author: STARLIGHT TEAM
+  changes:
+  - message: Medical HUDs no longer display the alive icon.
+    type: Tweak
+  id: 408283
+  time: '2026-09-06T03:40:18.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/5949
 Order: -1

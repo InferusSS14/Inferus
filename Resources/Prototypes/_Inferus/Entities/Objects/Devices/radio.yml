@@ -41,6 +41,7 @@
     - type: Item
       sprite: _Inferus/Objects/Devices/radiohandy.rsi
       heldPrefix: walkietalkie
+      size: Tiny
     - type: RadioSpeaker
       channels:
       - RadioShow

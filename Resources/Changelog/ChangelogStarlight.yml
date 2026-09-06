@@ -1,13 +1,6 @@
 Entries:
 - author: Caws
   changes:
-  - message: (Cluster) Fixed an unlinked conveyor on the Cargo dock.
-    type: Fix
-  id: 407929
-  time: '2026-08-28T20:52:27.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/5853
-- author: Caws
-  changes:
   - message: (Cluster) Disposals now ejects stuff facing a wall, which should make it more reliably land on the belt.
     type: Fix
   id: 407930
@@ -2799,4 +2792,11 @@ Entries:
   id: 408328
   time: '2026-09-06T14:55:46.000000+00:00'
   url: https://github.com/ss14Starlight/space-station-14/pull/6012
+- author: wonderfulnewworld
+  changes:
+  - message: Salvage medic can no longer be antag.
+    type: Fix
+  id: 408329
+  time: '2026-09-06T15:16:50.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/6013
 Order: -1

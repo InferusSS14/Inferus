@@ -1,13 +1,6 @@
 Entries:
 - author: Cvlancer
   changes:
-  - message: (Reach) Added assistant manager near hop's office.
-    type: Add
-  id: 407881
-  time: '2026-08-28T20:12:06.000000+00:00'
-  url: https://github.com/ss14Starlight/space-station-14/pull/5751
-- author: Cvlancer
-  changes:
   - message: (Reach) Added ice cream machine and chefs closet to kitchen.
     type: Add
   id: 407882
@@ -2799,4 +2792,11 @@ Entries:
   id: 408280
   time: '2026-09-06T03:14:49.000000+00:00'
   url: https://github.com/ss14Starlight/space-station-14/pull/5990
+- author: Starlight Administration
+  changes:
+  - message: Added an exception to rule 6 for stage names for musicians and the like.
+    type: Tweak
+  id: 408281
+  time: '2026-09-06T03:40:14.000000+00:00'
+  url: https://github.com/ss14Starlight/space-station-14/pull/5993
 Order: -1

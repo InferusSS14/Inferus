@@ -19,6 +19,8 @@
   - sneeze!
   - sneezes!
   - sneezed!
+  - sneeze? # Starlight
+  - sneezes? # Starlight
 
 - type: emote
   id: Cough

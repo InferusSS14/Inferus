@@ -511,7 +511,7 @@
       collection: LagomorphSqueak
     Snort:
       collection: LagomorphSnort
-    LagomorphSneeze:
+    Sneeze:
       collection: LagomorphSneeze
     LagomorphSnore:
       collection: LagomorphSnore
@@ -547,7 +547,7 @@
       collection: LagomorphSqueak
     Snort:
       collection: LagomorphSnort
-    LagomorphSneeze:
+    Sneeze:
       collection: LagomorphSneeze
     LagomorphSnore:
       collection: LagomorphSnore

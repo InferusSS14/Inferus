@@ -2045,6 +2045,6 @@
         conditions:
         - !type:MetabolizerTypeCondition
           type: [ Cyclorite ]
-        reagent: Warfarin
+        reagent: Heparin
         amount: -0.5
         # Starlight-End

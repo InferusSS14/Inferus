@@ -531,8 +531,6 @@
     Yip:
       path: /Audio/_Starlight/Effects/yip.ogg #Starlight Yip
     # STARLIGHT START
-    Yawn:
-      collection: MaleYawn
     Snore:
       collection: Snores
     Weh:
@@ -581,8 +579,6 @@
     Yip:
       path: /Audio/_Starlight/Effects/yip.ogg #Starlight Yip
     # STARLIGHT START
-    Yawn:
-      collection: FemaleYawn
     Snore:
       collection: Snores
     Weh:

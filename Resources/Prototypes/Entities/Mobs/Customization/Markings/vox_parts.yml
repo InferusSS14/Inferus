@@ -192,7 +192,9 @@
 - type: marking
   id: VoxTailAnimated
   bodyPart: Tail
-  groupWhitelist: []
+  markingCategory: Tail # Starlight
+  speciesRestriction: [Vox, NeoVox] # Starlight
+  # groupWhitelist # Starlight: []
   forcedColoring: true
   sprites:
   - sprite: Mobs/Customization/vox_parts.rsi
@@ -201,7 +203,7 @@
 - type: marking
   id: VoxTailShort
   bodyPart: Tail
-  markingCategory: Tail
+  markingCategory: Tail # Starlight
   speciesRestriction: [Vox, NeoVox] # Starlight
   forcedColoring: true
   sprites:
@@ -211,7 +213,9 @@
 - type: marking
   id: VoxTailShortAnimated
   bodyPart: Tail
-  groupWhitelist: []
+  markingCategory: Tail # Starlight
+  speciesRestriction: [Vox, NeoVox] # Starlight
+  # groupWhitelist # Starlight: []
   forcedColoring: true
   sprites:
   - sprite: Mobs/Customization/vox_parts.rsi
@@ -220,7 +224,7 @@
 - type: marking
   id: VoxTailBig
   bodyPart: Tail
-  markingCategory: Tail
+  markingCategory: Tail # Starlight
   speciesRestriction: [Vox, NeoVox] # Starlight
   forcedColoring: true
   sprites:
@@ -230,7 +234,9 @@
 - type: marking
   id: VoxTailBigAnimated
   bodyPart: Tail
-  groupWhitelist: []
+  markingCategory: Tail # Starlight
+  speciesRestriction: [Vox, NeoVox] # Starlight
+  # groupWhitelist # Starlight: []
   forcedColoring: true
   sprites:
   - sprite: Mobs/Customization/vox_parts.rsi
@@ -239,7 +245,7 @@
 - type: marking
   id: VoxTailSpikes
   bodyPart: Tail
-  markingCategory: Tail
+  markingCategory: Tail # Starlight
   speciesRestriction: [Vox, NeoVox] # Starlight
   forcedColoring: true
   sprites:
@@ -249,7 +255,9 @@
 - type: marking
   id: VoxTailSpikesAnimated
   bodyPart: Tail
-  groupWhitelist: []
+  markingCategory: Tail # Starlight
+  speciesRestriction: [Vox, NeoVox] # Starlight
+  # groupWhitelist # Starlight: []
   forcedColoring: true
   sprites:
   - sprite: Mobs/Customization/vox_parts.rsi
@@ -258,7 +266,7 @@
 - type: marking
   id: VoxTailDocked
   bodyPart: Tail
-  markingCategory: Tail
+  markingCategory: Tail # Starlight
   speciesRestriction: [Vox, NeoVox] # Starlight
   forcedColoring: true
   sprites:
@@ -268,7 +276,9 @@
 - type: marking
   id: VoxTailDockedAnimated
   bodyPart: Tail
-  groupWhitelist: []
+  markingCategory: Tail # Starlight
+  speciesRestriction: [Vox, NeoVox] # Starlight
+  # groupWhitelist # Starlight: []
   forcedColoring: true
   sprites:
   - sprite: Mobs/Customization/vox_parts.rsi
@@ -278,7 +288,7 @@
 - type: marking
   id: VoxTailSplit
   bodyPart: Tail
-  markingCategory: Tail
+  markingCategory: Tail # Starlight
   speciesRestriction: [Vox, NeoVox] # Starlight
   forcedColoring: true
   sprites:
@@ -288,7 +298,9 @@
 - type: marking
   id: VoxTailSplitAnimated
   bodyPart: Tail
-  groupWhitelist: []
+  markingCategory: Tail # Starlight
+  speciesRestriction: [Vox, NeoVox] # Starlight
+  # groupWhitelist # Starlight: []
   forcedColoring: true
   sprites:
   - sprite: Mobs/Customization/vox_parts.rsi

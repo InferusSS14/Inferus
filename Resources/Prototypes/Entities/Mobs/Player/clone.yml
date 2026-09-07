@@ -13,7 +13,7 @@
   - Dna
   - Fingerprint
   - Grammar # Pronouns
-  - HumanoidProfile # Age, Sex, Gender
+  #- HumanoidProfile # Age, Sex, Gender # Starlight, no nubody
   - NpcFactionMember
   # traits
   - BlackAndWhiteOverlay
@@ -92,6 +92,7 @@
   blacklist:
     components:
     - AttachedClothing # helmets, which are part of the suit
+    - HumanoidAppearance # Starlight, no nubody, so we need to keep this - Wizden's comment: will cause problems for downstream felinids getting cloned as Urists
     - Implanter # they will spawn full again, but you already get the implant. And we can't do item slot copying yet
     - VirtualItem
 

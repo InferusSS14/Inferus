@@ -1,4 +1,3 @@
-
 using Content.Shared.Preferences;
 
 namespace Content.Client.Lobby.UI;
@@ -9,11 +8,6 @@ public sealed partial class HumanoidProfileEditor
     {
         Profile = Profile?.WithName(newName);
         SetDirty();
-
-        if (!IsDirty)
-            return;
-
-        SpriteView.SetName(newName);
     }
 
     private void UpdateNameEdit()
@@ -30,7 +24,9 @@ public sealed partial class HumanoidProfileEditor
 
     private void RandomizeName()
     {
-        if (Profile == null) return;
+        if (Profile == null)
+            return;
+
         var name = HumanoidCharacterProfile.GetName(Profile.Species, Profile.Gender);
         SetName(name);
         UpdateNameEdit();

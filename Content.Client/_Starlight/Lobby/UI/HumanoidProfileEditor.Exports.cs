@@ -1,7 +1,8 @@
 using System.IO;
+using Content.Client._Starlight.Humanoid;
 using Content.Client.Sprite;
-using Content.Shared.Preferences;
 using Robust.Client.UserInterface;
+using Direction = Robust.Shared.Maths.Direction;
 
 namespace Content.Client.Lobby.UI;
 
@@ -16,8 +17,6 @@ public sealed partial class HumanoidProfileEditor
             return;
 
         var dir = SpriteView.OverrideDirection ?? Direction.South;
-
-        // I tried disabling the button but it looks sorta goofy as it only takes a frame or two to save
         _imaging = true;
         await _entManager.System<ContentSpriteSystem>().Export(SpriteView.PreviewDummy, dir, includeId: false);
         _imaging = false;
@@ -29,7 +28,9 @@ public sealed partial class HumanoidProfileEditor
             return;
 
         StartExport();
-        await using var file = await _dialogManager.OpenFile(new FileDialogFilters(new FileDialogFilters.Group("yml")), FileAccess.Read);
+        await using var file = await _dialogManager.OpenFile(
+            new FileDialogFilters(new FileDialogFilters.Group("yml")),
+            FileAccess.Read);
 
         if (file == null)
         {
@@ -39,10 +40,10 @@ public sealed partial class HumanoidProfileEditor
 
         try
         {
-            var profile = HumanoidCharacterProfile.FromStream(file, _playerManager.LocalSession!);
+            var profile = _entManager.System<HumanoidAppearanceSystem>()
+                .FromStream(file, _playerManager.LocalSession!);
             var oldProfile = Profile;
             SetProfile(profile, CharacterSlot);
-
             IsDirty = !profile.MemberwiseEquals(oldProfile);
         }
         catch (Exception exc)
@@ -71,7 +72,7 @@ public sealed partial class HumanoidProfileEditor
 
         try
         {
-            var dataNode = Profile.ToDataNode();
+            var dataNode = _entManager.System<HumanoidAppearanceSystem>().ToDataNode(Profile);
             await using var writer = new StreamWriter(file.Value.fileStream);
             dataNode.Write(writer);
         }

@@ -1,9 +1,8 @@
 using System.Linq;
-using Content.Client._Starlight.Lobby.UI;
 using Content.Client._Starlight.TextToSpeech;
 using Content.Shared._Starlight.TextToSpeech;
 
-namespace Content.Client.Lobby.UI;
+namespace Content.Client._Starlight.Lobby.UI;
 
 public sealed partial class HumanoidProfileEditor
 {

@@ -1,6 +1,6 @@
 using Content.Shared.Preferences;
 
-namespace Content.Client.Lobby.UI;
+namespace Content.Client._Starlight.Lobby.UI;
 
 public sealed partial class HumanoidProfileEditor
 {

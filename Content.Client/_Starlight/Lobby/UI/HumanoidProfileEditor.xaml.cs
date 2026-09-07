@@ -1,4 +1,5 @@
 using Content.Client.Humanoid;
+using Content.Client.Lobby;
 using Content.Client.Message;
 using Content.Client.Players.PlayTimeTracking;
 using System.Linq;
@@ -22,7 +23,7 @@ using Robust.Shared.Enums;
 using Robust.Shared.Prototypes;
 using Direction = Robust.Shared.Maths.Direction;
 
-namespace Content.Client.Lobby.UI
+namespace Content.Client._Starlight.Lobby.UI
 {
     [GenerateTypedNameReferences]
     public sealed partial class HumanoidProfileEditor : BoxContainer

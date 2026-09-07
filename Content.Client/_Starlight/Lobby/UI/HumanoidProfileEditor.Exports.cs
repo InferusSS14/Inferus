@@ -4,7 +4,7 @@ using Content.Client.Sprite;
 using Robust.Client.UserInterface;
 using Direction = Robust.Shared.Maths.Direction;
 
-namespace Content.Client.Lobby.UI;
+namespace Content.Client._Starlight.Lobby.UI;
 
 public sealed partial class HumanoidProfileEditor
 {

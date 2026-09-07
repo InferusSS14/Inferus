@@ -8,7 +8,7 @@ using Robust.Client.UserInterface.Controls;
 using Robust.Shared.Enums;
 using Robust.Shared.Prototypes;
 
-namespace Content.Client.Lobby.UI;
+namespace Content.Client._Starlight.Lobby.UI;
 
 public sealed partial class HumanoidProfileEditor
 {
@@ -269,8 +269,8 @@ public sealed partial class HumanoidProfileEditor
 
         var height = speciesPrototype.StandardSize * (Profile.Appearance.Height - 1f) * 2f + speciesPrototype.StandardSize;
         var weight = speciesPrototype.StandardWeight +
-                     speciesPrototype.StandardDensity *
-                     (Profile.Appearance.Width * Profile.Appearance.Height * Profile.Appearance.Height - 1);
+                        speciesPrototype.StandardDensity *
+                        (Profile.Appearance.Width * Profile.Appearance.Height * Profile.Appearance.Height - 1);
 
         HeightDescribeLabel.Text = Loc.GetString(
             "humanoid-profile-editor-height-label",

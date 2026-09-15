@@ -68,6 +68,18 @@
         reagents:
         - ReagentId: SpaceCleaner
           Quantity: 5000
+  # Inferus start
+  - type: PlumbingDevice
+    updateInterval: 2
+  - type: PlumbingInlet
+    solutionName: tank
+  - type: NodeContainer
+    nodes:
+      inlet:
+        !type:PlumbingNode
+        nodeGroupID: Plumbing
+        pipeDirection: North
+  # Inferus End
 
 - type: entity
   parent: BaseDispenser

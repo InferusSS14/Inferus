@@ -50,7 +50,7 @@
   id: CleanerDispenser
   categories: [ ShouldMapStation ] # Starlight
   name: space cleaner dispenser
-  description: Wallmount Space Cleaner dispenser.
+  description: Wall-mounted reagent dispenser. Connects to the plumbing network; usually contains space cleaner, hence the name.
   components:
   - type: Sprite
     layers:
@@ -73,12 +73,29 @@
     updateInterval: 2
   - type: PlumbingInlet
     solutionName: tank
+    inletNames:
+    - inletN
+    - inletE
+    - inletW
+    - inletS
   - type: NodeContainer
     nodes:
-      inlet:
+      inletN:
         !type:PlumbingNode
         nodeGroupID: Plumbing
         pipeDirection: North
+      inletE:
+        !type:PlumbingNode
+        nodeGroupID: Plumbing
+        pipeDirection: East
+      inletW:
+        !type:PlumbingNode
+        nodeGroupID: Plumbing
+        pipeDirection: West
+      inletS:
+        !type:PlumbingNode
+        nodeGroupID: Plumbing
+        pipeDirection: South
   # Inferus End
 
 - type: entity

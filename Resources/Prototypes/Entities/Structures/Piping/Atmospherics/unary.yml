@@ -595,8 +595,8 @@
   # Inferus start
   - type: PlumbingDevice
     updateInterval: 2
-  - type: PlumbingConnectorAppearance
-    offset: 0.0
+  #- type: PlumbingConnectorAppearance
+  #  offset: 0.09375 # DO NOT UNCOMMENT IT CRASHES THE CLIENT AND IDFK WHY
   - type: PlumbingOutlet
     solutionName: tank
     connectedOutlets: true

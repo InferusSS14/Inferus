@@ -55,6 +55,7 @@
   - type: Sprite
     layers:
     - state: cleanerdispenser
+      map: [ "enum.SubfloorLayers.FirstLayer" ]
     - state: fill-1
       map: ["enum.SolutionContainerLayers.Fill"]
       visible: false
@@ -96,17 +97,28 @@
         !type:PlumbingNode
         nodeGroupID: Plumbing
         pipeDirection: South
+  - type: ExaminableSolution
+    solution: tank
+  - type: SubFloorHide
+    blockInteractions: false
+    blockAmbience: false
+    visibleLayers:
+    - enum.SubfloorLayers.FirstLayer
+    - enum.SolutionContainerLayers.Fill
+  - type: PlumbingConnectorAppearance
+    offset: 0.09375
   # Inferus End
 
 - type: entity
   parent: BaseDispenser
   id: FuelDispenser
   name: fuel dispenser
-  description: Wallmount Fuel dispenser.
+  description: Wall-mounted reagent dispenser. Connects to the plumbing network; usually contains welding fuel, hence the name.
   components:
   - type: Sprite
     layers:
     - state: fueldispenser
+      map: [ "enum.SubfloorLayers.FirstLayer" ]
     - state: fill-1
       map: ["enum.SolutionContainerLayers.Fill"]
       visible: false
@@ -131,3 +143,42 @@
   - type: Explosive
     explosionType: Default
     totalIntensity: 50
+  # Inferus start
+  - type: PlumbingDevice
+    updateInterval: 2
+  - type: PlumbingInlet
+    solutionName: tank
+    inletNames:
+    - inletN
+    - inletE
+    - inletW
+    - inletS
+  - type: NodeContainer
+    nodes:
+      inletN:
+        !type:PlumbingNode
+        nodeGroupID: Plumbing
+        pipeDirection: North
+      inletE:
+        !type:PlumbingNode
+        nodeGroupID: Plumbing
+        pipeDirection: East
+      inletW:
+        !type:PlumbingNode
+        nodeGroupID: Plumbing
+        pipeDirection: West
+      inletS:
+        !type:PlumbingNode
+        nodeGroupID: Plumbing
+        pipeDirection: South
+  - type: ExaminableSolution
+    solution: tank
+  - type: SubFloorHide
+    blockInteractions: false
+    blockAmbience: false
+    visibleLayers:
+    - enum.SubfloorLayers.FirstLayer
+    - enum.SolutionContainerLayers.Fill
+  - type: PlumbingConnectorAppearance
+    offset: 0.09375
+  # Inferus End

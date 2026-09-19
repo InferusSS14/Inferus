@@ -596,7 +596,12 @@
   - type: PlumbingDevice
     updateInterval: 2
   #- type: PlumbingConnectorAppearance
-  #  offset: 0.09375 # DO NOT UNCOMMENT IT CRASHES THE CLIENT AND IDFK WHY
+  #  offset: 0.09375D # DO NOT UNCOMMENT
+  # - type: SubFloorHide
+  #   blockInteractions: false
+  #   blockAmbience: false
+  #   visibleLayers:
+  #   - enum.SubfloorLayers.FirstLayer
   - type: PlumbingOutlet
     solutionName: tank
     connectedOutlets: true

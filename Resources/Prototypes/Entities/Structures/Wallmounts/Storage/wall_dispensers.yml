@@ -44,6 +44,11 @@
   - type: ReagentTank
   - type: ExaminableSolution
     solution: tank
+# Inferus start
+  - type: CollideOnAnchor
+  - type: Visibility
+    layer: 1
+# Inferus end
 
 - type: entity
   parent: BaseDispenser

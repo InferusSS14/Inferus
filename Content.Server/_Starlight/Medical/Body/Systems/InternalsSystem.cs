@@ -76,16 +76,16 @@ public sealed partial class InternalsSystem : SharedInternalsSystem
                 _alerts.ShowAlert(ent.Owner, ent.Comp.InternalsAlert, GetSeverity(ent));
                 break;
             }
-            Resolve(ent.Owner, ref comp1, ref comp2, false);
+            Resolve(root.Owner, ref comp1, ref comp2, false);
             maybeRoot = null;
+            predInternals = null;
             if (
-                _container.TryGetContainingContainer(new(ent.Owner, comp1, comp2), out var container) &&
+                _container.TryGetContainingContainer(new(root.Owner, comp1, comp2), out var container) &&
                 container.ID == VorePredatorComponent.StomachContainerId &&
                 Resolve(container.Owner, ref predInternals, false)
             ) maybeRoot = new(container.Owner, predInternals);
             comp1 = null;
             comp2 = null;
-            predInternals = null;
         }
     }
 }

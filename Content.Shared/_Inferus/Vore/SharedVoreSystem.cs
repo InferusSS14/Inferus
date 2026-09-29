@@ -1,6 +1,7 @@
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using Content.Shared.Coordinates;
+using Content.Shared.Nutrition.EntitySystems;
 
 namespace Content.Shared._Inferus.Vore;
 
@@ -21,6 +22,7 @@ public abstract partial class SharedVoreSystem : EntitySystem
     [Dependency] private SharedContainerSystem _containerSystem = default!;
     [Dependency] private SharedDoAfterSystem _doAfterSystem = default!;
     [Dependency] private SharedPopupSystem _popupSystem = default!;
+    [Dependency] private IngestionSystem _ingestionSystem = default!;
 
     public override void Initialize()
     {
@@ -57,11 +59,19 @@ public abstract partial class SharedVoreSystem : EntitySystem
     /// </summary>
     private void OnSwallowAction(Entity<VorePredatorComponent> ent, ref SwallowActionEvent args)
     {
-        if (args.Handled || _whitelistSystem.IsWhitelistFailOrNull(ent.Comp.Whitelist, args.Target))
-            return;
+        if (
+            args.Handled || 
+            _whitelistSystem.IsWhitelistFailOrNull(ent.Comp.Whitelist, args.Target)
+        ) return;
 
         args.Handled = true;
         var target = args.Target;
+        
+        if (
+            TryGetPred(args.Target) != null ||
+            TryGetPred(ent) != null ||
+            !_ingestionSystem.HasMouthAvailable(ent, ent)
+        ) return;
         
         _popupSystem.PopupCoordinates(
             $"{MetaData(ent.Owner).EntityName} is trying to swallow you!",
@@ -79,8 +89,11 @@ public abstract partial class SharedVoreSystem : EntitySystem
     {
         if (args.Handled) return;
         args.Handled = true;
+        if (!CanEject(ent.AsNullable())) return;
         _containerSystem.EmptyContainer(ent.Comp.Stomach);
     }
+
+    public bool CanEject(Entity<VorePredatorComponent?> ent) => _ingestionSystem.HasMouthAvailable(ent, ent);
 
 
     private void OnDoAfter(Entity<VorePredatorComponent> ent, ref VoreDoAfterEvent args)
@@ -90,6 +103,9 @@ public abstract partial class SharedVoreSystem : EntitySystem
 
         if (args.Target is not { } target)
             return;
+        
+        if (TryGetPred(target) != null) return;
+        if (TryGetPred(ent) != null) return;
 
         _containerSystem.Insert(target, ent.Comp.Stomach);
 

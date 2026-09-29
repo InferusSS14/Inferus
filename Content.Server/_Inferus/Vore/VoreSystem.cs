@@ -20,6 +20,7 @@ public sealed partial class VoreSystem: SharedVoreSystem
     {
         if (!TryComp(ent.Owner, out TemperatureComponent? predTemp)) return;
         float initialPredTemp = predTemp.CurrentTemperature;
+        float predTempChange = 0f;
         foreach (EntityUid prey in ent.Comp.Stomach.ContainedEntities)
         {
             if (!TryComp(prey, out TemperatureComponent? preyTemp)) continue;
@@ -30,11 +31,11 @@ public sealed partial class VoreSystem: SharedVoreSystem
             var heatCapacityPrey = _temperatureSystem.GetHeatCapacity(prey, preyTemp);
             var totalHeatCapacity = heatCapacityPred + heatCapacityPrey;
 
-            var predTempChange = -temperatureDelta * heatCapacityPrey / totalHeatCapacity * predTemp.AtmosTemperatureTransferEfficiency;
+            predTempChange += -temperatureDelta * heatCapacityPrey / totalHeatCapacity * predTemp.AtmosTemperatureTransferEfficiency;
             var preyTempChange = temperatureDelta * heatCapacityPred / totalHeatCapacity * preyTemp.AtmosTemperatureTransferEfficiency;
 
-            _temperatureSystem.ChangeHeat(prey, preyTempChange, temperature: preyTemp);
-            _temperatureSystem.ChangeHeat(ent.Owner, predTempChange, temperature: predTemp);
+            _temperatureSystem.ForceChangeTemperature(prey, preyTemp.CurrentTemperature + preyTempChange);
         }
+        _temperatureSystem.ForceChangeTemperature(ent.Owner, initialPredTemp + predTempChange);
     }
 }

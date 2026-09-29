@@ -46,10 +46,12 @@ public sealed partial class EscapeInventorySystem : EntitySystem
         if (!_containerSystem.TryGetContainingContainer((uid, null, null), out var container) || !_actionBlockerSystem.CanInteract(uid, container.Owner))
             return;
         
-        // Inferus start - vore should always be escapable
-        if (_sharedVoreSystem.HasPrey(container.Owner, uid, out _))
+        // Inferus start
+        if (
+            _sharedVoreSystem.HasPrey(container.Owner, uid, out _)
+        )
         {
-            AttemptEscape(uid, container.Owner, component, 2f);
+            _popupSystem.PopupEntity(Loc.GetString("escape-inventory-component-failed-resisting"), uid, uid);
             return;
         }
         // Inferus end
@@ -84,7 +86,7 @@ public sealed partial class EscapeInventorySystem : EntitySystem
         // Starlight edit end
     }
 
-    private void AttemptEscape(EntityUid user, EntityUid container, CanEscapeInventoryComponent component, float multiplier = 1f)
+    private void AttemptEscape(EntityUid user, EntityUid container, CanEscapeInventoryComponent component, float multiplier = 1f, bool breakOnHandChange = false)
     {
         if (component.IsEscaping)
             return;
@@ -93,7 +95,8 @@ public sealed partial class EscapeInventorySystem : EntitySystem
         {
             BreakOnMove = true,
             BreakOnDamage = true,
-            NeedHand = false
+            NeedHand = false,
+            BreakOnHandChange = breakOnHandChange
         };
 
         if (!_doAfterSystem.TryStartDoAfter(doAfterEventArgs, out component.DoAfter))

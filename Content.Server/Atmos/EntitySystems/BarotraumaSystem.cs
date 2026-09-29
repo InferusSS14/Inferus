@@ -2,6 +2,7 @@ using System.Diagnostics.CodeAnalysis;
 using System.Linq; // Starlight
 using Content.Server.Administration.Logs;
 using Content.Server.Atmos.Components;
+using Content.Shared._Inferus.Vore;
 using Content.Shared.Alert;
 using Content.Shared.Atmos;
 using Content.Shared.Damage.Components;
@@ -22,6 +23,7 @@ namespace Content.Server.Atmos.EntitySystems
         [Dependency] private IAdminLogManager _adminLogger= default!;
         [Dependency] private InventorySystem _inventorySystem = default!;
         [Dependency] private SharedTransformSystem _sharedTransformSystem = default!; // Starlight
+        [Dependency] private SharedVoreSystem _sharedVoreSystem = default!; // Inferus
 
         private const float UpdateTimer = 1f;
         private float _timer;
@@ -208,8 +210,11 @@ namespace Content.Server.Atmos.EntitySystems
             {
                 return Atmospherics.OneAtmosphere;
             }
-
+            
             var modified = (environmentPressure + barotrauma.LowPressureModifier) * (barotrauma.LowPressureMultiplier);
+            BarotraumaComponent? predBaro = null;
+            if (_sharedVoreSystem.TryGetPred(uid) is {} pred && Resolve(pred.Owner, ref predBaro, false))
+                modified *= GetFeltLowPressure(pred.Owner, predBaro, environmentPressure) / environmentPressure;
             return Math.Min(modified, Atmospherics.OneAtmosphere);
         }
 
@@ -224,6 +229,9 @@ namespace Content.Server.Atmos.EntitySystems
             }
 
             var modified = (environmentPressure + barotrauma.HighPressureModifier) * (barotrauma.HighPressureMultiplier);
+            BarotraumaComponent? predBaro = null;
+            if (_sharedVoreSystem.TryGetPred(uid) is {} pred && Resolve(pred.Owner, ref predBaro, false))
+                modified *= GetFeltHighPressure(pred.Owner, predBaro, environmentPressure) / environmentPressure;
             return Math.Max(modified, Atmospherics.OneAtmosphere);
         }
 

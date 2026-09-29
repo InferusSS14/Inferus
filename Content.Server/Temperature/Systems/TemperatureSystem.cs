@@ -1,5 +1,6 @@
 using Content.Server.Atmos.EntitySystems;
 using Content.Server.Temperature.Components;
+using Content.Shared._Inferus.Vore;
 using Content.Shared._Starlight.CosmicCult.Components;
 using Content.Shared.Atmos;
 using Content.Shared.Inventory;
@@ -15,6 +16,7 @@ namespace Content.Server.Temperature.Systems;
 public sealed partial class TemperatureSystem : SharedTemperatureSystem
 {
     [Dependency] private AtmosphereSystem _atmosphere = default!;
+    [Dependency] private SharedVoreSystem _sharedVoreSystem = default!;
 
     public override void Initialize()
     {
@@ -94,13 +96,19 @@ public sealed partial class TemperatureSystem : SharedTemperatureSystem
 
     private void OnAtmosExposedUpdate(EntityUid uid, TemperatureComponent temperature, ref AtmosExposedUpdateEvent args)
     {
+        // Inferus: cancel if we have a pred
+        if (_sharedVoreSystem.TryGetPred(uid) is { } pred && HasComp<TemperatureComponent>(pred))
+            return; // The pred handles it
+        
         var transform = args.Transform;
 
         if (transform.MapUid == null)
             return;
 
-        var temperatureDelta = args.GasMixture.Temperature - temperature.CurrentTemperature;
+
+        float atmosTemperature = args.GasMixture.Temperature;
         var airHeatCapacity = _atmosphere.GetHeatCapacity(args.GasMixture, false);
+        var temperatureDelta = atmosTemperature - temperature.CurrentTemperature;
         var heatCapacity = GetHeatCapacity(uid, temperature);
         // TODO ATMOS: This heat transfer formula is really really wrong, it needs to be pulled out. Pending on HeatContainers.
         var heat = temperatureDelta * (airHeatCapacity * heatCapacity /

@@ -58,5 +58,12 @@ Entries:
   id: 1201
   time: '2026-09-20T04:03:54.000000+00:00'
   url: https://github.com/InferusSS14/Inferus/pull/12
+- author: balt-dev
+  changes:
+  - message: Added vore. Must select the Voracious trait to use.
+    type: Add
+  id: 1301
+  time: '2026-09-29T18:10:03.000000+00:00'
+  url: https://github.com/InferusSS14/Inferus/pull/13
 Order: -2
 

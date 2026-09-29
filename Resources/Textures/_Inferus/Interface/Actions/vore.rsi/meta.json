@@ -1,0 +1,23 @@
+﻿{
+  "version": 1,
+  "license": "CC0-1.0",
+  "copyright": "Created by balt-dev (github)",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "swallow"
+    },
+    {
+      "name": "swallow-on"
+    },
+    {
+      "name": "eject"
+    },
+    {
+      "name": "eject-on"
+    }
+  ]
+}

@@ -1,4 +1,5 @@
 using Content.Server.Popups;
+using Content.Shared._Inferus.Vore;
 using Content.Shared.Storage.Components;
 using Content.Shared.ActionBlocker;
 using Content.Shared.DoAfter;
@@ -24,6 +25,7 @@ public sealed partial class EscapeInventorySystem : EntitySystem
     [Dependency] private SharedHandsSystem _handsSystem = default!;
     [Dependency] private TagSystem _tagSystem = default!; // Starlight Edit
     [Dependency] private TransformSystem _transformSystem = default!; // Starlight Edit
+    [Dependency] private SharedVoreSystem _sharedVoreSystem = default!; // Inferus
 
     private static readonly ProtoId<TagPrototype> PersonnelStorageTag = "PersonnelStorage"; // Starlight
 
@@ -43,6 +45,19 @@ public sealed partial class EscapeInventorySystem : EntitySystem
 
         if (!_containerSystem.TryGetContainingContainer((uid, null, null), out var container) || !_actionBlockerSystem.CanInteract(uid, container.Owner))
             return;
+        
+        // Inferus start
+        if (
+            _sharedVoreSystem.HasPrey(container.Owner, uid, out _)
+        )
+        {
+            if (!_sharedVoreSystem.CanEject(container.Owner))
+                _popupSystem.PopupEntity(Loc.GetString("escape-inventory-component-failed-resisting"), uid, uid);
+            else
+                AttemptEscape(uid, container.Owner, component, 3f);
+            return;
+        }
+        // Inferus end
 
         // Make sure there's nothing stopped the removal (like being glued)
         if (!_containerSystem.CanRemove(uid, container))
@@ -74,7 +89,7 @@ public sealed partial class EscapeInventorySystem : EntitySystem
         // Starlight edit end
     }
 
-    private void AttemptEscape(EntityUid user, EntityUid container, CanEscapeInventoryComponent component, float multiplier = 1f)
+    private void AttemptEscape(EntityUid user, EntityUid container, CanEscapeInventoryComponent component, float multiplier = 1f, bool breakOnHandChange = false)
     {
         if (component.IsEscaping)
             return;
@@ -83,7 +98,8 @@ public sealed partial class EscapeInventorySystem : EntitySystem
         {
             BreakOnMove = true,
             BreakOnDamage = true,
-            NeedHand = false
+            NeedHand = false,
+            BreakOnHandChange = breakOnHandChange
         };
 
         if (!_doAfterSystem.TryStartDoAfter(doAfterEventArgs, out component.DoAfter))

@@ -1,10 +1,12 @@
 using Content.Server.Atmos.EntitySystems;
+using Content.Shared._Inferus.Vore;
 using Content.Shared._Starlight.Medical.Body.Systems;
 using Content.Shared.Alert;
 using Content.Shared.Atmos.Components;
 using Content.Shared.Body.Components;
 using Content.Shared.Internals;
 using Content.Shared.Roles;
+using Robust.Server.Containers;
 
 namespace Content.Server._Starlight.Medical.Body.Systems;
 
@@ -13,6 +15,7 @@ public sealed partial class InternalsSystem : SharedInternalsSystem
     [Dependency] private AlertsSystem _alerts = default!;
     [Dependency] private GasTankSystem _gasTank = default!;
     [Dependency] private RespiratorSystem _respirator = default!;
+    [Dependency] private ContainerSystem _container = default!;
 
     private EntityQuery<InternalsComponent> _internalsQuery;
 
@@ -51,12 +54,38 @@ public sealed partial class InternalsSystem : SharedInternalsSystem
 
     private void OnInhaleLocation(Entity<InternalsComponent> ent, ref InhaleLocationEvent args)
     {
-        if (AreInternalsWorking(ent))
+        // Inferus - check for pred internals, we essentially have to rewrite this entire function
+        TransformComponent? comp1 = null;
+        MetaDataComponent? comp2 = null;
+        InternalsComponent? predInternals = null;
+        Entity<InternalsComponent>? maybeRoot = ent;
+        int iterations = 0;
+        while (maybeRoot is { } root)
         {
-            var gasTank = Comp<GasTankComponent>(ent.Comp.GasTankEntity!.Value);
-            args.Gas = _gasTank.RemoveAirVolume((ent.Comp.GasTankEntity.Value, gasTank), args.Respirator.BreathVolume);
-            // TODO: Should listen to gas tank updates instead I guess?
-            _alerts.ShowAlert(ent.Owner, ent.Comp.InternalsAlert, GetSeverity(ent));
+            iterations++;
+            if (iterations > 5)
+            {
+                Log.Warning($"Maximum iterations reached while resolving internals for entity {ent} (root: {root})");
+                break;
+            }
+            if (AreInternalsWorking(root))
+            {
+                var gasTank = Comp<GasTankComponent>(root.Comp.GasTankEntity!.Value);
+                args.Gas = _gasTank.RemoveAirVolume((root.Comp.GasTankEntity.Value, gasTank), args.Respirator.BreathVolume);
+                // TODO: Should listen to gas tank updates instead I guess?
+                _alerts.ShowAlert(ent.Owner, ent.Comp.InternalsAlert, GetSeverity(ent));
+                break;
+            }
+            Resolve(root.Owner, ref comp1, ref comp2, false);
+            maybeRoot = null;
+            predInternals = null;
+            if (
+                _container.TryGetContainingContainer(new(root.Owner, comp1, comp2), out var container) &&
+                container.ID == VorePredatorComponent.StomachContainerId &&
+                Resolve(container.Owner, ref predInternals, false)
+            ) maybeRoot = new(container.Owner, predInternals);
+            comp1 = null;
+            comp2 = null;
         }
     }
 }

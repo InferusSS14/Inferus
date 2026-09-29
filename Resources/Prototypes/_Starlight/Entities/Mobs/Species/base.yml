@@ -10,6 +10,7 @@
   abstract: true
   components:
   # Starlight-start
+  - type: Internals # Inferus - let everyone put internals on
   - type: StationTracker
   - type: Railroadable
   - type: SurgeryTarget

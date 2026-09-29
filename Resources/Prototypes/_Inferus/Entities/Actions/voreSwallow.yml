@@ -1,0 +1,32 @@
+- type: entity
+  parent: BaseAction
+  id: ActionSwallow
+  name: "[color=yellow]Swallow[/color]"
+  description: Attempt to swallow a creature. This will not harm them.
+  components:
+    - type: Action
+      icon: { sprite : _Inferus/Interface/Actions/vore.rsi, state: swallow }
+      iconOn: { sprite : _Inferus/Interface/Actions/vore.rsi, state: swallow-on }
+      itemIconStyle: BigAction
+      priority: 1
+    - type: TargetAction
+    - type: EntityTargetAction
+      canTargetSelf: false
+      whitelist:
+        components:
+          - MobState
+      event: !type:SwallowActionEvent
+
+- type: entity
+  parent: BaseAction
+  id: ActionStomachEject
+  name: "[color=yellow]Eject Prey[/color]"
+  description: Ejects all entities from your stomach.
+  components:
+    - type: Action
+      icon: { sprite : _Inferus/Interface/Actions/vore.rsi, state: eject }
+      iconOn: { sprite : _Inferus/Interface/Actions/vore.rsi, state: eject-on }
+      itemIconStyle: BigAction
+      priority: 1
+    - type: InstantAction
+      event: !type:StomachEjectActionEvent

@@ -51,7 +51,10 @@ public sealed partial class EscapeInventorySystem : EntitySystem
             _sharedVoreSystem.HasPrey(container.Owner, uid, out _)
         )
         {
-            _popupSystem.PopupEntity(Loc.GetString("escape-inventory-component-failed-resisting"), uid, uid);
+            if (!_sharedVoreSystem.CanEject(container.Owner))
+                _popupSystem.PopupEntity(Loc.GetString("escape-inventory-component-failed-resisting"), uid, uid);
+            else
+                AttemptEscape(uid, container.Owner, component, 3f);
             return;
         }
         // Inferus end

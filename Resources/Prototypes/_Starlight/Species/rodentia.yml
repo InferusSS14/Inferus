@@ -21,7 +21,7 @@
   standardWeight: 50
   standardDensity: 60
   maxHeight: 1
-  minHeight: 0.85
+  minHeight: 0.15
 
 - type: speciesBaseSprites
   id: MobRodentiaSprites

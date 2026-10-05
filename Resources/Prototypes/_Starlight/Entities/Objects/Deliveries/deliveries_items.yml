@@ -39,11 +39,6 @@
           - SELFAgent
 
 - type: entity
-  id: MailSyndicateSpamLetterAdmin
-  suffix: Admin Only, No Achievement
-  parent: RRMailSyndicateSpamLetter
-
-- type: entity
   id: MailSpamDontYouWantMore
   name: Don't You Want More?
   description: An inciting paper that smells faintly of welding fuel and desire. Wont fit in a fax somehow.
@@ -107,14 +102,12 @@
         - FireAxeStealObjective
         - AmePartFlatpackStealObjective
         - ExpeditionsCircuitboardStealObjective
-        - SalvageShuttleConsoleCircuitboardStealObjective
         - MiningShuttleConsoleCircuitboardStealObjective
         - ShipyardCircuitboardStealObjective
         - CargoShuttleCircuitboardStealObjective
         - CommsComputerCircuitboardStealObjective
         - IDCardComputerCircuitboardStealObjective
         - BrigmedicStrangeBedsheetStealObjective
-        - ClothingNeckMantleDecoratedSalvagerStealObjective
         #- ClothingEyesHudBeerStealObjective Removed in favor of the misc sunglasses collection objective.
         - BibleStealObjective
         - ClothingNeckGoldmedalStealObjective
@@ -172,12 +165,10 @@
         - WardenHardsuitStealObjective
         - BrigmedicHardsuitStealObjective
         - QMHardsuitStealObjective
-        - SalvLeadHardsuitStealObjective
         - CaptainHardsuitStealObjective
         - NTRepHardsuitStealObjective
         - BSOHardsuitStealObjective
         - BSOMagbootsStealObjective
-
 
 #USSP
 - type: entity
@@ -192,29 +183,6 @@
       editingDisabled: true
     - type: AntagOnSign
       chance: 1
-      antags:
-        - antag: Revolutionary
-          targetComponent: RevolutionaryRule
-      blacklist:
-        components:
-          - NukeOperative
-          - Traitor
-          - Revolutionary
-          - MindShield
-          - SELFAgent
-
-- type: entity
-  id: MailSovietSpamLetter50
-  name: Workers' rights!
-  suffix: 50%
-  description: A propaganda pamphlet that smells of burnt matches. It's so thick it won't fit in the fax.
-  parent: [ Paper, BaseSovietContraband ]
-  components:
-    - type: Paper
-      content: delivery-spam-join-soviets
-      editingDisabled: true
-    - type: AntagOnSign
-      chance: 0.5
       antags:
         - antag: Revolutionary
           targetComponent: RevolutionaryRule

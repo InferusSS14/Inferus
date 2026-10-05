@@ -50,6 +50,7 @@
     - VoiceMaskImplant
     - MindControlImplant #Starlight
     - CommandTrackingImplant #Starlight
+    - ITGTrackingImplant #Starlight
     deimplantFailureDamage:
       types:
         Cellular: 50
@@ -94,17 +95,18 @@
     tags:
     - Trash
 
-- type: entity
-  id: ImplanterAdmeme
-  parent: Implanter
-  suffix: Admeme
-  components:
-  - type: Implanter
-    # go wild with sentient chairs with macrobombs
-    whitelist: null
-    blacklist: null
-    implantTime: 5
-    drawTime: 5
+# Starlight-edit: Admeme moved into our folder _Starlight/Admeme
+# - type: entity
+#   id: ImplanterAdmeme
+#   parent: Implanter
+#   suffix: Admeme
+#   components:
+#   - type: Implanter
+#     # go wild with sentient chairs with macrobombs
+#     whitelist: null
+#     blacklist: null
+#     implantTime: 5
+#     drawTime: 5
 
 - type: entity
   id: BaseImplantOnlyImplanter
@@ -261,7 +263,7 @@
 
 - type: entity
   id: VoiceMaskImplanter
-  name: voice mask implanter
+  name: identity mask implanter
   parent: BaseImplantOnlyImplanterSyndi
   components:
   - type: Implanter

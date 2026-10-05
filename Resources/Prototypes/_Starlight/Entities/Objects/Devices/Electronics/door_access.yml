@@ -1,11 +1,11 @@
 # NT Representative
 - type: entity
   parent: DoorElectronics
-  id: DoorElectronicsNtrep
-  suffix: Ntrep, Locked
+  id: DoorElectronicsNT
+  suffix: Nanotrasen, Locked
   components:
   - type: AccessReader
-    access: [["Ntrep"], ["BlueShield"]]
+    access: [["NTPersonnel"]]
 
 # Robotics
 - type: entity
@@ -17,13 +17,6 @@
     access: [["Robotics"]]
 
 # Freelance
-- type: entity
-  parent: DoorElectronics
-  id: DoorElectronicsFreelance
-  suffix: Freelance, Locked
-  components:
-  - type: AccessReader
-    access: [["Freelance"]]
 
 # Surgery
 - type: entity
@@ -88,7 +81,6 @@
   - type: AccessReader
     access: [["Security"], ["IAA"], ["Lawyer"]]
 
-
 # Attorney
 - type: entity
   parent: DoorElectronics
@@ -105,7 +97,7 @@
   suffix: Brigmed, Locked
   components:
     - type: AccessReader
-      access: [["Security"], ["Cadet"], ["Command"]]
+      access: [["Brig"], ["Brigmedic"]]
 
 #Brigmedic/Paramed
 - type: entity
@@ -114,7 +106,7 @@
   suffix: Brigmed/Paramedic, Locked
   components:
     - type: AccessReader
-      access: [["Security"], ["Cadet"], ["Command"], ["Paramedic"]]
+      access: [["Brig"], ["Brigmedic"], ["Paramedic"]]
 
 #Solgov
 - type: entity

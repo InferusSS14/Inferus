@@ -311,8 +311,6 @@
     borderColor: "#d7d7d0"
   - type: Icon
     state: pda-cook
-  - type: ReplacementAccent # for random sentience event
-    accent: italian
 
 - type: entity
   parent: BasePDA
@@ -383,17 +381,6 @@
         - ItemMask
 
 - type: entity
-  parent: ClownPDA
-  id: VisitorClownPDA
-  suffix: Visitor
-  components:
-  - type: Pda
-    id: VisitorIDCard
-  - type: Tag #  Ignore Chameleon tags
-    tags:
-    - DoorBumpOpener
-
-- type: entity
   parent: BasePDA
   id: MimePDA
   name: mime PDA
@@ -430,6 +417,9 @@
       whitelist:
         components:
         - Cartridge
+    preinstalled:
+    - CrewManifestCartridge
+    - NewsReaderCartridge
   - type: Appearance
     appearanceDataInit:
      enum.PdaVisuals.PdaType:
@@ -459,17 +449,6 @@
     borderColor: "#333333"
   - type: Icon
     state: pda-chaplain
-
-- type: entity
-  parent: ChaplainPDA
-  id: VisitorChaplainPDA
-  suffix: Visitor
-  components:
-  - type: Pda
-    id: VisitorIDCard
-  - type: Tag #  Ignore Chameleon tags
-    tags:
-    - DoorBumpOpener
 
 - type: entity
   name: quartermaster PDA
@@ -798,17 +777,6 @@
     - MedicalDoctor
 
 - type: entity
-  parent: MedicalPDA
-  id: VisitorMedicalPDA
-  suffix: Visitor
-  components:
-  - type: Pda
-    id: VisitorIDCard
-  - type: Tag #  Ignore Chameleon tags
-    tags:
-    - DoorBumpOpener
-
-- type: entity
   parent: BaseMedicalPDA
   id: ParamedicPDA
   name: paramedic PDA
@@ -1069,17 +1037,6 @@
     handheld: true
     program: 2
     bank: 100 # Defined in space-station-14.sf2
-
-- type: entity
-  parent: MusicianPDA
-  id: VisitorMusicianPDA
-  suffix: Visitor
-  components:
-  - type: Pda
-    id: VisitorIDCard
-  - type: Tag #  Ignore Chameleon tags
-    tags:
-    - DoorBumpOpener
 
 - type: entity
   parent: BasePDA

@@ -14,6 +14,21 @@
     stackType: FloorTileCarpetDeco
 
 - type: entity
+  name: carpet artsy tile
+  parent: FloorTileItemSteel
+  id: FloorTileItemCarpetArt
+  components:
+  - type: Sprite
+    sprite: _Starlight/Objects/Tiles/tiles.rsi
+    state: artcarpet
+  - type: FloorTile
+    outputs:
+      - Plating
+      - FloorCarpetArt
+  - type: Stack
+    stackType: FloorTileCarpetArt
+
+- type: entity
   name: dark bitile tile
   parent: FloorTileItemSteel
   id: FloorTileItemDarkBitile
@@ -132,57 +147,6 @@
       - FloorTerracottaSmall
   - type: Stack
     stackType: FloorTileTerracottaSmall
-
-- type: entity
-  name: dark wood floor
-  parent: FloorTileItemBase
-  id: FloorTileItemDarkWood
-  components:
-  - type: Sprite
-    sprite: _Starlight/Objects/Tiles/tiles.rsi
-    state: darkwood
-  - type: Item
-    heldPrefix: darkwood
-  - type: FloorTile
-    outputs:
-      - Plating
-      - FloorDarkWood
-  - type: Stack
-    stackType: FloorTileDarkWood
-
-- type: entity
-  name: dark wood pattern floor
-  parent: FloorTileItemBase
-  id: FloorTileItemDarkWoodPattern
-  components:
-  - type: Sprite
-    sprite: _Starlight/Objects/Tiles/tiles.rsi
-    state: darkwoodpatternfloor
-  - type: Item
-    heldPrefix: darkwood
-  - type: FloorTile
-    outputs:
-      - Plating
-      - FloorDarkWoodTile
-  - type: Stack
-    stackType: FloorTileDarkWoodPattern
-
-- type: entity
-  name: large dark wood floor
-  parent: FloorTileItemBase
-  id: FloorTileItemDarkWoodLarge
-  components:
-  - type: Sprite
-    sprite: _Starlight/Objects/Tiles/tiles.rsi
-    state: darkwood-large
-  - type: Item
-    heldPrefix: darkwood
-  - type: FloorTile
-    outputs:
-      - Plating
-      - FloorDarkWoodLarge
-  - type: Stack
-    stackType: FloorTileDarkWoodLarge
 
 - type: entity
   name: wooden parquet

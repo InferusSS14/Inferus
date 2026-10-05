@@ -810,10 +810,6 @@
     - sprite: *icon-rsi
       offset: *icon-offset
       state: Zookeeper
-  # Starlight start
-  - type: PresetIdCard
-    job: Zookeeper
-  # Starlight end
 
 #Supply
 
@@ -976,20 +972,6 @@
     listNumber: false
 
 - type: entity
-  name: assistant ID card
-  parent: AgentIDCard
-  id: NukieAgentIDCard
-  suffix: Nukie
-  components:
-  - type: Access
-    tags:
-    - Maintenance
-    - SyndicateAgent
-    - NuclearOperative
-  - type: NanoChatCard # CD
-    listNumber: false
-
-- type: entity
   parent: [ IDCardStandard, BaseSyndicateContraband ]
   id: SyndicateIDCard
   name: syndicate ID card
@@ -1004,6 +986,8 @@
     - sprite: *icon-rsi
       offset: *icon-offset
       state: Syndicate
+  - type: IdCard
+    jobIcon: JobIconSyndicate
   - type: Item
     heldPrefix: black
   - type: Access

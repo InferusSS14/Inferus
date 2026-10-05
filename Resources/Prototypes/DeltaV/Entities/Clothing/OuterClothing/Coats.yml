@@ -12,11 +12,6 @@
       sprite: DeltaV/Clothing/OuterClothing/Coats/long_lab.rsi
       # Starlight End
 
-- type: entity
-  parent: [ClothingOuterStorageFoldableBaseOpened, ClothingOuterCoatLabLong]
-  id: ClothingOuterCoatLabLongOpened
-  name: long lab coat
-
 #Chemist long coat
 - type: entity
   parent: ClothingOuterCoatLabChem # Starlight
@@ -30,11 +25,6 @@
     - type: Clothing
       sprite: DeltaV/Clothing/OuterClothing/Coats/chemistry_long_lab.rsi
       # Starlight End
-
-- type: entity
-  parent: [ClothingOuterStorageFoldableBaseOpened, ClothingOuterCoatLabChemistLong]
-  id: ClothingOuterCoatLabChemistLongOpened
-  name: long chemist lab coat
 
 #CMO long coat
 - type: entity
@@ -50,11 +40,6 @@
       sprite: DeltaV/Clothing/OuterClothing/Coats/cmo_long_lab.rsi
         # Starlight End
 
-- type: entity
-  parent: [ClothingOuterStorageFoldableBaseOpened, ClothingOuterCoatLabCmoLong]
-  id: ClothingOuterCoatLabCmoLongOpened
-  name: long chief medical officer lab coat
-
 #Geneticist long coat
 - type: entity
   parent: ClothingOuterCoatLabGene # Starlight
@@ -69,14 +54,9 @@
       sprite: DeltaV/Clothing/OuterClothing/Coats/medical_long_lab.rsi
       # Starlight End
 
-- type: entity
-  parent: [ClothingOuterStorageFoldableBaseOpened, ClothingOuterCoatLabGeneLong]
-  id: ClothingOuterCoatLabGeneLongOpened
-  name: long geneticist lab coat
-
 #Paramedic jacket
 - type: entity
-  parent: [ClothingOuterStorageFoldableBase, ClothingOuterColdBase] # Starlight
+  parent: [ClothingOuterStorageFoldableBase, ClothingOuterBaseWinter] # Starlight
   id: ClothingOuterCoatParamedicJacket
   name: paramedic jacket
   description: A stylish dark blue jacket decorated with white stripes and cross. Nine out of ten paramedic recommend "Do Not Revive."
@@ -84,14 +64,9 @@
     - type: Sprite
       sprite: DeltaV/Clothing/OuterClothing/Coats/paramedic.rsi
 
-- type: entity
-  parent: [ClothingOuterStorageFoldableBaseOpened, ClothingOuterCoatParamedicJacket]
-  id: ClothingOuterCoatParamedicJacketOpened
-  name: paramedic jacket
-
 #Rugged duster
 - type: entity
-  parent: [ClothingOuterStorageBase, ClothingOuterColdBase] # Starlight
+  parent: [ClothingOuterStorageBase, ClothingOuterBaseWinter] # Starlight
   id: ClothingOuterCoatDuster
   name: rugged duster
   description: A rugged duster with a bandana scarf made for keeping off the ash and dust. Not much of that up in space though.

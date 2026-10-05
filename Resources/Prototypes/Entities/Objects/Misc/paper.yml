@@ -1,5 +1,5 @@
 - type: entity
-  parent: BaseItem
+  parent: [SolutionFood, BaseItem]
   id: BasePaper
   abstract: true
   components:
@@ -51,13 +51,12 @@
     flavors:
     - paper
   - type: BadFood
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        maxVol: 1
-        reagents:
-        - ReagentId: Fiber
-          Quantity: 1
+  - type: Solution
+    solution:
+      maxVol: 2.5 # I consider paper to be like material sheets, so we divide their capacity by 12
+      reagents:
+      - ReagentId: Fiber
+        Quantity: 1.25
   - type: Material
   - type: PhysicalComposition
     materialComposition:
@@ -92,6 +91,7 @@
         type: PaperBoundUserInterface
   - type: FaxableObject
   - type: PaperVisuals
+  - type: StationAiWhitelist
 
 - type: entity
   name: paper scrap
@@ -359,30 +359,12 @@
 
 - type: entity
   parent: Paper
-  id: PaperWritten
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: Sprite
-    layers:
-    # Changing it here is fine - if the PaperStatus key is actually added,
-    #  something happened, so that ought to override this either way.
-    - state: paper_words
-
-- type: entity
-  parent: Paper
   id: NukeCodePaper
   name: nuclear authentication codes
   suffix: Random # Starlight
   components:
   - type: NukeCodePaper
     allNukesAvailable: true
-
-- type: entity
-  parent: NukeCodePaper
-  id: NukeCodePaperStation
-  suffix: Station Only
-  components:
-  - type: NukeCodePaper
 
 - type: entity
   parent: [Paper, BaseSyndicateContraband] # eat or burn your damn piece of paper damn thieves
@@ -482,3 +464,4 @@
       - !type:EmptyAllContainersBehaviour
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
+  - type: StationAiWhitelist

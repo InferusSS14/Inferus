@@ -1,7 +1,7 @@
 - type: entity
   name: rat king
   id: MobRatKing
-  parent: [ SimpleMobBase, MobCombat ] # Starlight Edit: Removed BaseMobRat
+  parent: [ SimpleMobBase, MobCombat, BaseSlicingRefinable ] # Starlight Edit: Removed BaseMobRat
   description: He's da rat. He make da roolz.
   components:
   # Starlight-start: Languages
@@ -118,6 +118,8 @@
       - CannotSuicide
       - FootstepSound
   - type: NoSlip
+  - type: Insulated
+    coefficient: 0.5 # rat king touches more wires, see?
   - type: Rummager
   - type: RatKing
     hungerPerArmyUse: 25
@@ -125,8 +127,8 @@
   - type: MobsterAccent
   - type: Speech
     speechVerb: SmallMob
-  - type: Butcherable
-    spawned:
+  - type: ToolRefinable
+    refineResult:
     - id: ClothingHeadHatFancyCrown #how did that get there?
       amount: 1
   - type: MobPrice
@@ -142,51 +144,13 @@
   - type: Grammar
     attributes:
       gender: male
-  - type: Sharp
   - type: Tool
-    qualities: [ Slicing ]
-
-- type: entity
-  id: MobRatKingBuff
-  parent: MobRatKing
-  suffix: Buff
-  components:
-  - type: Sprite
-    sprite: Mobs/Animals/buffrat.rsi
-    scale: 1.2, 1.2
-    layers:
-    - map: ["enum.DamageStateVisualLayers.Base"]
-      state: regalrat
-    - map: [ "enum.DamageStateVisualLayers.BaseUnshaded"]
-      state: eyes
-      shader: unshaded
-  - type: MobState
-  - type: MobThresholds
-    thresholds:
-      0: Alive
-      350: Dead
-  - type: MeleeWeapon
-    altDisarm: false
-    soundHit:
-        path: /Audio/Weapons/Xeno/alien_claw_flesh2.ogg
-    angle: 0
-    attackRate: 0.75
-    animation: WeaponArcFist
-    damage:
-      types:
-        Blunt: 66 #oof ouch owie my bones
-  - type: SlowOnDamage
-    speedModifierThresholds:
-      200: 0.7
-      250: 0.5
-  - type: GuideHelp
-    guides:
-    - MinorAntagonists
+    qualities: [Slicing] # Starlight
 
 - type: entity
   name: rat servant
   id: MobRatServant
-  parent: [ SimpleMobBase, MobCombat ] # Starlight Edit: Removed BaseMobRat
+  parent: [ SimpleMobBase, MobCombat, BaseSlicingRefinable ] # Starlight Edit: Removed BaseMobRat
   description: He's da mini rat. He don't make da roolz.
   categories: [ HideSpawnMenu ] #Must be configured to a King or the AI breaks.
   components:
@@ -310,8 +274,8 @@
         Base: smallrat_dead #SLEdit
       Dead:
         Base: smallrat_splat #SLEdit
-  - type: Butcherable
-    spawned:
+  - type: ToolRefinable
+    refineResult:
     - id: FoodMeatRat
       amount: 1
   - type: Vocal
@@ -325,6 +289,8 @@
       - CannotSuicide
       - FootstepSound
   - type: NoSlip
+  - type: Insulated
+    coefficient: 0.2 # they don't make da roolz, but they sneaky
   - type: MobPrice
     price: 500 # rat wealth
   - type: MobsterAccent

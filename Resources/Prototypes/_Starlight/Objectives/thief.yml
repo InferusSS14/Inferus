@@ -31,14 +31,6 @@
 - type: entity
   abstract: true
   parent: BaseThiefStealObjective
-  id: BaseThiefScienceStealObjective
-  components:
-  - type: NotJobRequirement
-    jobs: [ ResearchDirector, ResearchAssistant, Scientist, Roboticist ]
-
-- type: entity
-  abstract: true
-  parent: BaseThiefStealObjective
   id: BaseThiefEngineeringStealObjective
   components:
   - type: NotJobRequirement
@@ -51,32 +43,6 @@
   components:
   - type: NotJobRequirement
     jobs: [ Captain, HeadOfPersonnel, HeadOfSecurity, ResearchDirector, ChiefEngineer, ChiefMedicalOfficer, Quartermaster, NanoTrasenRepresentative, Magistrate, BlueShield ]
-
-- type: entity
-  abstract: true
-  parent: BaseThiefStealObjective
-  id: BaseThiefNanoTrasenStealObjective
-  components:
-  - type: NotJobRequirement
-    jobs: [ NanoTrasenRepresentative, Magistrate, BlueShield, IAA, NanotrasenCareerTrainer ]
-
-- type: entity
-  abstract: true
-  parent: BaseThiefStealObjective
-  id: BaseThiefLawStealObjective
-  components:
-  - type: NotJobRequirement
-    jobs: [ Magistrate, IAA, Lawyer ]
-
-# Thief Single
-- type: entity
-  parent: [BaseThiefStealObjective, BaseThiefCargoStealObjective]
-  id: SalvageShuttleCircuitboardStealObjective
-  components:
-  - type: StealCondition
-    stealGroup: SalvageShuttleConsoleCircuitboard
-  - type: Objective
-    difficulty: 0.7
 
 - type: entity
   parent: [BaseThiefStealObjective, BaseThiefSecurityStealObjective]
@@ -158,15 +124,6 @@
 
 - type: entity
   parent: [BaseThiefStealObjective, BaseThiefCargoStealObjective]
-  id: SalvageShuttleConsoleCircuitboardStealObjective
-  components:
-  - type: StealCondition
-    stealGroup: SalvageShuttleConsoleCircuitboard
-  - type: Objective
-    difficulty: 0.7
-
-- type: entity
-  parent: [BaseThiefStealObjective, BaseThiefCargoStealObjective]
   id: MiningShuttleConsoleCircuitboardStealObjective
   components:
   - type: StealCondition
@@ -200,15 +157,6 @@
     stealGroup: BrigmedicStrangeBedsheet
   - type: Objective
     difficulty: 1.4 # It's actually pretty hard to do
-
-- type: entity
-  parent: [BaseThiefStealObjective, BaseThiefCargoStealObjective]
-  id: ClothingNeckMantleDecoratedSalvagerStealObjective
-  components:
-  - type: StealCondition
-    stealGroup: SalvLeadMantle
-  - type: Objective
-    difficulty: 1.3 # Salvage Lead's usually always wearing this...
 
 - type: entity
   parent: BaseThiefStealObjective

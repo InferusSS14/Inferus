@@ -1,5 +1,5 @@
 - type: entity
-  name: sugar cube(s)
+  name: sugar cube
   parent: BaseItem
   id: SugarCube
   description: You could build a tiny house with these.
@@ -50,11 +50,11 @@
 
 - type: entity
   parent: SugarCube
-  id: SugarCube10
-  suffix: 10
+  id: SugarCube6
+  suffix: 6
   components:
   - type: Stack
-    count: 10
+    count: 6
 
 - type: stack
   parent: BaseSmallStack

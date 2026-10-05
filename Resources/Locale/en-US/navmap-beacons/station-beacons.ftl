@@ -9,7 +9,6 @@ station-beacon-hop = HOP
 
 station-beacon-security = Security
 station-beacon-brig = Brig
-station-beacon-brig-med = Brig Med
 station-beacon-warden = Warden
 station-beacon-hos = HOS
 station-beacon-armory = Armory

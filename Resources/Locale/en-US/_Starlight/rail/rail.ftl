@@ -1,6 +1,11 @@
 card-selection-window-title = CARD SELECTION
 cards = Cards
 
+card-selection-no-cards = No new cards available at this time.
+card-selection-restricted = Your last hand expired before you chose. You won't be offered any more cards this round.
+card-selection-timer = Choose within {$seconds}s or you will be locked out for the rest of the round.
+
+character-info-cards-button = View cards
 
 railroading-card-examined = ┌Active card:
     ├[color={$IconColor}][font="Icon"]{$Icon}[/font][/color] [color={$Color}]{$Title}[/color]
@@ -278,7 +283,6 @@ rr-monkeybusiness-desc = Banana, mischief, and questionable life choices.
 rr-moonshine = Moonshine
 rr-moonshine-desc = Homemade lightning in a jar.
 
-rr-neurotoxin = Neurotoxin
 rr-neurotoxin-desc = For when you want your drink to fight back.
 
 rr-painkiller = Painkiller

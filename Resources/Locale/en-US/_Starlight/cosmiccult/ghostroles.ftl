@@ -4,7 +4,6 @@ ghost-role-information-theunknown-name = The Unknown
 ghost-role-information-theunknown-description = The Cosmic Cult has won. An fragment of cosmic power extrudes into realspace.
 ghost-role-information-theunknown-rules = ...
 
-
 # CosmicMinions
 
 ghost-role-information-cosmic-minion-name = Cosmic Minion
@@ -49,8 +48,8 @@ ghost-role-colossus-briefing =
     Read more about your role in the guidebook entry.
 
 ghost-role-colossus-death = The colossus collapses, its light extinguished.
+ghost-role-colossus-revive = The colossus tears itself from death, roaring once more.
 ghost-role-colossus-hibernate = The colossus begins drawing in energy!
-ghost-role-colossus-effigy-confirm = If placement is  valid, press again to Beckon an Effigy.
 
 ghost-role-colossus-effigy-lost = Your connection to the effigy has been severed. You begin gathering strength for another.
 ghost-role-colossus-effigy-ready = Your strength has returned. You may once again beckon an effigy.
@@ -75,4 +74,7 @@ ghost-role-mindsink-wipe-device-verb-text = Erase Mind
 ghost-role-mindsink-wiped-device = The mind was snuffed out.
 ghost-role-mindsink-stop-searching-verb-text = Stop Seeking
 ghost-role-mindsink-stopped-searching = Noöspheric resonance halted.
-ghost-role-mindsink-slot-component-slot-name-brain = Brain
+
+# OTHER
+ghost-role-information-nymph-name = Diona Nymph
+ghost-role-information-nymph-description = A feral diona nymph that has found its way into the station.

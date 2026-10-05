@@ -202,7 +202,7 @@
       listNumber: false
 
 - type: entity
-  parent: [IDCardStandard, BaseCargoContraband]
+  parent: [ IDCardStandard, BaseSalvageContraband ]
   id: SalvageLeadIDCard
   name: salvage lead ID card
   components:
@@ -815,15 +815,15 @@
   name: makeshift ID card
   description: A set of door electronics rewired to act as an ID card.
   components:
-    - type: Sprite
-      sprite: _Starlight/Objects/Misc/id_cards.rsi
-      state: makeshift
-    - type: Item
-      heldPrefix: makeshift
-    - type: PresetIdCard
-      job: MakeshiftID
-    - type: NanoChatCard
-      listNumber: false
+  - type: Sprite
+    sprite: _Starlight/Objects/Misc/id_cards.rsi
+    state: makeshift
+  - type: Item
+    heldPrefix: makeshift
+  - type: PresetIdCard
+    job: MakeshiftID
+  - type: NanoChatCard
+    listNumber: false
 
 #ERT/Centcomm
 
@@ -1041,23 +1041,44 @@
   name: CBURN ID card
   suffix: CBURN
   components:
-    - type: Sprite
-      sprite: _Starlight/Objects/Misc/id_cards.rsi
-      layers:
-        - state: centcomsilver #Starlight
-        - sprite: *id-rsi
-          state: stripe_top
-          color: "#0c7d1d" #Starlight
-        - sprite: *id-rsi
-          state: stripe_bottom
-          color: "#0a5715" #Starlight
-        - sprite: *starlight-icon-rsi #Starlight
-          offset: *icon-offset
-          state: CBURN
-    - type: Item
-      sprite: Objects/Misc/id_cards.rsi
-      heldPrefix: silver
-    - type: PresetIdCard
-      job: CBURN
-    - type: NanoChatCard # CD
-      listNumber: false
+  - type: Sprite
+    sprite: _Starlight/Objects/Misc/id_cards.rsi
+    layers:
+    - state: centcomsilver #Starlight
+    - sprite: *id-rsi
+      state: stripe_top
+      color: "#0c7d1d" #Starlight
+    - sprite: *id-rsi
+      state: stripe_bottom
+      color: "#0a5715" #Starlight
+    - sprite: *starlight-icon-rsi #Starlight
+      offset: *icon-offset
+      state: CBURN
+  - type: Item
+    sprite: Objects/Misc/id_cards.rsi
+    heldPrefix: silver
+  - type: PresetIdCard
+    job: CBURN
+  - type: NanoChatCard # CD
+    listNumber: false
+
+- type: entity
+  parent: [ IDCardStandard, BaseSalvageContraband ]
+  id: SalvageMedicIDCard
+  name: salvage medic ID card
+  components:
+  - type: Sprite
+    sprite: _Starlight/Objects/Misc/id_cards.rsi
+    layers:
+    - state: default
+    - sprite: *id-rsi
+      state: stripe_top
+      color: *color-supply-top
+    - sprite: *id-rsi
+      state: stripe_bottom
+      color: *color-supply-top
+    - sprite: *starlight-icon-rsi
+      offset: *icon-offset
+      state: SalvageMedic
+  - type: PresetIdCard
+    job: SalvageMedic

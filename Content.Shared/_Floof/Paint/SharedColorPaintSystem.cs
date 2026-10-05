@@ -7,7 +7,7 @@ namespace Content.Shared._Floof.Paint;
 /// Shared logic for applying / clearing color paint.
 /// Used by both the spray-can system and loadout metadata tinting.
 /// </summary>
-public abstract class SharedColorPaintSystem : EntitySystem
+public abstract partial class SharedColorPaintSystem : EntitySystem
 {
     [Dependency] private EntityWhitelistSystem _whitelist = default!;
     [Dependency] private SharedAppearanceSystem _appearanceSystem = default!;

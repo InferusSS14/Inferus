@@ -6,7 +6,7 @@ using Robust.Shared.Audio.Systems;
 
 namespace Content.Shared._Floof.Paint;
 
-public sealed class ColorPaintRemoverSystem : EntitySystem
+public sealed partial class ColorPaintRemoverSystem : EntitySystem
 {
     [Dependency] private SharedPopupSystem _popup = default!;
     [Dependency] private SharedDoAfterSystem _doAfter = default!;

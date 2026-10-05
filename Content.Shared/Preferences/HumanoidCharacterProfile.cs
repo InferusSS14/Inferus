@@ -109,13 +109,6 @@ namespace Content.Shared.Preferences
 
         public IReadOnlyDictionary<string, string> JobTitles => _jobTitles;
 
-
-        /// <summary>
-        /// <see cref="Appearance"/>
-        /// </summary>
-        public ICharacterAppearance CharacterAppearance => Appearance;
-
-
         /// <summary>
         /// Stores markings, eye colors, etc for the profile.
         /// </summary>

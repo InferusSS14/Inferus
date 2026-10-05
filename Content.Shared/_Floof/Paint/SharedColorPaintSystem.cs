@@ -9,9 +9,9 @@ namespace Content.Shared._Floof.Paint;
 /// </summary>
 public abstract class SharedColorPaintSystem : EntitySystem
 {
-    [Dependency] private readonly EntityWhitelistSystem _whitelist = default!;
-    [Dependency] private readonly SharedAppearanceSystem _appearanceSystem = default!;
-    [Dependency] private readonly InventorySystem _inventory = default!;
+    [Dependency] private EntityWhitelistSystem _whitelist = default!;
+    [Dependency] private SharedAppearanceSystem _appearanceSystem = default!;
+    [Dependency] private InventorySystem _inventory = default!;
 
     public void Paint(EntityWhitelist? whitelist, EntityWhitelist? blacklist, EntityUid target, Color color)
     {

@@ -5,7 +5,7 @@ using Robust.Shared.Player;
 using Robust.Shared.Utility;
 
 // ReSharper disable once CheckNamespace
-namespace Content.Client.Lobby.UI;
+namespace Content.Client._Starlight.Lobby.UI;
 
 /// <summary>
 /// Floofstation extensions for the profile editor (loadout metadata editor + copy-to-all).

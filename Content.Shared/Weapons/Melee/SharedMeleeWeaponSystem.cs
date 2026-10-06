@@ -279,6 +279,7 @@ public abstract partial class SharedMeleeWeaponSystem : EntitySystem
 
         var ev = new GetHeavyDamageModifierEvent(uid, component.ClickDamageModifier, 1, user);
         RaiseLocalEvent(uid, ref ev);
+        if (uid != user) RaiseLocalEvent(user, ref ev); // STARLIGHT - also check wielder of weapon for bonuses
 
         return ev.DamageModifier * ev.Multipliers;
     }
@@ -290,6 +291,7 @@ public abstract partial class SharedMeleeWeaponSystem : EntitySystem
 
         var ev = new GetMeleeDamageEvent(uid, new(component.Damage * Damageable.UniversalMeleeDamageModifier), new(), user, component.ResistanceBypass);
         RaiseLocalEvent(uid, ref ev);
+        if (uid != user) RaiseLocalEvent(user, ref ev); // STARLIGHT - also check wielder of weapon for bonuses
 
         return ev.ResistanceBypass;
     }
@@ -653,7 +655,7 @@ public abstract partial class SharedMeleeWeaponSystem : EntitySystem
             entities = entities.Take(MaxTargets).ToHashSet();
         }
 
-                // Validate client
+        // Validate client
         entities.RemoveWhere(entity => TerminatingOrDeleted(entity) ||
                                        !ArcRaySuccessful(entity,
                                            userPos,

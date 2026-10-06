@@ -268,6 +268,15 @@ public abstract partial class SharedEnsnareableSystem : EntitySystem
 
         var ensnareObject = component.ensnareFreedPrototype != null ? Spawn(component.ensnareFreedPrototype) : ensnare;
 
+        var ensnaringComponent = component;
+        if (ensnareObject != ensnare && TryComp<EnsnaringComponent>(ensnareObject, out var replacementComponent))
+        {
+            replacementComponent.WalkSpeed = component.WalkSpeed;
+            replacementComponent.SprintSpeed = component.SprintSpeed;
+            replacementComponent.EnsnaredHandled = true;
+            ensnaringComponent = replacementComponent;
+        }
+
         Container.Insert(ensnareObject, ensnareable.Container);
         // Starlight end
 
@@ -277,7 +286,7 @@ public abstract partial class SharedEnsnareableSystem : EntitySystem
             _stamina.TakeStaminaDamage(target, component.StaminaDamage, with: ensnare, component: stamina);
         }
 
-        component.Ensnared = target;
+        ensnaringComponent.Ensnared = target;
         ensnareable.IsEnsnared = true;
         Dirty(target, ensnareable);
 

@@ -101,6 +101,7 @@
                 "--no-build",
                 "--configuration",
                 "DebugOpt",
+                "--project",
                 "Content.Tests/Content.Tests.csproj",
                 "--",
                 "NUnit.ConsoleOut=0"
@@ -122,6 +123,7 @@
                 "--no-build",
                 "--configuration",
                 "DebugOpt",
+                "--project",
                 "Content.IntegrationTests/Content.IntegrationTests.csproj",
                 "--",
                 "NUnit.ConsoleOut=0",

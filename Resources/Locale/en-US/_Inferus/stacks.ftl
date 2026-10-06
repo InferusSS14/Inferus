@@ -1,1 +1,1 @@
-stack-sugarcube = sugarcube(s)
+stack-sugarcube = sugarcube

@@ -26,25 +26,13 @@
   - type: Appearance
   - type: Extractable
     grindableSolutionName: hydrogen
-  - type: SolutionContainerManager
-    solutions:
-      hydrogen:
-        reagents:
-        - ReagentId: Hydrogen
-          Quantity: 20
-        canReact: false
-
-- type: entity
-  parent: MetalHydrogen
-  id: MetalHydrogen10
-  name: metal hydrogen
-  suffix: 10
-  components:
-  - type: Sprite
-    state: hydrogen
-  - type: Stack
-    stackType: MetalHydrogen
-    count: 10
+  - type: Solution
+    id: hydrogen
+    solution:
+      reagents:
+      - ReagentId: Hydrogen
+        Quantity: 10 # Starlight, same as the other ingots
+      canReact: false
 
 - type: entity
   parent: MetalHydrogen

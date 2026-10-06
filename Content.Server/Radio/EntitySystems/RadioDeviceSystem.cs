@@ -3,11 +3,11 @@ using Content.Server.Chat.Systems;
 using Content.Server.Interaction;
 using Content.Server.Popups;
 using Content.Server.Power.EntitySystems;
-using Content.Shared._Goobstation.StationRadio.Components;
-using Content.Shared.Item.ItemToggle.Components; // Starlight - Portable radio power toggle
+using Content.Shared._Starlight.StationRadio.Components;
 using Content.Shared.Chat;
 using Content.Shared.Examine;
 using Content.Shared.Interaction;
+using Content.Shared.Item.ItemToggle.Components;
 using Content.Shared.Power;
 using Content.Shared.Radio;
 using Content.Shared.Radio.Components;
@@ -16,10 +16,10 @@ using Content.Shared.Speech;
 using Content.Shared.Speech.Components;
 using Robust.Shared.Prototypes;
 using Content.Shared.Power.EntitySystems; // Goobstation - Radio Host
-using Content.Shared._Goobstation.StationRadio.Components; // Goobstation - Radio Host
+// Goobstation - Radio Host
 
 #region Starlight
-using Content.Server._Starlight.Language;
+
 #endregion Starlight
 
 namespace Content.Server.Radio.EntitySystems;
@@ -152,7 +152,11 @@ public sealed partial class RadioDeviceSystem : SharedRadioDeviceSystem
         if (!quiet && user != null)
         {
             var state = Loc.GetString(component.Enabled ? "handheld-radio-component-on-state" : "handheld-radio-component-off-state");
-            var message = Loc.GetString("handheld-radio-component-on-use", ("radioState", state));
+            // Starlight Start
+            var message = HasComp<StationRadioServerComponent>(uid)
+                ? Loc.GetString("station-radio-server-microphone-on-use", ("radioState", state))
+                : Loc.GetString("handheld-radio-component-on-use", ("radioState", state));
+            // Starlight End
             _popup.PopupEntity(message, user.Value, user.Value);
         }
 
@@ -230,7 +234,7 @@ public sealed partial class RadioDeviceSystem : SharedRadioDeviceSystem
         if (TryComp<StationRadioReceiverComponent>(uid, out var receiverComp))
         {
             transmitRange = ChatTransmitRange.HideChat; // Message hidden from chat if from a Station Radio.
-            chatType = receiverComp.LowVolume ? InGameICChatType.Whisper : InGameICChatType.Speak; // Radios will talk loudly if at full volume.
+            chatType = !receiverComp.BoostVolume ? InGameICChatType.Whisper : InGameICChatType.Speak; // Radios will talk loudly if at full volume.
         }
         // Starlight - End
 
@@ -325,6 +329,6 @@ public sealed partial class RadioDeviceSystem : SharedRadioDeviceSystem
         => SetMicrophoneEnabled(uid, null, args.Activated && !(comp.PowerRequired && !this.IsPowered(uid, EntityManager)));
     private void OnItemToggled(EntityUid uid, RadioSpeakerComponent comp, ref ItemToggledEvent args)
         => SetSpeakerEnabled(uid, null, args.Activated);
-    
+
     #endregion
 }

@@ -1,5 +1,5 @@
 - type: entity
-  parent: [ClothingOuterBaseLarge, AllowSuitStorageClothingGasTanks]
+  parent: [ClothingOuterBaseLarge, ClothingOuterBaseWarm, AllowSuitStorageClothingGasTanks] # Starlight
   id: ClothingOuterBioGeneral
   name: bio suit
   suffix: Generic
@@ -24,23 +24,6 @@
   - type: ClothingSpeedModifier
     walkModifier: 0.95
     sprintModifier: 0.95
-#Starlight
-  - type: Tag
-    tags:
-    - CorgiWearable
-    - WhitelistChameleon
-
-- type: entity
-  parent: ClothingOuterBioGeneral
-  id: ClothingOuterBioCmo
-  name: bio suit
-  suffix: CMO
-  description: An advanced suit that protects against biological contamination, in CMO colors.
-  components:
-  - type: Sprite
-    sprite: Clothing/OuterClothing/Bio/cmo.rsi
-  - type: Clothing
-    sprite: Clothing/OuterClothing/Bio/cmo.rsi
 #Starlight
   - type: Tag
     tags:
@@ -86,7 +69,7 @@
     - WhitelistChameleon
 
 - type: entity
-  parent: [ClothingOuterBaseLarge, AllowSuitStorageClothing, BaseSecurityContraband]
+  parent: [ClothingOuterBaseLarge, ClothingOuterBaseWarm, AllowSuitStorageClothing, BaseSecurityContraband] # Starlight
   id: ClothingOuterBioSecurity
   name: bio suit
   suffix: Security
@@ -96,6 +79,9 @@
     sprite: Clothing/OuterClothing/Bio/security.rsi
   - type: Clothing
     sprite: Clothing/OuterClothing/Bio/security.rsi
+  - type: HideLayerClothing
+    slots:
+    - Tail
   - type: Armor
     modifiers:
       coefficients:

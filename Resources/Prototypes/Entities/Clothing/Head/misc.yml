@@ -235,34 +235,6 @@
     price: 15000
 
 - type: entity
-  parent: [ClothingHeadHatCatEars, BaseToggleClothing]
-  id: ClothingHeadHatCatEarsValid
-  suffix: Valid, DO NOT MAP
-  categories: [ DoNotMap ]
-  components:
-  - type: ToggleClothing
-    action: ActionBecomeValid
-    disableOnUnequip: true
-  - type: ComponentToggler
-    parent: true
-    components:
-    - type: KillSign
-  - type: Tag
-    tags: [] # ignore "WhitelistChameleon" tag
-  - type: Sprite
-    sprite: _Starlight/Clothing/Head/Hats/blackcatears.rsi # Starlight
-  - type: Clothing
-    sprite: _Starlight/Clothing/Head/Hats/blackcatears.rsi # Starlight
-  - type: AddAccentClothing
-    accent: OwOAccent
-
-- type: entity
-  parent: BaseToggleAction
-  id: ActionBecomeValid
-  name: Become Valid
-  description: "*notices your killsign* owo whats this"
-
-- type: entity
   parent: ClothingHeadBase
   id: ClothingHeadHatDogEars
   name: doggy ears
@@ -313,7 +285,7 @@
     - FacialHair
 
 - type: entity
-  parent: Clothing
+  parent: [SolutionDrink, Clothing]
   id: WaterDropletHat
   name: water droplet
   description: Makes 8-eyed friends 8 times more adorable!
@@ -339,13 +311,12 @@
       - water
   - type: DrainableSolution
     solution: drink
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        maxVol: 2
-        reagents:
-        - ReagentId: Water
-          Quantity: 2
+  - type: Solution
+    solution:
+      maxVol: 2 # Droplets are pretty small.
+      reagents:
+      - ReagentId: Water
+        Quantity: 2
   - type: DamageOnHighSpeedImpact
     minimumSpeed: 0.1
     damage:

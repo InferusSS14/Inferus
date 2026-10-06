@@ -4,13 +4,11 @@ using Content.Server.Humanoid;
 using Content.Server.Mind;
 using Content.Server.PDA;
 using Content.Server.Station.Components;
+using Content.Shared._Inferus.Roles;
 using Content.Shared._Starlight.Roles;
 using Content.Shared.Access.Components;
 using Content.Shared.Access.Systems;
-using Content.Shared.CCVar;
 using Content.Shared.Clothing;
-using Content.Shared._Inferus.Roles;
-using Content.Shared.DetailExaminable;
 using Content.Shared.Humanoid;
 using Content.Shared.Humanoid.Prototypes;
 using Content.Shared.IdentityManagement;
@@ -20,18 +18,17 @@ using Content.Shared.Preferences.Loadouts;
 using Content.Shared.Roles;
 using Content.Shared.Station;
 using JetBrains.Annotations;
-using Robust.Shared.Configuration;
 using Robust.Shared.Map;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
 // Starlight Start
 using Content.Server.GameTicking;
+using Content.Server._Starlight.Statistics;
 using Robust.Shared.GameObjects.Components.Localization;
 using Content.Server._Starlight.Medical.Limbs;
 using Content.Shared.Body.Components;
 using Content.Shared.Body.Part;
-using Prometheus;
 using Content.Server._Starlight.Administration.Systems;
 using Content.Server._Starlight.Medical.Body.Systems;
 using Content.Server._Starlight.Antags.Components;
@@ -73,14 +70,10 @@ public sealed partial class StationSpawningSystem : SharedStationSpawningSystem
 
     #region Starlight
     [Dependency] private GameTicker _gameTicker = default!;
+    [Dependency] private RoundStatisticsSystem _roundStatistics = default!;
     [Dependency] private TransformSystem _xform = default!;
     private static readonly ProtoId<SpeciesPrototype> FallbackSpecies = "Human";
     private static readonly ProtoId<JobPrototype> FallbackJob = "Assistant";
-    private static readonly Gauge _speciesJobsSpawns = Metrics.CreateGauge(
-        "sl_species_jobs_spawns",
-        "Contains info on species and jobs spawned at and during the round.",
-        ["species", "job", "spawn_time"]
-    );
     #endregion
 
 
@@ -214,7 +207,7 @@ public sealed partial class StationSpawningSystem : SharedStationSpawningSystem
                 throw new ArgumentException($"Could not find ${profile.ForcedPrototype} prototype for spawn rule.");
             entity = SLSpawn(profile.ForcedPrototype, coordinates);
             var resolvedEntity = (EntityUid)entity;
-            var grammar = EntityManager.EnsureComponent<GrammarComponent>(resolvedEntity);
+            var grammar = EnsureComp<GrammarComponent>(resolvedEntity);
             _grammarSystem.SetGender((resolvedEntity, grammar), profile.Gender);
 
 
@@ -313,13 +306,7 @@ public sealed partial class StationSpawningSystem : SharedStationSpawningSystem
                 Log.Warning($"Unable to find job {job}, falling back to {FallbackJob}");
             }
 
-
-            _speciesJobsSpawns
-                .WithLabels(
-                    Loc.GetString(speciesProto.Name),
-                    jobProto.LocalizedName,
-                    _gameTicker.RunLevel.ToString())
-                .Inc();
+            _roundStatistics.RecordSpeciesJobSpawn(speciesProto.ID, jobProto.ID, _gameTicker.RunLevel);
         }
         #endregion
 

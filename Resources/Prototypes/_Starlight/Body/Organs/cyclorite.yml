@@ -9,17 +9,10 @@
   - type: Edible
   - type: Extractable
     grindableSolutionName: organ
-  - type: SolutionContainerManager
+  - type: SolutionManager
     solutions:
-      organ:
-        reagents:
-        - ReagentId: Nutriment
-          Quantity: 10
-      food:
-        maxVol: 5
-        reagents:
-        - ReagentId: UncookedAnimalProteins
-          Quantity: 5
+    - SolutionOrganNutriment
+    - SolutionOrganFoodMeat
   - type: FlavorProfile
     flavors:
       - people
@@ -64,18 +57,13 @@
   suffix: Cyclorite
   description: "A fleshy muscle mostly used for lying."
   components:
+  - type: OrganTongue
+    sounds:
+      Male: MaleCyclorite
+      Female: FemaleCyclorite
+      Unsexed: MaleCyclorite
   - type: Sprite
     state: tongue
-
-- type: entity
-  id: OrganCycloriteEars
-  parent: [BaseCycloriteOrgan, BaseOrganEars]
-  name: cyclorite ears
-  suffix: Cyclorite
-  description: "There are three parts to the ear: inner, middle and outer. Only one of these parts should normally be visible."
-  components:
-  - type: Sprite
-    state: ears
 
 - type: entity
   id: OrganCycloriteLungs
@@ -93,20 +81,11 @@
   - type: Metabolizer
     metabolizerTypes: [ Slime, Cyclorite ]
     stages: [ Respiration ]
-  - type: SolutionContainerManager
+  - type: SolutionManager
     solutions:
-      organ:
-        reagents:
-        - ReagentId: Nutriment
-          Quantity: 10
-      Lung:
-        maxVol: 100.0
-        canReact: false
-      food:
-        maxVol: 5
-        reagents:
-        - ReagentId: UncookedAnimalProteins
-          Quantity: 5
+    - SolutionOrganNutriment
+    - SolutionOrganFoodMeat
+    - SolutionOrganLung
 
 - type: entity
   id: OrganCycloriteHeart
@@ -133,15 +112,11 @@
   components:
   - type: Sprite
     state: stomach
-  - type: SolutionContainerManager
+  - type: SolutionManager
     solutions:
-      stomach:
-        maxVol: 50
-      food:
-        maxVol: 5
-        reagents:
-        - ReagentId: UncookedAnimalProteins
-          Quantity: 5
+    - SolutionOrganNutriment
+    - SolutionOrganFoodMeat
+    - SolutionOrganStomach50
   - type: Stomach
   # The stomach metabolizes stuff like foods and drinks.
   # TODO: Have it work off of the ent's solution container, and move this
@@ -151,6 +126,7 @@
     maxReagents: 3
     metabolizerTypes: [ Slime ]
     stages: [ Digestion ]
+
 - type: entity
   id: OrganCycloriteLiver
   parent: [BaseCycloriteOrgan, BaseOrganLiver]

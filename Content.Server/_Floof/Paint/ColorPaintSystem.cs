@@ -16,14 +16,14 @@ namespace Content.Server._Floof.Paint;
 /// Colors a target and consumes reagent on each successful paint.
 /// Floof port of the EE spray-paint system with pre-doafter validation fixes.
 /// </summary>
-public sealed class ColorPaintSystem : SharedColorPaintSystem
+public sealed partial class ColorPaintSystem : SharedColorPaintSystem
 {
-    [Dependency] private readonly SharedAudioSystem _audio = default!;
-    [Dependency] private readonly SharedPopupSystem _popup = default!;
-    [Dependency] private readonly SharedSolutionContainerSystem _solutionContainer = default!;
-    [Dependency] private readonly SharedDoAfterSystem _doAfterSystem = default!;
-    [Dependency] private readonly OpenableSystem _openable = default!;
-    [Dependency] private readonly EntityWhitelistSystem _whitelist = default!;
+    [Dependency] private SharedAudioSystem _audio = default!;
+    [Dependency] private SharedPopupSystem _popup = default!;
+    [Dependency] private SharedSolutionContainerSystem _solutionContainer = default!;
+    [Dependency] private SharedDoAfterSystem _doAfterSystem = default!;
+    [Dependency] private OpenableSystem _openable = default!;
+    [Dependency] private EntityWhitelistSystem _whitelist = default!;
 
     public override void Initialize()
     {
@@ -122,7 +122,7 @@ public sealed class ColorPaintSystem : SharedColorPaintSystem
         }
 
         if (!_solutionContainer.TryGetSolution(paint.Owner, paint.Comp.Solution, out _, out var solution)
-            || solution.Volume <= 0)
+            || solution.GetTotalPrototypeQuantity(paint.Comp.Reagent.ToString()) < paint.Comp.ConsumptionUnit)
         {
             reason = Loc.GetString("paint-empty", ("used", paint));
             return false;
@@ -147,10 +147,11 @@ public sealed class ColorPaintSystem : SharedColorPaintSystem
 
     private bool TryConsumePaint(Entity<ColorPaintComponent> reagent)
     {
-        if (!_solutionContainer.TryGetSolution(reagent.Owner, reagent.Comp.Solution, out _, out var solution))
+        if (!_solutionContainer.TryGetSolution(reagent.Owner, reagent.Comp.Solution, out var solutionEntity, out var solution)
+            || solution.GetTotalPrototypeQuantity(reagent.Comp.Reagent.ToString()) < reagent.Comp.ConsumptionUnit)
             return false;
 
-        var quantity = solution.RemoveReagent(reagent.Comp.Reagent, reagent.Comp.ConsumptionUnit);
-        return quantity > 0;
+        var quantity = _solutionContainer.RemoveReagent(solutionEntity.Value, reagent.Comp.Reagent, reagent.Comp.ConsumptionUnit);
+        return quantity >= reagent.Comp.ConsumptionUnit;
     }
 }

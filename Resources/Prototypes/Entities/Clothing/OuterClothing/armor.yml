@@ -1,7 +1,6 @@
 # Numbers for armor here largely taken from /tg/.
 # armor.yml covers both armored vests (e.g. not just cosmetic) and armor that covers multiple bodyparts/limbs
 
-
 #Basic armor vest for inheritance
 - type: entity
   abstract: true
@@ -26,6 +25,16 @@
   - type: ExplosionResistance
     damageCoefficient: 0.90
   - type: ArmorSparkEffect #starlight
+  # Forky - Start - Clothing stains
+  - type: Stainable
+    clothingVisuals:
+      outerClothing:
+      - sprite: _Funkystation/Effects/blood.rsi
+        state: armorblood
+    iconVisuals:
+    - sprite: _Funkystation/Effects/blood.rsi
+      state: armorbloodicon
+  # Forky - End
 
 #Standard armor vest, allowed for security and bartenders
 - type: entity
@@ -257,10 +266,9 @@
         Piercing: 0.5
         Heat: 0.9
 
-
 # Armor covering multiple body parts including limbs
 - type: entity
-  parent: [ClothingOuterBaseLarge, AllowSuitStorageClothing, BaseSyndicateContraband ]
+  parent: [ClothingOuterBaseLarge, ClothingOuterBaseWarm, AllowSuitStorageClothing, BaseSyndicateContraband ] # Starlight
   id: ClothingOuterArmorRaid
   name: syndicate raid suit
   description: A flexible and well-armored suit, made for speed, with a powerful shoulder mounted flashlight manufactured in the Gorlex Marauder's iconic blood-red color scheme, it does not protect its wearer from space. # Starlight
@@ -355,7 +363,7 @@
     - K9Wearable # Starlight
 
 - type: entity
-  parent: [ClothingOuterBaseLarge, AllowSuitStorageClothing, BaseSecurityContraband]
+  parent: [ClothingOuterBaseLarge, ClothingOuterBaseWarm, AllowSuitStorageClothing, BaseSecurityContraband] # Starlight
   id: ClothingOuterArmorRiot
   name: riot suit
   description: A suit of semi-flexible polycarbonate body armor with heavy padding to protect against melee attacks. Perfect for fighting delinquents around the station.
@@ -385,7 +393,7 @@
     - WhitelistChameleon
 
 - type: entity
-  parent: [ ClothingOuterBaseLarge, BaseMajorContraband, AllowSuitStorageClothing ]
+  parent: [ ClothingOuterBaseLarge, ClothingOuterBaseWarm, BaseMajorContraband, AllowSuitStorageClothing ] # Starlight
   id: ClothingOuterArmorCult
   name: acolyte armor
   description: An evil-looking piece of cult armor, made of bones.
@@ -406,7 +414,7 @@
   - type: GroupExamine
 
 - type: entity
-  parent: [ClothingOuterBaseLarge, AllowSuitStorageClothing]
+  parent: [ClothingOuterBaseLarge, ClothingOuterBaseWarm, AllowSuitStorageClothing] # Starlight
   id: ClothingOuterArmorHeavy
   name: heavy armor suit
   description: A heavily armored suit that protects against excessive damage.
@@ -475,37 +483,7 @@
     sprite: Clothing/OuterClothing/Armor/magusred.rsi
 
 - type: entity
-  parent: [ ClothingOuterBaseLarge, BaseMajorContraband, AllowSuitStorageClothing ]
-  id: ClothingOuterArmorChangeling
-  name: chitinous armor
-  description: Inflates the changeling's body into an all-consuming chitinous mass of armor.
-  components:
-  - type: Sprite
-    sprite: Clothing/OuterClothing/Armor/lingarmor.rsi
-  - type: Clothing
-    sprite: Clothing/OuterClothing/Armor/lingarmor.rsi
-  - type: Pierceable
-    level: Metal
-  - type: Armor
-    modifiers:
-      coefficients:
-        Blunt: 0.5
-        Slash: 0.5
-        Piercing: 0.5
-        Heat: 0.9
-        Radiation: 0.8
-  - type: ClothingSpeedModifier
-    walkModifier: 0.65
-    sprintModifier: 0.65
-  - type: HeldSpeedModifier
-  - type: ExplosionResistance
-    damageCoefficient: 0.5
-  - type: GroupExamine
-  - type: ProtectedFromStepTriggers
-    slots: WITHOUT_POCKET
-
-- type: entity
-  parent: [ ClothingOuterBaseLarge, BaseMajorContraband, AllowSuitStorageClothing ]
+  parent: [ ClothingOuterBaseLarge, ClothingOuterBaseWarm, BaseMajorContraband, AllowSuitStorageClothing ] # Starlight
   id: ClothingOuterArmorBone
   name: bone armor
   description: Sits on you like a second skin.
@@ -536,7 +514,7 @@
     slots: WITHOUT_POCKET
 
 - type: entity
-  parent: [ ClothingOuterBaseLarge, BaseMajorContraband, AllowSuitStorageClothing ]
+  parent: [ ClothingOuterBaseLarge, ClothingOuterBaseWarm, BaseMajorContraband, AllowSuitStorageClothing ] # Starlight
   id: ClothingOuterArmorPodWars
   name: ironclad II armor
   description: A repurposed suit of ironclad II armor, a relic of the pod wars.

@@ -34,16 +34,13 @@
       - ExCable
     overTile: true
   - type: Appearance
-  - type: Extractable
-    grindableSolutionName: excable
-  - type: SolutionContainerManager
-    solutions:
-      mvcable:
-        reagents:
-        - ReagentId: Thermite
-          Quantity: 3
-        - ReagentId: Charcoal
-          Quantity: 2
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Thermite
+        Quantity: 3
+      - ReagentId: Charcoal
+        Quantity: 2
   - type: Damageable
     damageContainer: StructuralInorganic
   - type: Destructible # should have the same general explosive behavior as in cables.yml & detonator.yml
@@ -81,25 +78,6 @@
       # - Window
       # - Wall
   # - type: StickyVisualizer
-
-- type: entity
-  parent: CableDetStack
-  id: CableDetStack10
-  suffix: 10
-  components:
-  - type: Sprite
-    state: coilex-10
-  - type: Stack
-    count: 10
-  - type: Explosive # TODO: some how make stacking logic handle the explosion scaling. Maybe also something for lingering stacks.
-    explosionType: DemolitionCharge
-    totalIntensity: 30
-    intensitySlope: 5
-    maxIntensity: 15
-    canCreateVacuum: false
-  - type: Tag
-    tags:
-    - Payload
 
 - type: entity
   parent: CableDetStack

@@ -1,6 +1,7 @@
 using Content.Server.Atmos.EntitySystems;
 using Content.Server.Temperature.Systems;
 using Content.Shared._Inferus.Vore;
+using Content.Shared.Atmos;
 using Content.Shared.Temperature.Components;
 
 namespace Content.Server._Inferus.Vore;
@@ -8,7 +9,7 @@ namespace Content.Server._Inferus.Vore;
 public sealed partial class VoreSystem: SharedVoreSystem
 {
     [Dependency] private TemperatureSystem _temperatureSystem = default!;
-    
+
     public override void Initialize()
     {
         base.Initialize();

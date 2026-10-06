@@ -59,18 +59,6 @@
     - !type:WallmountCondition {}
 
 - type: construction
-  id: VoreFlag
-  graph: Flags
-  startNode: start
-  targetNode: VoreFlag
-  category: construction-category-structures
-  placementMode: SnapgridCenter
-  objectType: Structure
-  canBuildInImpassable: true
-  conditions:
-    - !type:WallmountCondition {}
-
-- type: construction
   id: IntersexFlag
   graph: Flags
   startNode: start
@@ -243,6 +231,43 @@
   graph: Flags
   startNode: start
   targetNode: SyndieFlag
+  category: construction-category-structures
+  placementMode: SnapgridCenter
+  objectType: Structure
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition {}
+
+
+- type: construction
+  id: NonbinaryFlag
+  graph: Flags
+  startNode: start
+  targetNode: NonbinaryFlag
+  category: construction-category-structures
+  placementMode: SnapgridCenter
+  objectType: Structure
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition {}
+
+- type: construction
+  id: GenderfluidFlag
+  graph: Flags
+  startNode: start
+  targetNode: GenderfluidFlag
+  category: construction-category-structures
+  placementMode: SnapgridCenter
+  objectType: Structure
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition {}
+
+- type: construction
+  id: GenderqueerFlag
+  graph: Flags
+  startNode: start
+  targetNode: GenderqueerFlag
   category: construction-category-structures
   placementMode: SnapgridCenter
   objectType: Structure

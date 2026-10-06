@@ -6,12 +6,12 @@ using Robust.Shared.Audio.Systems;
 
 namespace Content.Shared._Floof.Paint;
 
-public sealed class ColorPaintRemoverSystem : EntitySystem
+public sealed partial class ColorPaintRemoverSystem : EntitySystem
 {
-    [Dependency] private readonly SharedPopupSystem _popup = default!;
-    [Dependency] private readonly SharedDoAfterSystem _doAfter = default!;
-    [Dependency] private readonly SharedAudioSystem _audio = default!;
-    [Dependency] private readonly SharedAppearanceSystem _appearanceSystem = default!;
+    [Dependency] private SharedPopupSystem _popup = default!;
+    [Dependency] private SharedDoAfterSystem _doAfter = default!;
+    [Dependency] private SharedAudioSystem _audio = default!;
+    [Dependency] private SharedColorPaintSystem _colorPaint = default!;
 
     public override void Initialize()
     {
@@ -48,11 +48,9 @@ public sealed class ColorPaintRemoverSystem : EntitySystem
             || !TryComp(target, out ColorPaintedComponent? paint))
             return;
 
-        paint.Enabled = false;
         _audio.PlayPredicted(component.Sound, target, args.User);
         _popup.PopupClient(Loc.GetString("paint-removed", ("target", target)), args.User, args.User, PopupType.Medium);
-        _appearanceSystem.RemoveData(target, PaintVisuals.Painted);
-        RemComp<ColorPaintedComponent>(target);
+        _colorPaint.ClearPaint(target);
 
         args.Handled = true;
     }

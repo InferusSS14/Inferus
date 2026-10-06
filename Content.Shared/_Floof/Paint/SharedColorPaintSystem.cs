@@ -7,11 +7,11 @@ namespace Content.Shared._Floof.Paint;
 /// Shared logic for applying / clearing color paint.
 /// Used by both the spray-can system and loadout metadata tinting.
 /// </summary>
-public abstract class SharedColorPaintSystem : EntitySystem
+public abstract partial class SharedColorPaintSystem : EntitySystem
 {
-    [Dependency] private readonly EntityWhitelistSystem _whitelist = default!;
-    [Dependency] private readonly SharedAppearanceSystem _appearanceSystem = default!;
-    [Dependency] private readonly InventorySystem _inventory = default!;
+    [Dependency] private EntityWhitelistSystem _whitelist = default!;
+    [Dependency] private SharedAppearanceSystem _appearanceSystem = default!;
+    [Dependency] private InventorySystem _inventory = default!;
 
     public void Paint(EntityWhitelist? whitelist, EntityWhitelist? blacklist, EntityUid target, Color color)
     {
@@ -50,13 +50,30 @@ public abstract class SharedColorPaintSystem : EntitySystem
 
     public void ClearPaint(EntityUid target)
     {
-        if (target is not { Valid: true } || !TryComp<ColorPaintedComponent>(target, out var paint))
+        if (target is not { Valid: true })
+            return;
+
+        ClearPaintSingle(target);
+
+        if (!HasComp<InventoryComponent>(target)
+            || !_inventory.TryGetSlots(target, out var slots))
+            return;
+
+        foreach (var slot in slots)
+        {
+            if (_inventory.TryGetSlotEntity(target, slot.Name, out var slotEntity))
+                ClearPaintSingle(slotEntity.Value);
+        }
+    }
+
+    private void ClearPaintSingle(EntityUid target)
+    {
+        if (!TryComp<ColorPaintedComponent>(target, out var paint))
             return;
 
         paint.Enabled = false;
         _appearanceSystem.RemoveData(target, PaintVisuals.Painted);
         RemComp<ColorPaintedComponent>(target);
-        Dirty(target, paint);
     }
 
     /// <summary>

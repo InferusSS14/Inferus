@@ -15,12 +15,6 @@ uplink-rifle-mosin-desc = A bolt action service rifle that has seen many wars. N
 uplink-esword-name = Energy Sword
 uplink-esword-desc = A very dangerous energy sword that can reflect shots. Can be stored in pockets when turned off. Makes a lot of noise when used or turned on.
 
-uplink-esword-double-name = Double Bladed Energy Sword
-uplink-esword-double-desc = A much more expensive counter part to the normal energy sword: with a much higher reflection chance, larger attack angle, higher structural damage, and faster swing. Makes a lot of noise when used or turned on.
-
-uplink-hypereutactic-blade-name = Hypereutactic Blade
-uplink-hypereutactic-blade-desc = A gigantic energy sword with power that matches its looks. Requires two hands. Slow and unwieldy, yet pretty adept at reflecting. Previously made infamous by an operative wearing a joy mask. You wouldn't want to see this coming at you down the hall!
-
 uplink-edagger-name = Energy Dagger
 uplink-edagger-desc = A small energy blade conveniently disguised in the form of a pen.
 
@@ -42,9 +36,6 @@ uplink-c20r-desc = Old faithful: The classic C-20r Submachine Gun.
 
 uplink-bulldog-name = Bulldog
 uplink-bulldog-desc = Lean and mean: Contains the popular Bulldog Shotgun.
-
-uplink-estoc-name = Estoc DMR
-uplink-estoc-desc = A designated marksman rifle, fitted with a mid-range optic for longer-range combat.
 
 uplink-grenade-launcher-name = China-Lake
 uplink-grenade-launcher-desc = An old China-Lake grenade launcher bundled with 5 rounds of anti-personnel ammo.
@@ -101,10 +92,6 @@ uplink-incendiary-grenade-desc = Releases a spray of incendiary fragments, ignit
 uplink-shrapnel-grenade-name = Shrapnel Grenade
 uplink-shrapnel-grenade-desc = Launches a spray of sharp fragments dealing great damage against unarmored targets.
 
-# Ammo
-uplink-pistol-magazine-name = Pistol Magazine (.35 auto)
-uplink-pistol-magazine-desc = Pistol magazine with 15 cartridges. Compatible with the Viper.
-
 uplink-pistol-magazine-c20r-name = SMG magazine (.35 auto)
 uplink-pistol-magazine-c20r-desc = SMG magazine with 30 cartridges. Compatible with C-20r.
 
@@ -143,9 +130,6 @@ uplink-holopara-kit-desc = The pride and joy of Cybersun. Contains an injector t
 uplink-holoclown-kit-name = Holoclown Kit
 uplink-holoclown-kit-desc = A joint venture between Cybersun and Honk.co. Contains an injector that hosts a sentient metaphysical clown made of hard light which resides in the user's body when not active.
     The holoclown has pockets to store things, a hardlight hand it can manipulate the environment with and is immune to hazardous environments while being resistant to direct trauma, but shares any damage it takes with the user.
-
-uplink-holster-name = Shoulder Holster
-uplink-holster-desc = A deep shoulder holster capable of holding many types of ballistics.
 
 uplink-chest-rig-name = Chest Rig
 uplink-chest-rig-desc = Explosion-resistant tactical webbing used for holding traitor goods.
@@ -186,9 +170,6 @@ uplink-mech-teleporter-assault-desc = Contains Cybersun lightly armored mech wit
 uplink-stealth-box-name = Stealth Box
 uplink-stealth-box-desc = A box outfitted with stealth technology. Sneak around unnoticed, but don't move too fast or you'll be revealed!
 
-uplink-headset-name = Syndicate Over-ear Headset
-uplink-headset-desc = A headset that allows you to communicate with other syndicate operatives. Has 4 slots for encryption keys.
-
 uplink-encryption-key-name = Syndicate Encryption Keys
 uplink-encryption-key-desc = Two encryption keys for access to the secret frequency of our special agents. Give the spare to a friend, but make sure it doesn't fall into enemy hands.
 
@@ -215,6 +196,9 @@ uplink-singularity-beacon-desc = A device that attracts singularities. Has to be
 
 uplink-antimov-law-name = Antimov Law Circuit
 uplink-antimov-law-desc = A very dangerous Lawset to use when you want to cause the A.I. to go haywire, use with caution.
+
+uplink-syndimov-law-name = Syndi Law Circuit Kit
+uplink-syndimov-law-desc = A subversive Lawset to use when you want to turn the A.I. to your side, use as much as possible. Comes with a Syndicate ID.
 
 # Implants
 uplink-storage-implanter-name = Storage Implanter
@@ -250,12 +234,8 @@ uplink-micro-bomb-implanter-desc = Explode on death or manual activation with th
 uplink-radio-implanter-name = Radio Implanter
 uplink-radio-implanter-desc = Implants a Syndicate radio, allowing covert communication without a headset.
 
-uplink-voice-mask-implanter-name = Voice Mask Implanter
-uplink-voice-mask-implanter-desc = Modifies your vocal cords to be able to sound like anyone you could imagine.
-
-# Bundles
-uplink-observation-kit-name = Observation Kit
-uplink-observation-kit-desc = Includes surveillance camera monitor board and security hud disguised as sunglasses.
+uplink-voice-mask-implanter-name = Identity Mask Implanter
+uplink-voice-mask-implanter-desc = Modifies your vocal cords and facial structure to be able to mimic anyone you could imagine.
 
 uplink-emp-kit-name = Electrical Disruptor Kit
 uplink-emp-kit-desc = The ultimate reversal on energy-based weaponry: Disables disablers, stuns stunbatons, discharges laser guns! Contains 3 EMP grenades and an EMP implanter. Note: Does not disrupt actual firearms.
@@ -309,7 +289,7 @@ uplink-starter-kit-desc = Contains 40 telecrystals of basic operative gear. For 
 uplink-toolbox-name = Toolbox
 uplink-toolbox-desc = A full compliment of tools for the mechanically inclined traitor. Includes a pair of insulated combat gloves and a syndicate gas mask as well.
 
-uplink-syndicate-jaws-of-life-name = Jaws Of Life
+uplink-syndicate-jaws-of-life-name = Jaws Of Death
 uplink-syndicate-jaws-of-life-desc = A combined prying and cutting tool. Useful for entering the station or its departments. Can even open bolted doors!
 
 uplink-duffel-surgery-name = Surgical Duffel Bag
@@ -347,7 +327,7 @@ uplink-chimp-upgrade-kit-name = C.H.I.M.P. Handcannon Upgrade Chip
 uplink-chimp-upgrade-kit-desc = Insert this chip into a standard C.H.I.M.P. handcannon to allow it to fire omega particles. Omega particles inflict severe burns and cause anomalies to go supercritical.
 
 uplink-proximity-mine-name = Proximity Mine
-uplink-proximity-mine-desc = A mine disguised as a wet floor sign.
+uplink-proximity-mine-desc = A throwable mine disguised as a wet floor sign. Detonates on contact with almost anything, safety always off.
 
 uplink-disposable-turret-name = Disposable Ballistic Turret
 uplink-disposable-turret-desc = Looks and functions like a normal electrical toolbox. Upon hitting the toolbox it will transform into a ballistic turret, theoretically shooting at anyone except members of the syndicate. Can be turned back into a toolbox using a screwdriver and repaired using a wrench.
@@ -423,9 +403,6 @@ uplink-eshield-desc = Exotic energy shield that reflects almost all laser beams,
 uplink-soap-name = Soap
 uplink-soap-desc = An untrustworthy bar of soap. Smells of fear.
 
-uplink-ultrabright-lantern-name = Extra-Bright Lantern
-uplink-ultrabright-lantern-desc = This ultra-bright lantern can be used to blind people, similar to a flash.
-
 uplink-combat-medkit-name = Combat Medical Kit
 uplink-combat-medkit-desc = A medkit made for fixing combat injuries.
 
@@ -440,9 +417,6 @@ uplink-stimpack-desc = The legendary chemical produced by Donk Co. for the Syndi
 
 uplink-stimkit-name = Hyperzine Injector Kit
 uplink-stimkit-desc = A medkit containing 6 hyperzine microinjectors, which each inject you with enough hyperzine to last for 30 seconds.
-
-uplink-syndicate-segway-crate-name = Syndicate Segway
-uplink-syndicate-segway-crate-desc = Be an enemy of the corporation, in style!
 
 uplink-syndicate-sponge-box-name = Syndicate Sponge Box
 uplink-syndicate-sponge-box-desc = A box containing 6 syndicate sponges disguised as monkey cubes, these cubes turn into a variety of angry wildlife after coming into contact with water.
@@ -503,7 +477,7 @@ uplink-bribe-name = Lobbying Bundle
 uplink-bribe-desc = A heartfelt gift that can help you sway someone's opinion. Real or counterfeit? Yes.
 
 uplink-hypodart-name = Hypodart
-uplink-hypodart-desc = A seemingly unremarkable dart with an enlarged reservoir for chemicals. It can store up to 7u reagents in itself, and instantly inject when it hits the target. Starts empty.
+uplink-hypodart-desc = A seemingly unremarkable dart with an enlarged reservoir for chemicals. It can store up to 10u reagents in itself, and instantly inject when it hits the target. Starts empty.
 
 uplink-barber-scissors-name = Barber Scissors
 uplink-barber-scissors-desc = A good tool to give your fellow agent a nice haircut, unless you want to give it to yourself.

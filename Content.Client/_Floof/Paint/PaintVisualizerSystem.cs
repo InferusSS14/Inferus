@@ -11,9 +11,9 @@ namespace Content.Client._Floof.Paint;
 /// Uses LayerSet* APIs only — never assigns Layer.Shader and Layer.ShaderPrototype
 /// together, which triggers DebugAssertException in SpriteSystem.RenderLayer
 /// </summary>
-public sealed class ColorPaintedVisualizerSystem : VisualizerSystem<ColorPaintedComponent>
+public sealed partial class ColorPaintedVisualizerSystem : VisualizerSystem<ColorPaintedComponent>
 {
-    [Dependency] private readonly SharedAppearanceSystem _appearance = default!;
+    [Dependency] private SharedAppearanceSystem _appearance = default!;
 
     public override void Initialize()
     {

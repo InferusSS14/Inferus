@@ -21,11 +21,8 @@
         name: clothing-boots-sidearm
         whitelist:
           tags:
-          - Knife
+          - ToyKnife
           - ToySidearm
-        blacklist:
-          components:
-          - Sharp
 
 - type: entity
   parent: ClothingShoesClownBase
@@ -105,7 +102,7 @@
     sprite: Clothing/Shoes/Specific/cult.rsi
 
 - type: entity
-  parent: [ ClothingShoesBase, BaseJanitorContraband ]
+  parent: [ ClothingShoesBase, ClothingShoesUnstainable, BaseJanitorContraband ] # Starlight, untaintable, no footprints
   id: ClothingShoesGaloshes
   name: galoshes
   description: Specialised non-slip rubber boots, designed to reduce janitorial workplace accidents; a tider's treasure.
@@ -141,17 +138,6 @@
     sprintModifier: 1.3
   - type: FootstepModifier
     footstepSoundCollection: null
-
-- type: entity
-  parent: ClothingShoesBaseButcherable
-  id: ClothingShoesSwat
-  name: swat shoes
-  description: When you want to turn up the heat.
-  components:
-  - type: Sprite
-    sprite: Clothing/Shoes/Specific/swat.rsi
-  - type: Clothing
-    sprite: Clothing/Shoes/Specific/swat.rsi
 
 - type: entity
   parent: ClothingShoesBaseButcherable

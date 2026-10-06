@@ -1,23 +1,4 @@
 # Hydrogen
-- type: entity
-  name: pill
-  suffix: Hydrogen 5u
-  parent: Pill
-  id: PillHydrogen5
-  components:
-  - type: Pill
-    pillType: 7
-  - type: Sprite
-    state: pill8
-  - type: Label
-    currentLabel: reagent-label-hydrogen-5
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        maxVol: 20
-        reagents:
-        - ReagentId: Hydrogen
-          Quantity: 5
 
 - type: entity
   name: pill
@@ -31,13 +12,13 @@
     state: pill8
   - type: Label
     currentLabel: reagent-label-hydrogen-10
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        maxVol: 20
-        reagents:
-        - ReagentId: Hydrogen
-          Quantity: 10
+  - type: Solution
+    id: food
+    solution:
+      maxVol: 20
+      reagents:
+      - ReagentId: Hydrogen
+        Quantity: 10
 
 - type: entity
   name: pill canister
@@ -54,25 +35,6 @@
         amount: 5
 
 # Nitrogen
-- type: entity
-  name: pill
-  suffix: Nitrogen 5u
-  parent: Pill
-  id: PillNitrogen5
-  components:
-  - type: Pill
-    pillType: 8
-  - type: Sprite
-    state: pill9
-  - type: Label
-    currentLabel: reagent-label-nitrogen-5
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        maxVol: 20
-        reagents:
-        - ReagentId: Nitrogen
-          Quantity: 5
 
 - type: entity
   name: pill
@@ -86,13 +48,13 @@
     state: pill9
   - type: Label
     currentLabel: reagent-label-nitrogen-10
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        maxVol: 20
-        reagents:
-        - ReagentId: Nitrogen
-          Quantity: 10
+  - type: Solution
+    id: food
+    solution:
+      maxVol: 20
+      reagents:
+      - ReagentId: Nitrogen
+        Quantity: 10
 
 - type: entity
   name: pill canister

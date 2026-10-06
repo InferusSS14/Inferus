@@ -51,7 +51,8 @@ public sealed partial class DevilSystem : SharedDevilSystem
     }
 
     #region abilities
-    protected EntityUid CreateContract(EntityUid author, DevilComponent devilComp)
+
+    private EntityUid CreateContract(EntityUid author, DevilComponent devilComp)
     {
         var paper = Spawn(devilComp.InfernalContractPrototype, Transform(author).Coordinates);
         if (TryComp<InfernalContractComponent>(paper, out var contractComp))
@@ -104,7 +105,7 @@ public sealed partial class DevilSystem : SharedDevilSystem
         if (FitsChangeCriteria(devilComp, devilComp.EvilHaloAppearance))
         {
             EnsureComp<AppliedSpriteLayerComponent>(uid, out var appliedSpriteLayer);
-            appliedSpriteLayer.Sprite = new SpriteSpecifier.Rsi(new ResPath("_Starlight/Devil/evilhalo.rsi"), "halo");
+            appliedSpriteLayer.Sprite = new SpriteSpecifier.Rsi(new ResPath("_Starlight/Effects/Devil/evilhalo.rsi"), "halo");
             appliedSpriteLayer.Layer = "devil_halo";
             devilComp.EvilHaloAppearance.Completed = true;
         }

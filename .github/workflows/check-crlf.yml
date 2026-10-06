@@ -44,7 +44,7 @@ jobs:
             echo "Checking ${added_modified_file}"
             set +e
             editorconfig-checker --no-color --format gcc \
-              --exclude '\.(sf2|icns|aseprite)$' "${added_modified_file}" >> "$report" 2>&1
+              --exclude '\.(sf2|icns|aseprite)$' -- "${added_modified_file}" >> "$report" 2>&1
             file_status=$?
             set -e
             if (( file_status > checker_status )); then

@@ -1858,13 +1858,6 @@ entities:
     - type: Transform
       parent: 1
       pos: 6.5,0.5
-- proto: VisitorBartenderSpawner
-  entities:
-  - uid: 74
-    components:
-    - type: Transform
-      parent: 1
-      pos: 12.5,-2.5
 - proto: WallReinforcedShuttle
   entities:
   - uid: 295

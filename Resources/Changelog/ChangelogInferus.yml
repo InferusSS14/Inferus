@@ -65,5 +65,12 @@ Entries:
   id: 1301
   time: '2026-09-29T18:10:03.000000+00:00'
   url: https://github.com/InferusSS14/Inferus/pull/13
+- author: Tarazicon
+  changes:
+  - message: Added content and changes from STARLIGHT up to 10-5-26.
+    type: Add
+  id: 1501
+  time: '2026-10-06T16:25:05.000000+00:00'
+  url: https://github.com/InferusSS14/Inferus/pull/15
 Order: -2
 

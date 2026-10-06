@@ -14,9 +14,9 @@ namespace Content.Client._Floof.Lobby.UI;
 [GenerateTypedNameReferences]
 public sealed partial class LoadoutMetadataEditorDialog : FancyWindow
 {
-    [Dependency] private readonly IEntitySystemManager _entSys = default!;
-    [Dependency] private readonly IEntityManager _entMan = default!;
-    [Dependency] private readonly IPrototypeManager _protoMan = default!;
+    [Dependency] private IEntitySystemManager _entSys = default!;
+    [Dependency] private IEntityManager _entMan = default!;
+    [Dependency] private IPrototypeManager _protoMan = default!;
 
     public event Action<(Loadout loadout, bool copyMetadata, bool copyLoadout)>? OnSave;
 

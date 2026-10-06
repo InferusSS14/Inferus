@@ -1,7 +1,0 @@
-- type: jobIcon
-  parent: JobIcon
-  id: JobIconMakeshiftID
-  icon:
-    sprite: /Textures/_Inferus/Interface/Misc/job_icons.rsi
-    state: MakeshiftID
-  jobName: job-name-makeshift-id

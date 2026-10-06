@@ -41,13 +41,6 @@
             - material: Cloth
               amount: 2
               doAfter: 1
-        - to: VoreFlag
-          completed:
-            - !type:SnapToGrid {}
-          steps:
-            - material: Cloth
-              amount: 2
-              doAfter: 1
         - to: IntersexFlag
           completed:
             - !type:SnapToGrid {}

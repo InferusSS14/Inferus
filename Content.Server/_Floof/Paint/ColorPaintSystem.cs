@@ -16,7 +16,7 @@ namespace Content.Server._Floof.Paint;
 /// Colors a target and consumes reagent on each successful paint.
 /// Floof port of the EE spray-paint system with pre-doafter validation fixes.
 /// </summary>
-public sealed class ColorPaintSystem : SharedColorPaintSystem
+public sealed partial class ColorPaintSystem : SharedColorPaintSystem
 {
     [Dependency] private SharedAudioSystem _audio = default!;
     [Dependency] private SharedPopupSystem _popup = default!;

@@ -1,9 +1,14 @@
 using Content.Client.Guidebook;
 using Content.Client.Lobby.UI;
 using Content.Client.Players.PlayTimeTracking;
+using Content.Client.Station;
 using Content.Shared.CCVar;
+using Content.Shared.Clothing;
+using Content.Shared.GameTicking;
+using Content.Shared.Humanoid;
 using Content.Shared.Humanoid.Markings;
 using Content.Shared.Humanoid.Prototypes;
+using Content.Shared.Inventory;
 using Content.Shared.Preferences;
 using Content.Shared.Preferences.Loadouts;
 using Content.Shared.Roles;
@@ -13,6 +18,7 @@ using Robust.Client.State;
 using Robust.Client.UserInterface;
 using Robust.Client.UserInterface.Controllers;
 using Robust.Shared.Configuration;
+using Robust.Shared.Map;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
 
@@ -492,7 +498,7 @@ public sealed partial class LobbyUIController : UIController, IOnStateEntered<Lo
             return;
 
         if (_prototypeManager.TryIndex(roleLoadout.Role, out var roleLoadoutPrototype))
-            _spawn.EquipRoleLoadout(uid, roleLoadout, roleLoadoutPrototype);
+            EntityManager.System<StationSpawningSystem>().EquipRoleLoadout(uid, roleLoadout, roleLoadoutPrototype);
     }
 
     /// <summary>
@@ -500,7 +506,8 @@ public sealed partial class LobbyUIController : UIController, IOnStateEntered<Lo
     /// </summary>
     public void GiveDummyJobClothes(EntityUid dummy, HumanoidCharacterProfile profile, JobPrototype job)
     {
-        if (!_inventory.TryGetSlots(dummy, out var slots))
+        var inventory = EntityManager.System<InventorySystem>();
+        if (!inventory.TryGetSlots(dummy, out var slots))
             return;
 
         // Apply loadout
@@ -521,7 +528,7 @@ public sealed partial class LobbyUIController : UIController, IOnStateEntered<Lo
                         {
                             var itemType = ((IEquipmentLoadout) loadoutGear).GetGear(slot.Name);
 
-                            if (_inventory.TryUnequip(dummy, slot.Name, out var unequippedItem, silent: true, force: true, reparent: false))
+                            if (inventory.TryUnequip(dummy, slot.Name, out var unequippedItem, silent: true, force: true, reparent: false))
                             {
                                 EntityManager.DeleteEntity(unequippedItem.Value);
                             }
@@ -529,14 +536,14 @@ public sealed partial class LobbyUIController : UIController, IOnStateEntered<Lo
                             if (itemType != string.Empty)
                             {
                                 var item = EntityManager.SpawnEntity(itemType, MapCoordinates.Nullspace);
-                                _inventory.TryEquip(dummy, item, slot.Name, true, true);
+                                inventory.TryEquip(dummy, item, slot.Name, true, true);
                             }
                         }
                         else
                         {
                             var itemType = ((IEquipmentLoadout) loadoutProto).GetGear(slot.Name);
 
-                            if (_inventory.TryUnequip(dummy, slot.Name, out var unequippedItem, silent: true, force: true, reparent: false))
+                            if (inventory.TryUnequip(dummy, slot.Name, out var unequippedItem, silent: true, force: true, reparent: false))
                             {
                                 EntityManager.DeleteEntity(unequippedItem.Value);
                             }
@@ -544,7 +551,7 @@ public sealed partial class LobbyUIController : UIController, IOnStateEntered<Lo
                             if (itemType != string.Empty)
                             {
                                 var item = EntityManager.SpawnEntity(itemType, MapCoordinates.Nullspace);
-                                _inventory.TryEquip(dummy, item, slot.Name, true, true);
+                                inventory.TryEquip(dummy, item, slot.Name, true, true);
                             }
                         }
                     }
@@ -559,7 +566,7 @@ public sealed partial class LobbyUIController : UIController, IOnStateEntered<Lo
         {
             var itemType = ((IEquipmentLoadout) gear).GetGear(slot.Name);
 
-            if (_inventory.TryUnequip(dummy, slot.Name, out var unequippedItem, silent: true, force: true, reparent: false))
+            if (inventory.TryUnequip(dummy, slot.Name, out var unequippedItem, silent: true, force: true, reparent: false))
             {
                 EntityManager.DeleteEntity(unequippedItem.Value);
             }
@@ -567,7 +574,7 @@ public sealed partial class LobbyUIController : UIController, IOnStateEntered<Lo
             if (itemType != string.Empty)
             {
                 var item = EntityManager.SpawnEntity(itemType, MapCoordinates.Nullspace);
-                _inventory.TryEquip(dummy, item, slot.Name, true, true);
+                inventory.TryEquip(dummy, item, slot.Name, true, true);
             }
         }
     }
@@ -603,7 +610,7 @@ public sealed partial class LobbyUIController : UIController, IOnStateEntered<Lo
             dummyEnt = EntityManager.SpawnEntity(_prototypeManager.Index<SpeciesPrototype>(SharedHumanoidAppearanceSystem.DefaultSpecies).DollPrototype, MapCoordinates.Nullspace);
         }
 
-        _humanoid.LoadProfile(dummyEnt, humanoid);
+        EntityManager.System<HumanoidAppearanceSystem>().LoadProfile(dummyEnt, humanoid);
 
         // Far Horizons start
         if (humanoid != null)

@@ -4,6 +4,7 @@ using Content.Server.Humanoid;
 using Content.Server.Mind;
 using Content.Server.PDA;
 using Content.Server.Station.Components;
+using Content.Shared._Inferus.Roles;
 using Content.Shared._Starlight.Roles;
 using Content.Shared.Access.Components;
 using Content.Shared.Access.Systems;

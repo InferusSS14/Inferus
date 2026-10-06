@@ -59,18 +59,6 @@
     - !type:WallmountCondition {}
 
 - type: construction
-  id: VoreFlag
-  graph: Flags
-  startNode: start
-  targetNode: VoreFlag
-  category: construction-category-structures
-  placementMode: SnapgridCenter
-  objectType: Structure
-  canBuildInImpassable: true
-  conditions:
-    - !type:WallmountCondition {}
-
-- type: construction
   id: IntersexFlag
   graph: Flags
   startNode: start

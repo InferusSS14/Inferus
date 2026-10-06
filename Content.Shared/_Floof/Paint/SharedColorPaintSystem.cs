@@ -50,13 +50,30 @@ public abstract partial class SharedColorPaintSystem : EntitySystem
 
     public void ClearPaint(EntityUid target)
     {
-        if (target is not { Valid: true } || !TryComp<ColorPaintedComponent>(target, out var paint))
+        if (target is not { Valid: true })
+            return;
+
+        ClearPaintSingle(target);
+
+        if (!HasComp<InventoryComponent>(target)
+            || !_inventory.TryGetSlots(target, out var slots))
+            return;
+
+        foreach (var slot in slots)
+        {
+            if (_inventory.TryGetSlotEntity(target, slot.Name, out var slotEntity))
+                ClearPaintSingle(slotEntity.Value);
+        }
+    }
+
+    private void ClearPaintSingle(EntityUid target)
+    {
+        if (!TryComp<ColorPaintedComponent>(target, out var paint))
             return;
 
         paint.Enabled = false;
         _appearanceSystem.RemoveData(target, PaintVisuals.Painted);
         RemComp<ColorPaintedComponent>(target);
-        Dirty(target, paint);
     }
 
     /// <summary>

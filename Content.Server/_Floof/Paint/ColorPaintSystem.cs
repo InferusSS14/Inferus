@@ -122,7 +122,7 @@ public sealed partial class ColorPaintSystem : SharedColorPaintSystem
         }
 
         if (!_solutionContainer.TryGetSolution(paint.Owner, paint.Comp.Solution, out _, out var solution)
-            || solution.Volume <= 0)
+            || solution.GetTotalPrototypeQuantity(paint.Comp.Reagent.ToString()) < paint.Comp.ConsumptionUnit)
         {
             reason = Loc.GetString("paint-empty", ("used", paint));
             return false;
@@ -147,10 +147,11 @@ public sealed partial class ColorPaintSystem : SharedColorPaintSystem
 
     private bool TryConsumePaint(Entity<ColorPaintComponent> reagent)
     {
-        if (!_solutionContainer.TryGetSolution(reagent.Owner, reagent.Comp.Solution, out _, out var solution))
+        if (!_solutionContainer.TryGetSolution(reagent.Owner, reagent.Comp.Solution, out var solutionEntity, out var solution)
+            || solution.GetTotalPrototypeQuantity(reagent.Comp.Reagent.ToString()) < reagent.Comp.ConsumptionUnit)
             return false;
 
-        var quantity = solution.RemoveReagent(reagent.Comp.Reagent, reagent.Comp.ConsumptionUnit);
-        return quantity > 0;
+        var quantity = _solutionContainer.RemoveReagent(solutionEntity.Value, reagent.Comp.Reagent, reagent.Comp.ConsumptionUnit);
+        return quantity >= reagent.Comp.ConsumptionUnit;
     }
 }

@@ -304,6 +304,7 @@ public sealed partial class HumanoidProfileEditor
 
         _loadoutWindow.RefreshLoadouts(roleLoadout, session, collection);
         _loadoutWindow.OpenCenteredLeft();
+        OpenLoadoutFloof(jobProto, roleLoadout, roleLoadoutProto, session, collection);
 
         _loadoutWindow.OnNameChanged += name =>
         {
@@ -363,6 +364,15 @@ public sealed partial class HumanoidProfileEditor
 
         _loadoutWindow.RefreshLoadouts(roleLoadout, session, collection);
         _loadoutWindow.OpenCenteredLeft();
+        OpenLoadoutFloof(
+            antagProto.PreviewStartingGear != null
+                ? _prototypeManager.EnumeratePrototypes<JobPrototype>()
+                    .FirstOrDefault(j => j.StartingGear == antagProto.PreviewStartingGear)
+                : null,
+            roleLoadout,
+            roleLoadoutProto,
+            session,
+            collection);
 
         _loadoutWindow.OnNameChanged += name =>
         {

@@ -67,13 +67,6 @@
   - type: SolutionContainerVisuals
     maxFillLevels: 5
     fillBaseName: fill-
-  - type: SolutionContainerManager
-    solutions:
-      tank:
-        maxVol: 5000
-        reagents:
-        - ReagentId: SpaceCleaner
-          Quantity: 5000
   # Inferus start
   - type: PlumbingDevice
     updateInterval: 2

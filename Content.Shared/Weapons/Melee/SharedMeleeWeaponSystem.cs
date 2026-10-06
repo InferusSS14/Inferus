@@ -653,16 +653,16 @@ public abstract partial class SharedMeleeWeaponSystem : EntitySystem
             entities = entities.Take(MaxTargets).ToHashSet();
         }
 
-        // Validate client
+                // Validate client
         entities.RemoveWhere(entity => TerminatingOrDeleted(entity) ||
                                        !ArcRaySuccessful(entity,
-                                        userPos,
-                                        direction.ToWorldAngle(),
-                                        component.Angle,
-                                        distance,
-                                        userXform.MapID,
-                                        user,
-                                        session));
+                                           userPos,
+                                           direction.ToWorldAngle(),
+                                           component.Angle,
+                                           distance,
+                                           userXform.MapID,
+                                           user,
+                                           session));
 
         var targets = new HashSet<EntityUid>();
         var damageQuery = GetEntityQuery<DamageableComponent>();

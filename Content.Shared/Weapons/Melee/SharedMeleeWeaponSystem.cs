@@ -1096,7 +1096,7 @@ public abstract partial class SharedMeleeWeaponSystem : EntitySystem
     //Starlight begin | ES Screenshake
     private void DoScreenshake(EntityUid weapon, DamageSpecifier damage, EntityUid attacker, HashSet<EntityUid> targets)
     {
-        if(damage.GetTotal()>8) // only show to others if it hurts real bad
+        if (damage.GetTotal() > 8) // only show to others if it hurts real bad
         {
             var otherTranslation = new ScreenshakeParameters
             {

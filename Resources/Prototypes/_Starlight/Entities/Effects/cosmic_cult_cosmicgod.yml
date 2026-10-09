@@ -85,7 +85,7 @@
   - type: Input
     context: "ghost"
   - type: MovementIgnoreGravity
-  - type: GhostHearing
+  # - type: GhostHearing # inferus - no
   - type: Physics
     bodyType: KinematicController
     bodyStatus: InAir

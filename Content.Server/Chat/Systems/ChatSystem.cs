@@ -790,6 +790,88 @@ public sealed partial class ChatSystem : SharedChatSystem
         _adminLogger.Add(LogType.Chat, LogImpact.Low, $"LOOC from {player:Player}: {message}");
     }
 
+    /// <summary>
+    /// Sends a Subtle (whisper-range emote-style) message.
+    /// Non-admin ghosts never receive it.
+    /// </summary>
+    private void SendEntitySubtle(
+        EntityUid source,
+        string action,
+        ChatTransmitRange range,
+        string? nameOverride,
+        bool hideLog = false,
+        bool ignoreActionBlocker = false,
+        NetUserId? author = null)
+    {
+        if (!_actionBlocker.CanEmote(source) && !ignoreActionBlocker)
+            return;
+
+        // Apparent name (Identity system)
+        var ent = Identity.Entity(source, EntityManager);
+        var name = FormattedMessage.EscapeText(nameOverride ?? Name(ent));
+
+        var wrappedMessage = Loc.GetString("chat-manager-entity-subtle-wrap-message",
+            ("entityName", name),
+            ("entity", ent),
+            ("message", action));
+
+        SendInSubtleRange(ChatChannel.Subtle, source, action, wrappedMessage, range);
+
+        if (!hideLog)
+        {
+            if (name != Name(source))
+                _adminLogger.Add(LogType.Chat, LogImpact.Low, $"Subtle from {ToPrettyString(source):user} as {name}: {action}");
+            else
+                _adminLogger.Add(LogType.Chat, LogImpact.Low, $"Subtle from {ToPrettyString(source):user}: {action}");
+        }
+    }
+
+    /// <summary>
+    /// Sends a Subtle OOC / SOOC message.
+    /// </summary>
+    private void SendSubtleLooc(EntityUid source, ICommonSession player, string message, bool hideChat)
+    {
+        var name = FormattedMessage.EscapeText(Identity.Name(source, EntityManager));
+
+        if (_adminManager.IsAdmin(player) && !_adminLoocEnabled || !_loocEnabled)
+            return;
+
+        // Crit-player LOOC check (reuse existing logic)
+        if (!_critLoocEnabled && _mobStateSystem.IsCritical(source))
+            return;
+
+        var wrappedMessage = Loc.GetString("chat-manager-entity-subtle-looc-wrap-message",
+            ("entityName", name),
+            ("message", FormattedMessage.EscapeText(message)));
+
+        SendInSubtleRange(ChatChannel.SubtleOOC, source, message, wrappedMessage,
+            hideChat ? ChatTransmitRange.HideChat : ChatTransmitRange.Normal);
+
+        _adminLogger.Add(LogType.Chat, LogImpact.Low, $"SOOC from {player:Player}: {message}");
+    }
+
+    /// <summary>
+    /// Core range-restricted sender used by both Subtle and SubtleOOC.
+    /// Respects the Subtle flag on ICChatRecipientData so non-admin ghosts are excluded.
+    /// </summary>
+    private void SendInSubtleRange(ChatChannel channel, EntityUid source, string message, string wrappedMessage, ChatTransmitRange range)
+    {
+        foreach (var (session, data) in GetRecipients(source, WhisperClearRange))
+        {
+            // PR #857 protection: non-admin ghosts never see Subtle / SubtleOOC
+            if (!data.Subtle)
+                continue;
+
+            if (session.AttachedEntity is not { Valid: true } listener)
+                continue;
+
+            // Existing range / LOS / hideChat handling can be reused here.
+            // The exact signature of the final ChatMessageToOne / ChatMessageToMany call
+            // depends on how Inferus currently sends emotes / whispers – mirror that pattern.
+            _chatManager.ChatMessageToOne(channel, message, wrappedMessage, source, false, session.Channel);
+        }
+    }
+
     private void SendDeadChat(EntityUid source, ICommonSession player, string message, bool hideChat)
     {
         var clients = GetDeadChatClients();

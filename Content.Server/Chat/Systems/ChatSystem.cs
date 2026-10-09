@@ -345,8 +345,8 @@ public sealed partial class ChatSystem : SharedChatSystem
             case InGameOOCChatType.Looc:
                 SendLOOC(source, player, message, hideChat);
                 break;
-            case InGameOOCChatType.SubtleLOOC:                                     // ← ADD THIS
-                SendSubtleLooc(source, player, message, hideChat);
+            case InGameOOCChatType.SubtleOOC:
+                SendSubtleOOC(source, player, message, hideChat);
                 break;
         }
     }
@@ -835,7 +835,7 @@ public sealed partial class ChatSystem : SharedChatSystem
     /// <summary>
     /// Sends a Subtle OOC / SOOC message.
     /// </summary>
-    private void SendSubtleLooc(EntityUid source, ICommonSession player, string message, bool hideChat)
+    private void SendSubtleOOC(EntityUid source, ICommonSession player, string message, bool hideChat)
     {
         var name = FormattedMessage.EscapeText(Identity.Name(source, EntityManager));
 

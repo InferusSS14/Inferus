@@ -284,6 +284,9 @@ public sealed partial class ChatSystem : SharedChatSystem
             case InGameICChatType.Emote:
                 SendEntityEmote(source, message.Text, range, nameOverride, language, hideLog: hideLog, ignoreActionBlocker: ignoreActionBlocker); // Starlight
                 break;
+            case InGameICChatType.Subtle:                                          // ← ADD THIS
+                SendEntitySubtle(source, message.Text, range, nameOverride, hideLog, ignoreActionBlocker);
+                break;
         }
     }
 
@@ -341,6 +344,9 @@ public sealed partial class ChatSystem : SharedChatSystem
                 break;
             case InGameOOCChatType.Looc:
                 SendLOOC(source, player, message, hideChat);
+                break;
+            case InGameOOCChatType.SubtleLOOC:                                     // ← ADD THIS
+                SendSubtleLooc(source, player, message, hideChat);
                 break;
         }
     }
@@ -1201,9 +1207,9 @@ public sealed partial class ChatSystem : SharedChatSystem
 
             var observer = ghostHearing.HasComponent(playerEntity);
 
-            //Starlight begin | Check what's larger, the passed voice range or, if it exists, the voice range on ChatListenerRangeComponent
+            // Starlight begin | Check what's larger, the passed voice range or, if it exists, the voice range on ChatListenerRangeComponent
             var distanceToCheck = voiceGetRange;
-            if(TryComp<ChatListenerRangeComponent>(playerEntity, out var rangeComp))
+            if (TryComp<ChatListenerRangeComponent>(playerEntity, out var rangeComp))
                 if (rangeComp.AllowExtendListenRange)
                 {
                     distanceToCheck = isWhisper switch
@@ -1213,24 +1219,33 @@ public sealed partial class ChatSystem : SharedChatSystem
                         _ => distanceToCheck
                     };
                 }
-            //Starlight end
+            // Starlight end
+
+            // Subtle protection: non-admin ghosts must never receive Subtle / SubtleOOC
+            var isDead = HasComp<GhostComponent>(playerEntity);
+            var isAdmin = _adminManager.IsAdmin(player);
+            var subtleAllowed = !(isDead && !isAdmin);
 
             // even if they are a ghost hearer, in some situations we still need the range
             if (sourceCoords.TryDistance(EntityManager, transformEntity.Coordinates, out var distance) && distance < distanceToCheck) // Starlight-edit
             {
-                recipients.Add(player, new ICChatRecipientData(distance, observer));
+                recipients.Add(player, new ICChatRecipientData(distance, observer, Subtle: subtleAllowed));
                 continue;
             }
 
             if (observer)
-                recipients.Add(player, new ICChatRecipientData(-1, true));
+                recipients.Add(player, new ICChatRecipientData(-1, true, Subtle: subtleAllowed));
         }
 
         RaiseLocalEvent(new ExpandICChatRecipientsEvent(source, voiceGetRange, recipients));
         return recipients;
     }
 
-    public readonly record struct ICChatRecipientData(float Range, bool Observer, bool? HideChatOverride = null)
+    public readonly record struct ICChatRecipientData(
+    float Range,
+    bool Observer,
+    bool? HideChatOverride = null,
+    bool Subtle = true)
     {
     }
 

@@ -67,7 +67,7 @@ internal sealed partial class ChatManager : IChatManager
                 // Starlight end
                 break;
 
-            // TODO sepearate radio and say into separate commands.
+            // TODO separate radio and say into separate commands.
             case ChatSelectChannel.Radio:
             case ChatSelectChannel.Local:
                 _consoleHost.ExecuteCommand($"say \"{CommandParsing.Escape(str)}\"");
@@ -75,6 +75,14 @@ internal sealed partial class ChatManager : IChatManager
 
             case ChatSelectChannel.Whisper:
                 _consoleHost.ExecuteCommand($"whisper \"{CommandParsing.Escape(str)}\"");
+                break;
+
+            case ChatSelectChannel.Subtle:
+                _consoleHost.ExecuteCommand($"subtle \"{CommandParsing.Escape(str)}\"");
+                break;
+
+            case ChatSelectChannel.SubtleOOC:
+                _consoleHost.ExecuteCommand($"sooc \"{CommandParsing.Escape(str)}\"");
                 break;
 
             default:

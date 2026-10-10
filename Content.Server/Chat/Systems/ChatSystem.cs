@@ -224,7 +224,7 @@ public sealed partial class ChatSystem : SharedChatSystem
         else language = languageOverride ?? _language.GetLanguage(source);
         // Starlight end
 
-        bool shouldCapitalize = (desiredType != InGameICChatType.Emote);
+        bool shouldCapitalize = desiredType != InGameICChatType.Emote && desiredType != InGameICChatType.Subtle;
         bool shouldPunctuate = _configurationManager.GetCVar(CCVars.ChatPunctuation) || (player != null && _netConfigurationManager.GetClientCVar(player.Channel, StarlightCCVars.AutoPunctuate)); // Starlight - Auto-punctuate support
         // Capitalizing the word I only happens in English, so we check language here
         bool shouldCapitalizeTheWordI = (!CultureInfo.CurrentCulture.IsNeutralCulture && CultureInfo.CurrentCulture.Parent.Name == "en")
@@ -284,6 +284,9 @@ public sealed partial class ChatSystem : SharedChatSystem
             case InGameICChatType.Emote:
                 SendEntityEmote(source, message.Text, range, nameOverride, language, hideLog: hideLog, ignoreActionBlocker: ignoreActionBlocker); // Starlight
                 break;
+            case InGameICChatType.Subtle:                                          // ← ADD THIS
+                SendEntitySubtle(source, message.Text, range, nameOverride, hideLog, ignoreActionBlocker);
+                break;
         }
     }
 
@@ -341,6 +344,9 @@ public sealed partial class ChatSystem : SharedChatSystem
                 break;
             case InGameOOCChatType.Looc:
                 SendLOOC(source, player, message, hideChat);
+                break;
+            case InGameOOCChatType.SubtleOOC:
+                SendSubtleOOC(source, player, message, hideChat);
                 break;
         }
     }
@@ -790,6 +796,88 @@ public sealed partial class ChatSystem : SharedChatSystem
         _adminLogger.Add(LogType.Chat, LogImpact.Low, $"LOOC from {player:Player}: {message}");
     }
 
+    /// <summary>
+    /// Sends a Subtle (whisper-range emote-style) message.
+    /// Non-admin ghosts never receive it.
+    /// </summary>
+    private void SendEntitySubtle(
+        EntityUid source,
+        string action,
+        ChatTransmitRange range,
+        string? nameOverride,
+        bool hideLog = false,
+        bool ignoreActionBlocker = false,
+        NetUserId? author = null)
+    {
+        if (!_actionBlocker.CanEmote(source) && !ignoreActionBlocker)
+            return;
+
+        // Apparent name (Identity system)
+        var ent = Identity.Entity(source, EntityManager);
+        var name = FormattedMessage.EscapeText(nameOverride ?? Name(ent));
+
+        var wrappedMessage = Loc.GetString("chat-manager-entity-subtle-wrap-message",
+            ("entityName", name),
+            ("entity", ent),
+            ("message", action));
+
+        SendInSubtleRange(ChatChannel.Subtle, source, action, wrappedMessage, range);
+
+        if (!hideLog)
+        {
+            if (name != Name(source))
+                _adminLogger.Add(LogType.Chat, LogImpact.Low, $"Subtle from {ToPrettyString(source):user} as {name}: {action}");
+            else
+                _adminLogger.Add(LogType.Chat, LogImpact.Low, $"Subtle from {ToPrettyString(source):user}: {action}");
+        }
+    }
+
+    /// <summary>
+    /// Sends a Subtle OOC / SOOC message.
+    /// </summary>
+    private void SendSubtleOOC(EntityUid source, ICommonSession player, string message, bool hideChat)
+    {
+        var name = FormattedMessage.EscapeText(Identity.Name(source, EntityManager));
+
+        if (_adminManager.IsAdmin(player) && !_adminLoocEnabled || !_loocEnabled)
+            return;
+
+        // Crit-player LOOC check (reuse existing logic)
+        if (!_critLoocEnabled && _mobStateSystem.IsCritical(source))
+            return;
+
+        var wrappedMessage = Loc.GetString("chat-manager-entity-subtle-looc-wrap-message",
+            ("entityName", name),
+            ("message", FormattedMessage.EscapeText(message)));
+
+        SendInSubtleRange(ChatChannel.SubtleOOC, source, message, wrappedMessage,
+            hideChat ? ChatTransmitRange.HideChat : ChatTransmitRange.Normal);
+
+        _adminLogger.Add(LogType.Chat, LogImpact.Low, $"SOOC from {player:Player}: {message}");
+    }
+
+    /// <summary>
+    /// Core range-restricted sender used by both Subtle and SubtleOOC.
+    /// Respects the Subtle flag on ICChatRecipientData so non-admin ghosts are excluded.
+    /// </summary>
+    private void SendInSubtleRange(ChatChannel channel, EntityUid source, string message, string wrappedMessage, ChatTransmitRange range)
+    {
+        foreach (var (session, data) in GetRecipients(source, WhisperClearRange))
+        {
+            // PR #857 protection: non-admin ghosts never see Subtle / SubtleOOC
+            if (!data.Subtle)
+                continue;
+
+            if (session.AttachedEntity is not { Valid: true } listener)
+                continue;
+
+            // Existing range / LOS / hideChat handling can be reused here.
+            // The exact signature of the final ChatMessageToOne / ChatMessageToMany call
+            // depends on how Inferus currently sends emotes / whispers – mirror that pattern.
+            _chatManager.ChatMessageToOne(channel, message, wrappedMessage, source, false, session.Channel);
+        }
+    }
+
     private void SendDeadChat(EntityUid source, ICommonSession player, string message, bool hideChat)
     {
         var clients = GetDeadChatClients();
@@ -826,6 +914,8 @@ public sealed partial class ChatSystem : SharedChatSystem
             ChatChannel.Whisper => WrapWhisperMessage(source, "chat-manager-entity-whisper-wrap-message", unknownName, content, language),
             ChatChannel.Emotes => Loc.GetString("chat-manager-entity-me-wrap-message", ("entityName", unknownName), ("entity", source), ("message", content)),
             ChatChannel.LOOC => Loc.GetString("chat-manager-entity-looc-wrap-message", ("entityName", unknownName), ("message", FormattedMessage.EscapeText(content))),
+            ChatChannel.Subtle => Loc.GetString("chat-manager-entity-subtle-wrap-message", ("entityName", unknownName), ("message", FormattedMessage.EscapeText(content))),
+            ChatChannel.SubtleOOC => Loc.GetString("chat-manager-entity-sooc-wrap-message", ("entityName", unknownName), ("message", FormattedMessage.EscapeText(content))),
             _ => fallback
         };
     #endregion
@@ -1119,9 +1209,9 @@ public sealed partial class ChatSystem : SharedChatSystem
 
             var observer = ghostHearing.HasComponent(playerEntity);
 
-            //Starlight begin | Check what's larger, the passed voice range or, if it exists, the voice range on ChatListenerRangeComponent
+            // Starlight begin | Check what's larger, the passed voice range or, if it exists, the voice range on ChatListenerRangeComponent
             var distanceToCheck = voiceGetRange;
-            if(TryComp<ChatListenerRangeComponent>(playerEntity, out var rangeComp))
+            if (TryComp<ChatListenerRangeComponent>(playerEntity, out var rangeComp))
                 if (rangeComp.AllowExtendListenRange)
                 {
                     distanceToCheck = isWhisper switch
@@ -1131,24 +1221,33 @@ public sealed partial class ChatSystem : SharedChatSystem
                         _ => distanceToCheck
                     };
                 }
-            //Starlight end
+            // Starlight end
+
+            // Subtle protection: non-admin ghosts must never receive Subtle / SubtleOOC
+            var isDead = HasComp<GhostComponent>(playerEntity);
+            var isAdmin = _adminManager.IsAdmin(player);
+            var subtleAllowed = !(isDead && !isAdmin);
 
             // even if they are a ghost hearer, in some situations we still need the range
             if (sourceCoords.TryDistance(EntityManager, transformEntity.Coordinates, out var distance) && distance < distanceToCheck) // Starlight-edit
             {
-                recipients.Add(player, new ICChatRecipientData(distance, observer));
+                recipients.Add(player, new ICChatRecipientData(distance, observer, Subtle: subtleAllowed));
                 continue;
             }
 
             if (observer)
-                recipients.Add(player, new ICChatRecipientData(-1, true));
+                recipients.Add(player, new ICChatRecipientData(-1, true, Subtle: subtleAllowed));
         }
 
         RaiseLocalEvent(new ExpandICChatRecipientsEvent(source, voiceGetRange, recipients));
         return recipients;
     }
 
-    public readonly record struct ICChatRecipientData(float Range, bool Observer, bool? HideChatOverride = null)
+    public readonly record struct ICChatRecipientData(
+    float Range,
+    bool Observer,
+    bool? HideChatOverride = null,
+    bool Subtle = true)
     {
     }
 

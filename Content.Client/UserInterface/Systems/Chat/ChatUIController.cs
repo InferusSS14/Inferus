@@ -93,6 +93,8 @@ public sealed partial class ChatUIController : UIController
         {SharedChatSystem.OOCPrefix, ChatSelectChannel.OOC},
         {SharedChatSystem.EmotesPrefix, ChatSelectChannel.Emotes},
         {SharedChatSystem.EmotesAltPrefix, ChatSelectChannel.Emotes},
+        {SharedChatSystem.SubtlePrefix, ChatSelectChannel.Subtle},
+        {SharedChatSystem.SubtleOOCPrefix, ChatSelectChannel.SubtleOOC},
         {SharedChatSystem.AdminPrefix, ChatSelectChannel.Admin},
         {SharedChatSystem.RadioCommonPrefix, ChatSelectChannel.Radio},
         {SharedChatSystem.DeadPrefix, ChatSelectChannel.Dead}
@@ -106,6 +108,8 @@ public sealed partial class ChatUIController : UIController
         {ChatSelectChannel.LOOC, SharedChatSystem.LOOCPrefix},
         {ChatSelectChannel.OOC, SharedChatSystem.OOCPrefix},
         {ChatSelectChannel.Emotes, SharedChatSystem.EmotesPrefix},
+        {ChatSelectChannel.Subtle, SharedChatSystem.SubtlePrefix},
+        {ChatSelectChannel.SubtleOOC, SharedChatSystem.SubtleOOCPrefix},
         {ChatSelectChannel.Admin, SharedChatSystem.AdminPrefix},
         {ChatSelectChannel.Radio, SharedChatSystem.RadioCommonPrefix},
         {ChatSelectChannel.Dead, SharedChatSystem.DeadPrefix}
@@ -239,6 +243,12 @@ public sealed partial class ChatUIController : UIController
 
         _input.SetInputCommand(ContentKeyFunctions.CycleChatChannelBackward,
             InputCmdHandler.FromDelegate(_ => CycleChatChannel(false)));
+
+        _input.SetInputCommand(ContentKeyFunctions.FocusSubtle,
+        InputCmdHandler.FromDelegate(_ => FocusChannel(ChatSelectChannel.Subtle)));
+
+        _input.SetInputCommand(ContentKeyFunctions.FocusSubtleOOC,
+        InputCmdHandler.FromDelegate(_ => FocusChannel(ChatSelectChannel.SubtleOOC)));
 
         var gameplayStateLoad = UIManager.GetUIController<GameplayStateLoadController>();
         gameplayStateLoad.OnScreenLoad += OnScreenLoad;
@@ -548,7 +558,7 @@ public sealed partial class ChatUIController : UIController
         // Can always send console stuff.
         CanSendChannels |= ChatSelectChannel.Console;
 
-        // can always send/recieve OOC
+        // can always send/receive OOC
         CanSendChannels |= ChatSelectChannel.OOC;
         CanSendChannels |= ChatSelectChannel.LOOC;
         FilterableChannels |= ChatChannel.OOC;
@@ -559,14 +569,16 @@ public sealed partial class ChatUIController : UIController
 
         if (_state.CurrentState is GameplayStateBase)
         {
-            // can always hear local / radio / emote / notifications when in the game
+            // can always hear local / radio / emote / notifications / subtle when in the game
             FilterableChannels |= ChatChannel.Local;
             FilterableChannels |= ChatChannel.Whisper;
             FilterableChannels |= ChatChannel.Radio;
             FilterableChannels |= ChatChannel.Emotes;
             FilterableChannels |= ChatChannel.Notifications;
+            FilterableChannels |= ChatChannel.Subtle;
+            FilterableChannels |= ChatChannel.SubtleOOC;
 
-            // Can only send local / radio / emote when attached to a non-ghost entity.
+            // Can only send local / radio / emote / subtle when attached to a non-ghost entity.
             // TODO: this logic is iffy (checking if controlling something that's NOT a ghost), is there a better way to check this?
             if (_ghost is not {IsGhost: true} or {Player.BypassGhostChat:true}) // Starlight-edit: keep these enabled if bypass enabled.
             {
@@ -574,6 +586,8 @@ public sealed partial class ChatUIController : UIController
                 CanSendChannels |= ChatSelectChannel.Whisper;
                 CanSendChannels |= ChatSelectChannel.Radio;
                 CanSendChannels |= ChatSelectChannel.Emotes;
+                CanSendChannels |= ChatSelectChannel.Subtle;
+                CanSendChannels |= ChatSelectChannel.SubtleOOC;
             }
         }
 
@@ -1006,6 +1020,15 @@ public sealed partial class ChatUIController : UIController
             case ChatChannel.LOOC:
                 if (_config.GetCVar(CCVars.LoocAboveHeadShow))
                     AddSpeechBubble(msg, SpeechBubble.SpeechType.Looc);
+                break;
+
+            case ChatChannel.Subtle:
+                AddSpeechBubble(msg, SpeechBubble.SpeechType.SubtleEmote);
+                break;
+
+            case ChatChannel.SubtleOOC:
+                if (_config.GetCVar(CCVars.LoocAboveHeadShow))
+                    AddSpeechBubble(msg, SpeechBubble.SpeechType.SubtleOoc);
                 break;
         }
     }

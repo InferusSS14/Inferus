@@ -7,6 +7,7 @@ using Content.Server.GameTicking;
 using Content.Server.Mind;
 using Content.Server.Mobs;
 using Content.Server.Roles.Jobs;
+using Content.Server.Administration.Managers;
 using Content.Shared._Starlight.Ghost;
 using Content.Shared.Actions;
 using Content.Shared.CCVar;
@@ -74,6 +75,7 @@ namespace Content.Server.Ghost
         [Dependency] private NameModifierSystem _nameMod = default!;
         [Dependency] private GhostSpriteStateSystem _ghostState = default!;
         [Dependency] private NewLifeSystem _newLifeSystem = default!;
+        [Dependency] private IAdminManager _adminManager = default!;
 
         private EntityQuery<GhostComponent> _ghostQuery;
         private EntityQuery<PhysicsComponent> _physicsQuery;
@@ -235,7 +237,16 @@ namespace Content.Server.Ghost
         private void OnMapInit(EntityUid uid, GhostComponent component, MapInitEvent args)
         {
             _actions.AddAction(uid, ref component.BooActionEntity, component.BooAction);
-            _actions.AddAction(uid, ref component.ToggleGhostHearingActionEntity, component.ToggleGhostHearingAction);
+
+            // Only give the ghost-hearing toggle to entities that already have GhostHearing
+            // or to admin players. This prevents non-admin observers from freely enabling
+            // global hearing (and therefore seeing Subtle messages).
+            if (HasComp<GhostHearingComponent>(uid) ||
+                (_player.TryGetSessionByEntity(uid, out var session) && _adminManager.IsAdmin(session)))
+            {
+                _actions.AddAction(uid, ref component.ToggleGhostHearingActionEntity, component.ToggleGhostHearingAction);
+            }
+
             _actions.AddAction(uid, ref component.ToggleLightingActionEntity, component.ToggleLightingAction);
             _actions.AddAction(uid, ref component.ToggleFoVActionEntity, component.ToggleFoVAction);
             _actions.AddAction(uid, ref component.ToggleGhostsActionEntity, component.ToggleGhostsAction);

@@ -663,3 +663,11 @@ binds:
 - function: LatchStruggle
   type: State
   key: Space
+
+- function: FocusSubtle
+  type: State
+  key: Minus          # or another free key
+- function: FocusSubtleOOC
+  type: State
+  mod1: Shift
+  key: Minus

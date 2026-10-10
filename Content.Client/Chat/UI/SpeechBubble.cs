@@ -80,10 +80,10 @@ namespace Content.Client.Chat.UI
 
                 case SpeechType.Looc:
                     return new TextSpeechBubble(message, senderEntity, "emoteBox", Color.FromHex("#48d1cc"));
-                
+
                 case SpeechType.SubtleEmote:
                     return new TextSpeechBubble(message, senderEntity, "emoteBox", Color.FromHex("#ffbebe"));
-                
+
                 case SpeechType.SubtleOoc:
                     return new TextSpeechBubble(message, senderEntity, "emoteBox", Color.FromHex("#ff80a0"));
 

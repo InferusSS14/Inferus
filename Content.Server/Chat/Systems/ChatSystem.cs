@@ -224,7 +224,7 @@ public sealed partial class ChatSystem : SharedChatSystem
         else language = languageOverride ?? _language.GetLanguage(source);
         // Starlight end
 
-        bool shouldCapitalize = (desiredType != InGameICChatType.Emote);
+        bool shouldCapitalize = desiredType != InGameICChatType.Emote && desiredType != InGameICChatType.Subtle;
         bool shouldPunctuate = _configurationManager.GetCVar(CCVars.ChatPunctuation) || (player != null && _netConfigurationManager.GetClientCVar(player.Channel, StarlightCCVars.AutoPunctuate)); // Starlight - Auto-punctuate support
         // Capitalizing the word I only happens in English, so we check language here
         bool shouldCapitalizeTheWordI = (!CultureInfo.CurrentCulture.IsNeutralCulture && CultureInfo.CurrentCulture.Parent.Name == "en")
@@ -914,6 +914,8 @@ public sealed partial class ChatSystem : SharedChatSystem
             ChatChannel.Whisper => WrapWhisperMessage(source, "chat-manager-entity-whisper-wrap-message", unknownName, content, language),
             ChatChannel.Emotes => Loc.GetString("chat-manager-entity-me-wrap-message", ("entityName", unknownName), ("entity", source), ("message", content)),
             ChatChannel.LOOC => Loc.GetString("chat-manager-entity-looc-wrap-message", ("entityName", unknownName), ("message", FormattedMessage.EscapeText(content))),
+            ChatChannel.Subtle => Loc.GetString("chat-manager-entity-subtle-wrap-message", ("entityName", unknownName), ("message", FormattedMessage.EscapeText(content))),
+            ChatChannel.SubtleOOC => Loc.GetString("chat-manager-entity-sooc-wrap-message", ("entityName", unknownName), ("message", FormattedMessage.EscapeText(content))),
             _ => fallback
         };
     #endregion

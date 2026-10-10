@@ -88,12 +88,12 @@ namespace Content.Shared.Chat
         /// <summary>
         ///     Subtle messages (whisper-range emote-style, blocked from non-admin ghosts).
         /// </summary>
-        Subtle = 1u << 31,
+        Subtle = 1 << 16,
 
         /// <summary>
         ///     Subtle out-of-character messages.
         /// </summary>
-        SubtleOOC = 1u << 30,
+        SubtleOOC = 1 << 17,
 
         /// <summary>
         ///     Channels considered to be IC.

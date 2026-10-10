@@ -1023,11 +1023,12 @@ public sealed partial class ChatUIController : UIController
                 break;
 
             case ChatChannel.Subtle:
-                AddSpeechBubble(msg, SpeechBubble.SpeechType.Emote);
+                AddSpeechBubble(msg, SpeechBubble.SpeechType.SubtleEmote);
                 break;
 
             case ChatChannel.SubtleOOC:
-                AddSpeechBubble(msg, SpeechBubble.SpeechType.Looc);
+                if (_config.GetCVar(CCVars.LoocAboveHeadShow))
+                    AddSpeechBubble(msg, SpeechBubble.SpeechType.SubtleOoc);
                 break;
         }
     }

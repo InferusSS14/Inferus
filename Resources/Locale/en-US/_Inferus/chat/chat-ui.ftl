@@ -1,2 +1,2 @@
-chat-channel-subtle = Subtle
-chat-channel-subtle-ooc = Subtle OOC
+hud-chatbox-select-channel-Subtle = Subtle
+hud-chatbox-select-channel-SubtleOOC = Subtle OOC

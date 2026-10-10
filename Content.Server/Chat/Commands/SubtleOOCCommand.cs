@@ -38,6 +38,6 @@ public sealed class SubtleOOCCommand : IConsoleCommand
             return;
 
         var chat = IoCManager.Resolve<IEntitySystemManager>().GetEntitySystem<ChatSystem>();
-        chat.TrySendInGameOOCMessage(playerEntity, message, InGameOOCChatType.Looc, false, shell, player);
+        chat.TrySendInGameOOCMessage(playerEntity, message, InGameOOCChatType.SubtleOOC, false, shell, player);
     }
 }

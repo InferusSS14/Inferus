@@ -10,6 +10,7 @@ using Content.Server.Prayer;
 using Content.Server.Preferences.Managers;
 using Content.Server.Silicons.Laws;
 using Content.Server.Station.Systems;
+using Content.Shared._Starlight.Language.Systems;
 using Content.Shared.Administration;
 using Content.Shared.Administration.Systems;
 using Content.Shared.Chemistry.Components.SolutionManager;
@@ -39,6 +40,14 @@ using Robust.Shared.Timing;
 using Robust.Shared.Toolshed;
 using Robust.Shared.Utility;
 using Content.Shared.Chemistry.Components;
+using Content.Shared.Damage.Components;
+using Content.Shared.Damage.Systems;
+using Content.Shared.Forensics;
+using Content.Shared.Forensics.Components;
+using Content.Shared.Forensics.Systems;
+using Content.Shared.Hands.Components;
+using Robust.Shared.Serialization;
+using Robust.Shared.Serialization.Manager;
 using static Content.Shared.Configurable.ConfigurationComponent;
 #region Starlight
 using Content.Server._Starlight.Thaven;
@@ -186,6 +195,92 @@ namespace Content.Server.Administration.Systems
                             Impact = LogImpact.High,
                         });
                     }
+                    
+                    #region Inferus
+                    // Morph - Spawns a new entity, moves various attributes to it, and then deletes the old one. Not perfect.
+                    
+                    foreach (var (slot, profile) in pref.Characters)
+                    {
+                        if (profile is not { } humanoid) continue;
+
+                        args.Verbs.Add(new Verb()
+                        {
+                            Text = $"{slot}. {profile.Name}",
+                            Category = VerbCategory.Morph,
+                            Act = () =>
+                            {
+                                if (!_transformSystem.TryGetMapOrGridCoordinates(args.Target, out var coords))
+                                {
+                                    _popup.PopupEntity(Loc.GetString("admin-player-spawn-failed"), args.User, args.User);
+                                    return;
+                                }
+
+                                var stationUid = _stations.GetOwningStation(args.Target);
+
+                                var mobUid = _spawning.SpawnPlayerMob(coords.Value, null, humanoid, stationUid);
+                                
+                                if (_inventorySystem.TryGetContainerSlotEnumerator(args.Target, out var enumerator))
+                                    while (enumerator.NextItem(out var item, out var slot))
+                                        if (_inventorySystem.TryUnequip(args.Target, args.Target, slot.Name, true, true))
+                                            _inventorySystem.TryEquip(mobUid, item, slot.Name, true, true);
+
+                                _traitSystem.ApplyTraits(mobUid, humanoid, targetActor.PlayerSession); // Starlight
+                                _sLSharedCharacterInfoSystem.ApplyCharacterInfo(mobUid, humanoid); // Starlight
+
+                                if (_mindSystem.TryGetMind(args.Target, out var mindId, out var mindComp))
+                                    _mindSystem.TransferTo(mindId, mobUid, true, mind: mindComp);
+
+                                RaiseLocalEvent(new PlayerAdminSpawnEvent(mobUid, player, null, stationUid, humanoid)); //Starlight
+
+                                if (TryComp(args.Target, out TagComponent? tags))
+                                    _tag.AddTags(mobUid, tags.Tags);
+
+                                if (TryComp(args.Target, out DnaComponent? oldDna))
+                                {
+                                    var newDna = EnsureComp<DnaComponent>(mobUid);
+                                    newDna.DNA = oldDna.DNA;
+                                    Dirty(mobUid, newDna);
+
+                                    var ev = new GenerateDnaEvent { Owner = mobUid, DNA = newDna.DNA ?? "" };
+                                    RaiseLocalEvent(mobUid, ref ev);
+                                }
+                                if (TryComp(args.Target, out FingerprintComponent? oldFingerprint))
+                                {
+                                    var newFingerprint = EnsureComp<FingerprintComponent>(mobUid);
+                                    newFingerprint.Fingerprint = oldFingerprint.Fingerprint;
+                                    Dirty(mobUid, newFingerprint);
+                                }
+
+                                if (TryComp(args.Target, out DamageableComponent? oldDamage))
+                                {
+                                    EnsureComp<DamageableComponent>(mobUid);
+                                    _damageable.SetDamage(mobUid, oldDamage.GetDamage());
+                                }
+                                if (TryComp(args.Target, out HandsComponent? hands))
+                                {
+                                    var handEnt = new Entity<HandsComponent?>(args.Target, hands);
+                                    var newHands = EnsureComp<HandsComponent>(mobUid);
+                                    var newHandEnt = new Entity<HandsComponent>(mobUid, newHands);
+                                    foreach (var hand in _handsSystem.EnumerateHands(handEnt))
+                                    {
+                                        var item = _handsSystem.GetHeldItem(handEnt, hand);
+                                        if (item is { } held)
+                                        {
+                                            _handsSystem.TryDrop(handEnt, hand);
+                                            _handsSystem.TryForcePickup(newHandEnt.AsNullable(), held, hand);
+                                        }
+                                    }
+                                }
+                                
+                                
+                                QueueDel(args.Target);
+                            },
+                            ConfirmationPopup = true,
+                            Impact = LogImpact.High,
+                        });
+                    }
+
+                    #endregion
 
                     // Clone - Spawn but without the mind transfer, also spawns at the user's coordinates not the target's
                     args.Verbs.Add(new Verb()

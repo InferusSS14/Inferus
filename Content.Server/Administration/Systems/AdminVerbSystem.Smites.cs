@@ -151,6 +151,22 @@ public sealed partial class AdminVerbSystem
             Message = string.Join(": ", explodeName, Loc.GetString("admin-smite-explode-description")) // we do this so the description tells admins the Text to run it via console.
         };
         args.Verbs.Add(explode);
+        
+        #region Inferus
+        
+        var gibName = Loc.GetString("admin-smite-gib-name").ToLowerInvariant();
+        Verb gib = new()
+        {
+            Text = gibName,
+            Category = VerbCategory.Smite,
+            Icon = new SpriteSpecifier.Texture(new("/Textures/Interface/VerbIcons/smite.svg.192dpi.png")),
+            Act = () => _gibbing.Gib(args.Target),
+            Impact = LogImpact.Extreme,
+            Message = string.Join(": ", gibName, Loc.GetString("admin-smite-gib-description"))
+        };
+        args.Verbs.Add(gib);
+        
+        #endregion
 
         var chessName = Loc.GetString("admin-smite-chess-dimension-name").ToLowerInvariant();
         Verb chess = new()

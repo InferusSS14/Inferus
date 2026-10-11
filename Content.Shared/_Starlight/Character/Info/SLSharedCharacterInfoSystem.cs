@@ -75,13 +75,13 @@ public abstract partial class SLSharedCharacterInfoSystem : EntitySystem
             if (_configManager.GetCVar(StarlightCCVars.OOCNotes))
             {
                 var roleplayInfo = new RoleplayInfoComponent { OOCNotes = character.OOCNotes };
-                AddComp(newMind.Value, roleplayInfo);
+                AddComp(newMind.Value, roleplayInfo, true);
 
                 if (applyFlavorText)
                 {
                     //Setup mindInfo
                     var mindSecrets = new MindSecretsComponent { PersonalNotes = character.PersonalNotes, };
-                    AddComp(newMind.Value, mindSecrets);
+                    AddComp(newMind.Value, mindSecrets, true);
                 }
             }
         }

@@ -52,6 +52,11 @@ public sealed partial class DamageableComponent : Component
     public DamageSpecifier Damage = new();
 
     /// <summary>
+    ///     Gets a copy of the component's <see cref="DamageSpecifier"/>.
+    /// </summary>
+    public DamageSpecifier GetDamage() => Damage.Clone();
+
+    /// <summary>
     ///     Damage, indexed by <see cref="DamageGroupPrototype"/> ID keys.
     /// </summary>
     /// <remarks>

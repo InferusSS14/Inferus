@@ -1,0 +1,192 @@
+- type: species
+  id: Apid
+  name: species-name-apid
+  roundStart: true
+  prototype: MobApid
+  sprites: MobApidSprites
+  markingLimits: MobApidMarkingLimits
+  defaultSkinTone: "#fcd719"
+  dollPrototype: AppearanceApid
+  skinColoration: Hues # this prevents RandomHumanoidAppearance from fucking with their colorscheme too much
+  maleFirstNames: ApidNamesSoup
+  femaleFirstNames: ApidNamesSoup
+  lastNames: ApidNames
+  sexes: [ Male, Female, Unsexed ]
+
+- type: speciesBaseSprites
+  id: MobApidSprites
+  sprites:
+    Head: MobApidHead
+    Hair: MobHumanoidAnyMarking
+    Snout: MobHumanoidAnyMarking
+    UndergarmentTop: MobHumanoidAnyMarking
+    UndergarmentBottom: MobHumanoidAnyMarking
+    Chest: MobApidTorso
+    HeadTop: MobHumanoidAnyMarking
+    HeadSide: MobHumanoidAnyMarking
+    Tail: MobHumanoidAnyMarking
+    TailOverlay: MobHumanoidAnyMarking
+    Eyes: MobApidEyes
+    RArm: MobApidRArm
+    LArm: MobApidLArm
+    RHand: MobApidRHand
+    LHand: MobApidLHand
+    RLeg: MobApidRLeg
+    LLeg: MobApidLLeg
+    RFoot: MobApidRFoot
+    LFoot: MobApidLFoot
+
+- type: humanoidBaseSprite
+  id: MobApidHead
+  baseSprite:
+    sprite: _MACRO/Mobs/Species/Apid/parts.rsi
+    state: head
+
+- type: humanoidBaseSprite
+  id: MobApidHeadMale
+  baseSprite:
+    sprite: _MACRO/Mobs/Species/Apid/parts.rsi
+    state: head
+
+- type: humanoidBaseSprite
+  id: MobApidHeadFemale
+  baseSprite:
+    sprite: _MACRO/Mobs/Species/Apid/parts.rsi
+    state: head
+
+- type: humanoidBaseSprite
+  id: MobApidTorso
+  baseSprite:
+    sprite: _MACRO/Mobs/Species/Apid/parts.rsi
+    state: torso
+
+- type: humanoidBaseSprite
+  id: MobApidTorsoMale
+  baseSprite:
+    sprite: _MACRO/Mobs/Species/Apid/parts.rsi
+    state: torso
+
+- type: humanoidBaseSprite
+  id: MobApidTorsoFemale
+  baseSprite:
+    sprite: _MACRO/Mobs/Species/Apid/parts.rsi
+    state: torso
+
+- type: humanoidBaseSprite
+  id: MobApidEyes
+  baseSprite:
+    sprite: _MACRO/Mobs/Species/Apid/parts.rsi
+    state: eyes
+
+- type: humanoidBaseSprite
+  id: MobApidLArm
+  baseSprite:
+    sprite: _MACRO/Mobs/Species/Apid/parts.rsi
+    state: l_arm
+
+- type: humanoidBaseSprite
+  id: MobApidRArm
+  baseSprite:
+    sprite: _MACRO/Mobs/Species/Apid/parts.rsi
+    state: r_arm
+
+- type: humanoidBaseSprite
+  id: MobApidLHand
+  baseSprite:
+    sprite: _MACRO/Mobs/Species/Apid/parts.rsi
+    state: l_hand
+
+- type: humanoidBaseSprite
+  id: MobApidRHand
+  baseSprite:
+    sprite: _MACRO/Mobs/Species/Apid/parts.rsi
+    state: r_hand
+
+- type: humanoidBaseSprite
+  id: MobApidLLeg
+  baseSprite:
+    sprite: _MACRO/Mobs/Species/Apid/parts.rsi
+    state: l_leg
+
+- type: humanoidBaseSprite
+  id: MobApidRLeg
+  baseSprite:
+    sprite: _MACRO/Mobs/Species/Apid/parts.rsi
+    state: r_leg
+
+- type: humanoidBaseSprite
+  id: MobApidLFoot
+  baseSprite:
+    sprite: _MACRO/Mobs/Species/Apid/parts.rsi
+    state: l_foot
+
+- type: humanoidBaseSprite
+  id: MobApidRFoot
+  baseSprite:
+    sprite: _MACRO/Mobs/Species/Apid/parts.rsi
+    state: r_foot
+
+- type: markingPoints
+  id: MobApidMarkingLimits
+  onlyWhitelisted: true
+  points:
+    Eyes:
+      points: 1
+      required: true
+      defaultMarkings: [ ApidEyesDefault ]
+    HeadTop:
+      points: 1
+      required: true
+      defaultMarkings: [ ApidAntennaeDefault ]
+    Tail:
+      points: 1
+      required: true
+      defaultMarkings: [ ApidBeeButtDefault ]
+    Overlay:
+      points: 1
+      required: true
+      defaultMarkings: [ ApidWingsAnimatedDefault ]
+    Chest:
+      points: 1
+      required: false
+      defaultMarkings: [ ApidChestStripesDefault ]
+    Hair:
+      points: 1
+      required: false
+    FacialHair:
+      points: 0
+      required: false
+    Snout:
+      points: 1
+      required: false
+    HeadSide:
+      points: 1
+      required: false
+    Head:
+      points: 1
+      required: false
+    UndergarmentTop:
+      points: 1
+      required: false
+    UndergarmentBottom:
+      points: 1
+      required: false
+    Arms:
+      points: 2
+      required: false
+    Legs:
+      points: 2
+      required: false
+
+# Developer Notes
+#
+# Apids are smaller, floatier moths. You can almost think of them like a moth equivelant of a monkey stats wise.
+# They have dramatically lower health, are limited to one hand (although they can still wield!), and are permanently
+# immune to gravity in all contexts. In return, theyre very fast!
+#
+# Apids are primarily intended to be a ghost role, but that code isn't on macrocosm. Instead, they're here as an option
+# if you want to use them for something, or if youd like to roundstart them for your server.
+#
+# Be aware if you choose to do so that they have a lot of overlap with moths, and have a fairly dramatic lack of customization
+# options, so if you would like to have them as an available species you might want to give them a little bit of love and care first.
+# (And if you do, please send it upstream!)

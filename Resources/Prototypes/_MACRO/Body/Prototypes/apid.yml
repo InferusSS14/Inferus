@@ -1,0 +1,48 @@
+- type: body
+  id: Apid
+  name: apid
+  root: torso
+  slots:
+    head:
+      part: HeadApid
+      connections: [ torso ]
+      organs:
+        brain: OrganHumanBrain
+        eyes: OrganHumanEyes
+        tongue: OrganMothTongue
+        eye_implant: null
+        nose_implant: null
+        brain_implant: null
+    torso:
+      part: TorsoApid
+      connections:
+      - right arm
+      - left arm
+      - right leg
+      - left leg
+      organs:
+        heart: OrganAnimalHeart
+        lungs: OrganApidLungs
+        stomach: OrganHumanStomach
+        liver: OrganAnimalLiver
+        kidneys: OrganHumanKidneys
+        cavity: null
+    right arm:
+      part: RightArmApid
+      connections: [ right hand ]
+    left arm:
+      part: LeftArmApid
+    right hand:
+      part: RightHandApid
+      organs:
+        hand_implant: null
+    right leg:
+      part: RightLegApid
+      connections: [ right foot ]
+    left leg:
+      part: LeftLegApid
+      connections: [ left foot ]
+    right foot:
+      part: RightFootApid
+    left foot:
+      part: LeftFootApid

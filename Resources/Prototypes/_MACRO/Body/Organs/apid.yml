@@ -1,0 +1,9 @@
+- type: entity
+  id: OrganApidLungs
+  parent: OrganHumanLungs
+  name: apid lungs
+  suffix: Apid
+  components:
+  - type: Metabolizer
+    metabolizerTypes: [ Apid, Human ]
+    stages: [ Respiration ]

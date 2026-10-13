@@ -1,0 +1,21 @@
+- type: parallax
+  id: RustySky
+  layers:
+    - texture:
+        !type:ImageParallaxTextureSource
+        path: "/Textures/_Inferus/Tiles/Planet/rusty.png"
+      slowness: 0.995
+      scale: 0.2,0.2
+    - texture:
+        !type:ImageParallaxTextureSource
+        path: "/Textures/Parallaxes/lownoise.png"
+      slowness: 0.97
+      scale: "2.3, 2.3"
+      scrolling: "0.31, -0.01"
+      worldHomePosition: "12000, 18300"
+    - texture:
+        !type:ImageParallaxTextureSource
+        path: "/Textures/Parallaxes/lownoise.png"
+      slowness: 0.95
+      scale: "1.2, 1.2"
+      scrolling: "0.71, -0.05"
